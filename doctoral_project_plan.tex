@@ -1,0 +1,436 @@
+\documentclass[12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm, a4paper]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{color}
+\definecolor{shadecolor}{gray}{0.95}
+\setlength{\FrameSep}{\fboxsep}
+\usepackage{url}
+\setlist{noitemsep, topsep=3pt}
+
+\ifpdf
+  \DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\else
+  \DeclareGraphicsExtensions{.eps}
+\fi  
+
+\newcommand{\dottedrule}[1]{%
+   \parbox[t]{#1}{\rule{0pt}{5mm}\dotfill}}
+\newcommand{\dottedline}{%
+   {\rule{0pt}{5mm}\dotfill\newline}}
+\newcommand{\dottedlineitem}{%
+   {\rule{0pt}{5mm}\dotfill\mbox{}}}
+
+\usepackage{fancyhdr}
+\fancyhead{}
+\cfoot{\thepage}
+\lhead{\includegraphics[height=15mm]{ec_logo}}
+\rhead{\includegraphics[height=15mm]{DEDS_logo}}
+%\setlength{\headheight}{47pt}
+
+%\thispagestyle{fancy}
+
+\setlength{\headheight}{47pt}
+\pagestyle{fancy}
+
+\begin{document}
+
+\noindent\framebox[\textwidth][c]{
+\bf\large
+\begin{tabular}{c}
+European Joint Doctorate in  \\
+Data Engineering for Data Science (DEDS) \\*[2mm]
+Doctoral Project Plan\footnotemark \\
+Thesis Title \\ First Name Last Name \\
+\end{tabular}
+}\\[5mm]
+
+\footnotetext{Choose the appropriate heading. Based on the PhD Study Plan of Aalborg University, available at \url{http://www.phd.teknat.aau.dk/intranet/phd-study-plan}.}
+
+The Doctorate Project Plan (DPP), Thesis Proposal Report (TPR), and Research Progress Report (RPR) constitute a tool for directing the development of a  doctorate process. It helps to formulate and concretise different elements involved in the process. It is also meant as a communication tool among the doctoral candidate, his/her co-supervisors, and the Candidate Progress Committee (CPC).  From an administrative viewpoint, it is a tool for evaluating the extent to which the proposed research can be realised within the framework of a doctorate study. Therefore, this tool will be used for the candidate's evaluation in the four milestones M1--M4.
+
+The DPP has to be submitted to the chair of the CPC no later than two months after the start of the studies (M1). The DPP should include the initial plan of the doctorate project, as well as the preliminary overview of the literature in the studied field, which should further lead to concretise the specific project topic. It is expected that the co-supervisors lead the production of the plan.
+In the TPR, the DPP is updated by the candidate according to the experiences gained during the beginning phase of the project. It is expected that the TPR is much more concrete and elaborated than the DPP. The TPR should propose a specific path for the rest of the doctorate project, including concrete topics to be studied, tentative list of expected publications, doctorate training, external co-operation, and other activities to be completed during the project. The TPR should be sent to the chair of the CPC no later than one month before the end of the first academic year (M2). In the RPR, the TPR is updated by the candidate, reporting the results, and the completed activities (e.g., publications, doctorate training, external co-operations) during the doctorate project. The RPR should be sent to the chair of the CPC no later than one month before the end of the second academic year (M3). Finally, the Doctoral Thesis will be submitted at the end of the third year (M4).
+
+The following sections contain the elements that are to be present in the DPP, TPR, and RPR. The DPP should be specific and as short as possible while still containing the necessary information. Sections 1--6 and 8 should in total not exceed 10 pages (12 point Times New Roman, 20 mm margins on all sides).
+The template form at the end of this document must be filled out and handed in along with the doctorate plan/report, to be added to the portfolio of the candidate.
+\begin{shaded}
+\noindent
+\emph{The particular areas that you must pay attention to with regard to the TPR and RPR are written in italic and highlighted.}
+\end{shaded}
+
+Please make sure that a proper scientific conduct is demonstrated throughout the DPP, TPR, and RPR. For guidelines see, for example, the European Code of Conduct for Research Integrity\footnote{\url{http://www.esf.org/fileadmin/Public_documents/Publications/Code_Conduct_ResearchIntegrity.pdf}}, the Singapore Statement\footnote{\url{http://www.singaporestatement.org/}}, and similar sources.
+
+\subsection*{Section 1. Project Summary}
+
+A short (maximum 400 words) summary in layman's terms describing in a preliminary manner key motivation, significance, methodology, and expected outcome of the doctorate study. A reader of the local newspaper should be able to understand the summary.
+
+\begin{shaded}
+\noindent
+\emph{TPR: An updated version of the summary, concretising key motivation, significance, methodology, and expected outcome of the doctorate study.}
+
+\noindent
+\emph{RPR: An updated version of the summary, refining key motivation, significance, methodology, and reporting the hitherto outcome of the doctorate study.}
+\end{shaded}
+
+\subsection*{Section 2. Scientific Content of the Doctorate Project}
+
+\begin{enumerate}
+\item The background for the project problem should be described (maximum 300 words).
+\item An introduction stating the state of the art for the doctorate project. The introduction should include key references listed under Section 7. Typically, at least 10-15 references to peer-reviewed scientific material are expected. In case it is necessary to refer to non-peer-reviewed material then use a footnote (or parenthesis) to provide information to the source. Explain the relevance of the present doctorate project so the scientific contribution will be evident -- i.e., explain how the project advances current state-of-the-art. Scientific challenges should be clearly defined -- do not mistake this for technological challenges.
+
+\begin{shaded}
+\noindent
+\emph{TPR: The state of the art for the doctorate project must be updated including use of the most essential references (list references under Section 7).}
+
+\noindent
+\emph{RPR: The state of the art for the doctorate project must be updated including use of the most essential references (list references under Section 7). The relevance of the project results achieved so far should be reported and how they advance the current state-of-the-art.}
+\end{shaded}
+
+\item Statement of the project's objectives. This could be formulated as a hypothesis and/or research questions if applicable.
+
+\begin{shaded}
+\emph{TPR: Updated statement of the project's objectives followed by a formulation of the specific problem(s) that is(are) to be addressed in the study. The problem(s) could be stated as one (or more) scientific hypothesis, if relevant, that is (are) to be examined.}
+
+\emph{RPR: The final statement of the project's objectives must be specified, followed by a formulation of the specific problem(s) addressed in the study.}
+\end{shaded}
+
+\item Key methods. Coverage of the methodological needs, identification of means of meeting these needs, and the methodological design. The coverage should include techniques for evaluating or assessing the outcome of the project (e.g. empirical studies and/or theoretical studies).
+
+\begin{shaded}
+\emph{TPR: Update the preliminary key methods, planned for the doctorate project.}
+
+\emph{RPR: Report the final key methods used for the doctorate project.}
+\end{shaded}
+
+\item Potential significance and application(s) of the project's expected outcome, possibly including methodological contributions.
+
+\begin{shaded}
+\emph{TPR: Experiences and results obtained so far in the project followed by the expected outcome of the entire doctorate project. What is the potential significance of this expected outcome, possibly including methodological contributions.}
+
+\emph{RPR: Report on the experiences and results obtained in the doctorate project, as well as the expected ones.}
+\end{shaded}
+
+\item Work and time plans including measurable milestones (project milestones and deadlines for expected publications for each 6-month period, or finer).
+A practice is recommended where results are documented and submitted for publication in peer-reviewed outlets throughout the project.
+
+The planned timing for the stays at the host institution should be given. In addition to this, the plans for mobility to a partner organisation (secondment) should be stated.
+
+\begin{shaded}
+\emph{TPR: An updated time schedule for the entire project must be included. It is recommended that a number of subproject activities are identified that can be associated with milestones, so that there are milestones (at least) each six months during the project. Remember to allocate time for preparing scientific publications (conference papers, journal paper, etc.). Indicate deadlines for the expected publications. These milestones will allow the doctorate candidate and co-supervisor(s) to assess the status of the project each six months and to revise the plan if needed. The specific activities described in the time plan must be of such detail that it is clear what should be carried out.}
+
+\emph{RPR: Report on the fulfilment of the planned activities, and concrete time schedule until the finalising of the thesis.}
+\end{shaded}
+
+\item Outline of the content of the thesis.
+
+\begin{shaded}
+\emph{TPR: This description could be organised by means of an overall table of contents.}
+
+\emph{RPR: The final, refined outline of the thesis.}
+\end{shaded}
+
+\item
+Outline the publication strategy for the project.
+Tentative titles (or expected subjects) on papers, including preliminary authors list (indicate who has the primary responsibility for the publication). Three international peer-reviewed publications should be planned, at least.
+
+\begin{shaded}
+\emph{TPR:
+For each publication, the following should be indicated or estimated: working title, co-authors, length in pages, outlet (e.g. a named conference or journal), and approximate time of submission. Indicate who has the primary responsibility for the publication. 
+% At least one publication in a journal indexed in Web of Science. % or in Scopus is mandatory. % (use the ISI service at \url{http://apps.isiknowledge.com/}).
+}
+
+\emph{RPR: The list of publications, published and/or accepted as part of the doctorate project should be reported, together with the ongoing and planned ones.}
+\end{shaded}
+
+\end{enumerate}
+
+\subsection*{Section 3. Co-supervisors/Candidate Co-operation Agreements}
+
+The DEDS programme expects that the co-supervisor and candidate should meet (face to face if possible) at least once every other week.
+Each of these working meetings should produce minutes drafted by the candidate stating:
+(1) what was done since last meeting,
+(2) what will be done before next meeting,
+(3) what is slowing down or blocking the project, and
+(4) what was discovered that would be of interest, or needs to be discussed.
+
+In addition, periodic monitoring meetings are planned just before moving from one university of the co-tutelle to the other.
+These teleconference (e.g., skype) meetings involving the candidate and both co-supervisors allow doctoral candidates to present their results, ask questions, prepare the next stay, etc.
+Minutes of these meetings are drafted by the candidate in a Periodic Evaluation Form, reviewed by the local supervisor, and added to the candidate's portfolio.%allowing the CPC an efficient quality control and monitoring.
+
+Please detail the agreement on the relationship between the co-supervisors and the candidate (meeting frequency, communication forms, mutual expectations, etc.).
+
+\begin{shaded}
+\noindent
+\emph{TPR: Status and updated agreement on the relationship between co-supervisors and candidate.}
+
+\noindent
+\emph{RPR: Report on the achieved relationship between co-supervisors and candidate throughout the doctorate project.}
+\end{shaded}
+
+\subsection*{Section 4. Proposed Education and Training Programme}
+
+The DEDS education and training programme is composed of several activities.
+\begin{itemize}
+\item \textbf{Research}, where doctoral candidates work on a novel research problem 
+guided by two supervisors who will advise them to gradually become independent researchers.
+\item \textbf{Research-specific courses}, aimed at providing doctoral candidates with focused
+state-of-the art technical skills pertaining to their research topic.
+\item \textbf{Innovation and entrepreneurship courses}, aimed at complementing the scientific training
+of doctoral candidates with business-related aspects such as entrepreneurship,
+intellectual property rights, etc.
+\item \textbf{Methodological and communication courses}, aimed at introducing the necessary
+research methods and communication skills.
+\item \textbf{Language courses}, aimed at introducing the local language at each partner university.
+\item \textbf{Summer and winter schools}, wherein candidates will obtain 
+feedback about their research from invited researchers and practitioners,
+as well as get international contacts in both academia and industry.
+\item \textbf{Tutoring}, whereby candidates will be involved in teaching activities
+(e.g., supervising student projects and delivering exercises) 
+while being coached by their supervisors or other experienced staff.
+\item \textbf{Knowledge dissemination and participation to scientific events}, aimed at allowing
+doctoral candidates to present and confront their findings, thereby familiarising
+themselves with essential practices such as peer-review and public debating.
+\item \textbf{External cooperation and secondments}, aimed at ensuring that the candidate
+participate actively in another research environment outside his/her home and host universities.
+These activities are realised typically with DEDS partner organisations.
+\end{itemize}
+
+Please detail in the following subsections your personalised education and training programme,
+taking into account your previous background and future career prospects. This programme must
+be approved from both co-supervisors.
+
+Activities adding at least 30 ECTS credits must be outlined.
+A tabular listing of all activities performed or to be performed during the doctorate project is to be included. Group the activities according to the categories specified above. For each activity, the title, time, location, organiser, and ECTS credits must be included together with an indication of whether the activity has been completed.
+Please use this table:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+\makebox[5cm]{Activity} & Place/Organised by & ECTS & General/Project course & Status \\\hline\hline
+& & & & \\\hline
+& & & & \\\hline
+& & & & \\\hline
+& & & & \\\hline
+& & & & \\\hline
+& & & & \\\hline
+\end{tabular}
+\end{center}
+
+\begin{shaded}
+\noindent
+\emph{TPR: The table of activities must be updated with planned and hitherto completed activities.}
+
+\noindent
+\emph{RPR: The contents and the extent of the completed activities must be reported.
+It is expected that all training activities have been finalised in order to devote the last year of the project for finalising the Doctoral Dissertation.}
+\end{shaded}
+
+
+\subsubsection*{Section 4.1. Planned Courses}
+
+Courses adding at least 20 ECTS credits must be outlined.
+
+Only courses at doctorate level are approved. If a course at master level is deemed to be highly relevant for the doctorate project, the co-supervisors can establish a study group on the topic, which includes the master course and additional reading/discussion to bring it up to doctorate level. A written report on participation in a study group must be completed to get course credit. To ensure the scientific level, the study circle must be headed by a member of the scientific staff, who is Professor or Associate Professor (senior scientist level). A 2-3 ECTS study circle organised by the co-supervisors on the state of the art in the research field of the doctorate study is recommended.
+
+\begin{shaded}
+\noindent
+\emph{TPR: The course table should be updated with more specific information for the completed courses, as well as with the rest of planned courses for the rest of the doctorate project.}
+
+\noindent
+\emph{RPR: The table must be updated, reporting the complete set of courses that are completed in the doctorate project.}
+\end{shaded}
+
+\subsubsection*{Section 4.2. Knowledge Dissemination and Participation to Scientific Events}
+
+Detail the plan for dissemination of knowledge and findings from the project.\\
+
+This could for instance be:
+\begin{itemize}
+\item Poster presentations at conferences/seminars.
+\item Presentations at conferences/seminars
+\item Newspaper articles or other popular presentations
+\item Teaching (lecturing and project supervision)
+\end{itemize}
+
+
+%, e.g., newspaper articles, seminars, conference presentations, teaching, etc.
+%As seen, dissemination is not only teaching but can also be other activities.
+
+Each participation to scientific events must be accompanied by a written report by the doctorate candidate that relates the specific activity to the doctorate project. This report must be of general value for the project. Activities that relate to workshop and conference participation must not exceed 6 ECTS credits.
+
+\begin{shaded}
+\noindent
+\emph{TPR: Updated plan for dissemination of knowledge and findings from the doctorate project other than those listed in Section 2 must be specified. }
+
+\noindent
+\emph{RPR: The final realisation of the knowledge and findings dissemination from the doctorate project other than those listed in Section 2 must be reported. }
+\end{shaded}
+
+\subsubsection*{Section 4.3. External Co-operation}
+
+The doctorate candidate must participate actively in another research environment outside his/her home and host universities.
+Outline a plan for external co-operation (e.g., secondment at a partner organisation).
+One or two tentative institutions (others than that of the co-supervisors) must be described. \\
+This should include:
+\begin{itemize}
+\item Co-operation with researchers at external/international research environments (typically partner organisations).
+\item Active engagement in external research environments via, e.g., an external stay of 2-3 months.
+Activities of specific significance for the study must be included. Summer schools, conference attendance, etc. are not considered external cooperation. The co-operation must be a research co-operation in which also the visiting institution contributes to the research. The co-operation must be active and it must be with a research institution or a company doing innovation and research.
+\end{itemize}
+
+Summer schools, conference attendance, etc., are not considered external cooperation.
+The candidate can be awarded with up to 4 ECTS credits based on the Secondment Evaluation Forms of these co-operations.
+
+\begin{shaded}
+\noindent
+\emph{TPR: A description must be updated with hitherto completed and expected/planned co-operation activities.}
+
+\noindent
+\emph{RPR: Completed co-operation activities during the doctorate project must be reported.}
+\end{shaded}
+
+\subsection*{Section 5. Agreements on Immaterial Rights to Patents}
+
+Outline relevant agreements on immaterial rights to patents, etc. produced during the doctorate project. Typically it is sufficient to mention that IPR is handled via the standard university rules.
+
+\begin{shaded}
+\noindent
+\emph{TPR: Update this section if applicable.}
+
+\noindent
+\emph{RPR: Update this section if applicable.}
+\end{shaded}
+
+\subsection*{Section 6. Financing Budget}
+
+Information on the financing budget for the doctorate project, i.e., expenses needed to complete the project (not salary). The funding source or sources should be identified. This part is for information entirely and cannot be used to demand any resources from the doctoral college - this part is governed by the specific Doctorate Candidate Agreement between the consortium and the doctorate candidate, which is agreed upon by the time of enrolment.
+
+\begin{shaded}
+\noindent
+\emph{TPR: Update this section if applicable.}
+
+\noindent
+\emph{RPR: Update this section if applicable.}
+\end{shaded}
+
+\subsection*{Section 7. Career Development Plan}
+In this section, the candidate's career plan and development are described. When the thesis is handed in (M4), this section is revisited in a self-contained document called ``Career Development Plan'' (CDP) to be signed by the candidate and the supervisors.
+
+\subsubsection*{Section 7.1. Long-Term Career Objectives}
+\begin{shaded}
+\noindent
+\emph{DPP: Describe long-term career goals (over 5 years) and how to become able to reach those goals.}
+
+\noindent
+\emph{TPR, RPR, CDP: Update as needed if the career plans have evolved.}
+
+\end{shaded}
+
+\subsubsection*{Section 7.2. Objectives Covered in Project}
+Describe which development objectives will be/have been achieved in the project with respect to
+\begin{enumerate}
+\item Research skills and techniques
+\item Research management and co-operation
+\item Communication skills
+\item Other professional training
+\item Networking activities and opportunities
+\item Other activities with professional relevance
+\end{enumerate}
+
+\begin{shaded}
+\noindent
+\emph{
+CDP: Include also published and accepted papers as well as completed course activities such that the document is self-contained.}
+\end{shaded}
+
+
+
+\subsection*{Section 8. References}
+
+List of essential references used in the doctorate plan (e.g., in the state of the art) including authors, title, publication outlet, pages/volume/year and for conferences also town/country/dates. Include only peer-reviewed publications (includes books from recognised publishers). The list should include the most important 10-25 references in the research field.
+
+\begin{shaded}
+\noindent
+\emph{TPR: List of essential references used in the thesis proposal must be updated.}
+
+\noindent
+\emph{RPR: List of essential references used in the progress report must be updated.}
+\end{shaded}
+
+\pagebreak
+
+\noindent\framebox[\textwidth][c]{
+\bf\large
+\begin{tabular}{c}
+\bf European Joint Doctorate in  \\
+\bf Data Engineering for Data Science (DEDS) \\
+Doctorate Project Plan\footnotemark\\
+Thesis Title \\ First Name Last Name \\
+\end{tabular}
+}\\[5mm]
+\footnotetext{Choose the appropriate heading among the three}
+
+\emph{This page must be completed and sent together with the project
+plan/report in a pdf file to the chair of the Candidate Progress Committee.}
+
+\vspace*{3mm}
+
+\noindent
+Project title: \dottedline
+Name of doctorate candidate: \dottedline
+Email: \dottedline
+Supervisor: \dottedline
+Home University: \dottedline
+Co-supervisor: \dottedline
+Host University: \dottedline
+Secondment supervisor: \dottedline
+Partner organisation: \dottedline
+Date of enrolment: \dottedline
+Expected date of completion: \dottedline
+
+\vspace*{3mm}
+\subsubsection*{Signatures}
+\vspace*{3mm}
+
+\begin{tabular}{p{0.48\textwidth}}
+The Doctorate Candidate\\
+\dottedline
+\vspace{2cm}%
+Date: \\
+
+The Supervisor from the Host University\\
+Professor \dottedline
+\vspace{2cm}%
+Date: \\
+
+\end{tabular}
+%
+\begin{tabular}{p{0.48\textwidth}}
+The Supervisor from the Home University\\
+Professor \dottedline
+\vspace{2cm}%
+Date: \\
+
+The Secondment Supervisor \\
+\dottedline
+\vspace{2cm}%
+Date: \\
+
+\end{tabular}
+
+
+\begin{center}
+\begin{tabular}{p{0.48\textwidth}}
+The Chair of the Candidate Progress Committee\\
+Professor \dottedline
+\vspace{2cm}%
+Date: \\
+
+\end{tabular}
+\end{center}
+
+\end{document}
