@@ -7,6 +7,11 @@
 \usepackage{enumitem}
 \usepackage{framed}
 \usepackage{color}
+\usepackage{biblatex}
+%\bibliography{References.bib}
+\addbibresource{References.bib}
+%\usepackage{natbib}
+%\bibliographystyle{apaeng}
 \definecolor{shadecolor}{gray}{0.95}
 \setlength{\FrameSep}{\fboxsep}
 \usepackage{url}
@@ -66,11 +71,14 @@ The template form at the end of this document must be filled out and handed in a
 Please make sure that a proper scientific conduct is demonstrated throughout the DPP, TPR, and RPR. For guidelines see, for example, the European Code of Conduct for Research Integrity\footnote{\url{http://www.esf.org/fileadmin/Public_documents/Publications/Code_Conduct_ResearchIntegrity.pdf}}, the Singapore Statement\footnote{\url{http://www.singaporestatement.org/}}, and similar sources.
 
 \subsection*{Section 1. Project Summary}
-Data integration is the set of processes to gather and bridge data from heterogeneous sources together in order to have an unified view. The premise of data integration is to make data more freely available and easier to consume and process by systems and users. 
+Data integration is the set of processes to gather and bridge data from heterogeneous sources together in order to 
+have an unified view. The premise of data integration is to make data more freely available and easier 
+to consume and process by systems and users.
 
+Research on data integration started more than 50 years ago \cite*{recordLinkTheory,dataModelIntegration1980} but with the advent of the big data era 
+new challenges arose, both in the problem of scaling \cite*{Dong2013} and privacy \cite{yu2016big}.
 
-
-A short (maximum 400 words) summary in layman's terms describing in a preliminary manner key motivation, significance, methodology, and expected outcome of the doctorate study. A reader of the local newspaper should be able to understand the summary.
+%A short (maximum 400 words) summary in layman's terms describing in a preliminary manner key motivation, significance, methodology, and expected outcome of the doctorate study. A reader of the local newspaper should be able to understand the summary.
 
 \begin{shaded}
 \noindent
@@ -297,13 +305,13 @@ During the following three years, all ESRs will meet in four different winter/su
 %Summer schools, conference attendance, etc., are not considered external cooperation.
 %The candidate can be awarded with up to 4 ECTS credits based on the Secondment Evaluation Forms of these co-operations.
 
-\begin{shaded}
-\noindent
-\emph{TPR: A description must be updated with hitherto completed and expected/planned co-operation activities.}
+%\begin{shaded}
+%\noindent
+%\emph{TPR: A description must be updated with hitherto completed and expected/planned co-operation activities.}
 
-\noindent
-\emph{RPR: Completed co-operation activities during the doctorate project must be reported.}
-\end{shaded}
+%\noindent
+%\emph{RPR: Completed co-operation activities during the doctorate project must be reported.}
+%\end{shaded}
 
 \subsection*{Section 5. Agreements on Immaterial Rights to Patents}
 
@@ -363,16 +371,17 @@ CDP: Include also published and accepted papers as well as completed course acti
 
 
 \subsection*{Section 8. References}
+%\bibliographystyle{te}
+\printbibliography{}
+%List of essential references used in the doctorate plan (e.g., in the state of the art) including authors, title, publication outlet, pages/volume/year and for conferences also town/country/dates. Include only peer-reviewed publications (includes books from recognised publishers). The list should include the most important 10-25 references in the research field.
 
-List of essential references used in the doctorate plan (e.g., in the state of the art) including authors, title, publication outlet, pages/volume/year and for conferences also town/country/dates. Include only peer-reviewed publications (includes books from recognised publishers). The list should include the most important 10-25 references in the research field.
+%\begin{shaded}
+%\noindent
+%\emph{TPR: List of essential references used in the thesis proposal must be updated.}
 
-\begin{shaded}
-\noindent
-\emph{TPR: List of essential references used in the thesis proposal must be updated.}
-
-\noindent
-\emph{RPR: List of essential references used in the progress report must be updated.}
-\end{shaded}
+%\noindent
+%\emph{RPR: List of essential references used in the progress report must be updated.}
+%\end{shaded}
 
 \pagebreak
 
