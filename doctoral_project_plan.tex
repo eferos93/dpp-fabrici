@@ -7,6 +7,11 @@
 \usepackage{enumitem}
 \usepackage{framed}
 \usepackage{color}
+\usepackage{biblatex}
+%\bibliography{References.bib}
+\addbibresource{References.bib}
+%\usepackage{natbib}
+%\bibliographystyle{apaeng}
 \definecolor{shadecolor}{gray}{0.95}
 \setlength{\FrameSep}{\fboxsep}
 \usepackage{url}
@@ -51,23 +56,46 @@ Thesis Title \\ First Name Last Name \\
 
 \footnotetext{Choose the appropriate heading. Based on the PhD Study Plan of Aalborg University, available at \url{http://www.phd.teknat.aau.dk/intranet/phd-study-plan}.}
 
-The Doctorate Project Plan (DPP), Thesis Proposal Report (TPR), and Research Progress Report (RPR) constitute a tool for directing the development of a  doctorate process. It helps to formulate and concretise different elements involved in the process. It is also meant as a communication tool among the doctoral candidate, his/her co-supervisors, and the Candidate Progress Committee (CPC).  From an administrative viewpoint, it is a tool for evaluating the extent to which the proposed research can be realised within the framework of a doctorate study. Therefore, this tool will be used for the candidate's evaluation in the four milestones M1--M4.
+%The Doctorate Project Plan (DPP), Thesis Proposal Report (TPR), and Research Progress Report (RPR) constitute a tool for directing the development of a  doctorate process. It helps to formulate and concretise different elements involved in the process. It is also meant as a communication tool among the doctoral candidate, his/her co-supervisors, and the Candidate Progress Committee (CPC).  From an administrative viewpoint, it is a tool for evaluating the extent to which the proposed research can be realised within the framework of a doctorate study. Therefore, this tool will be used for the candidate's evaluation in the four milestones M1--M4.
 
-The DPP has to be submitted to the chair of the CPC no later than two months after the start of the studies (M1). The DPP should include the initial plan of the doctorate project, as well as the preliminary overview of the literature in the studied field, which should further lead to concretise the specific project topic. It is expected that the co-supervisors lead the production of the plan.
-In the TPR, the DPP is updated by the candidate according to the experiences gained during the beginning phase of the project. It is expected that the TPR is much more concrete and elaborated than the DPP. The TPR should propose a specific path for the rest of the doctorate project, including concrete topics to be studied, tentative list of expected publications, doctorate training, external co-operation, and other activities to be completed during the project. The TPR should be sent to the chair of the CPC no later than one month before the end of the first academic year (M2). In the RPR, the TPR is updated by the candidate, reporting the results, and the completed activities (e.g., publications, doctorate training, external co-operations) during the doctorate project. The RPR should be sent to the chair of the CPC no later than one month before the end of the second academic year (M3). Finally, the Doctoral Thesis will be submitted at the end of the third year (M4).
+%The DPP has to be submitted to the chair of the CPC no later than two months after the start of the studies (M1). The DPP should include the initial plan of the doctorate project, as well as the preliminary overview of the literature in the studied field, which should further lead to concretise the specific project topic. It is expected that the co-supervisors lead the production of the plan.
+%In the TPR, the DPP is updated by the candidate according to the experiences gained during the beginning phase of the project. It is expected that the TPR is much more concrete and elaborated than the DPP. The TPR should propose a specific path for the rest of the doctorate project, including concrete topics to be studied, tentative list of expected publications, doctorate training, external co-operation, and other activities to be completed during the project. The TPR should be sent to the chair of the CPC no later than one month before the end of the first academic year (M2). In the RPR, the TPR is updated by the candidate, reporting the results, and the completed activities (e.g., publications, doctorate training, external co-operations) during the doctorate project. The RPR should be sent to the chair of the CPC no later than one month before the end of the second academic year (M3). Finally, the Doctoral Thesis will be submitted at the end of the third year (M4).
 
-The following sections contain the elements that are to be present in the DPP, TPR, and RPR. The DPP should be specific and as short as possible while still containing the necessary information. Sections 1--6 and 8 should in total not exceed 10 pages (12 point Times New Roman, 20 mm margins on all sides).
-The template form at the end of this document must be filled out and handed in along with the doctorate plan/report, to be added to the portfolio of the candidate.
-\begin{shaded}
-\noindent
-\emph{The particular areas that you must pay attention to with regard to the TPR and RPR are written in italic and highlighted.}
-\end{shaded}
+%The following sections contain the elements that are to be present in the DPP, TPR, and RPR. The DPP should be specific and as short as possible while still containing the necessary information. Sections 1--6 and 8 should in total not exceed 10 pages (12 point Times New Roman, 20 mm margins on all sides).
+%The template form at the end of this document must be filled out and handed in along with the doctorate plan/report, to be added to the portfolio of the candidate.
+%\begin{shaded}
+%\noindent
+%\emph{The particular areas that you must pay attention to with regard to the TPR and RPR are written in italic and highlighted.}
+%\end{shaded}
 
-Please make sure that a proper scientific conduct is demonstrated throughout the DPP, TPR, and RPR. For guidelines see, for example, the European Code of Conduct for Research Integrity\footnote{\url{http://www.esf.org/fileadmin/Public_documents/Publications/Code_Conduct_ResearchIntegrity.pdf}}, the Singapore Statement\footnote{\url{http://www.singaporestatement.org/}}, and similar sources.
+%Please make sure that a proper scientific conduct is demonstrated throughout the DPP, TPR, and RPR. For guidelines see, for example, the European Code of Conduct for Research Integrity\footnote{\url{http://www.esf.org/fileadmin/Public_documents/Publications/Code_Conduct_ResearchIntegrity.pdf}}, the Singapore Statement\footnote{\url{http://www.singaporestatement.org/}}, and similar sources.
 
 \subsection*{Section 1. Project Summary}
+The term Big Data refers to data sets that are too large or complex to be dealt with by traditional data processing software. 
+In particular, Big Data refers to 4 dimensions: Velocity, Variety, Veracity, and Volume. This large quantity of data available nowadays has 
+a lot of statistical and business value, therefore their analysis is of core importance for business decision making.
 
-A short (maximum 400 words) summary in layman's terms describing in a preliminary manner key motivation, significance, methodology, and expected outcome of the doctorate study. A reader of the local newspaper should be able to understand the summary.
+Data Integration is the set of processes to gather and bridge data from heterogeneous sources together in order to 
+have a unified view. The premise of data integration is to make data more freely available and easier 
+to consume and process by systems and users.
+Research on Data Integration started more than 50 years ago \cite*{recordLinkTheory,dataModelIntegration1980} but as we entered the Big Data era, new challenges arose,
+ which include scaling \cite*{Dong2013} data integration while guaranteeing the privacy \cite*{yu2016big} of the individuals involved in the datasets.
+Over the last decade new techniques have been applied for improving computational performance, consisting of the use of parallelizing the computation by using big data processing platforms \cite*{Dong2013},
+ or algorithmically, namely using summarization techniques \cite*{Cormode2011}, used for 
+approximate fast and approximate querying, improving the performance of Machine Learning processes \cite*{Gribonval2020, Antonanzas2021, Jiang2018} as well as in some data integration scenarios.
+
+Analyzing Big Data may involve accessing sensitive information, especially in the health sector. For these reasons, in Data Integration, 
+techniques like Secure Multi-Party Computation and Differential Privacy \cite*{Dwork2013} have been used. One big concern in private Data Integration is that it is 
+difficult to guarantee privacy, accuracy, and good performance at the same time.
+
+Machine Learning and Data Integration have really close relationship \cite*{Dong2019}. In particular, it is possible to leverage the first to improve the performance of the second
+and vice-versa. An evolving branch of Machine Learning is Federated Learning, which consists in building a Machine Learning model in a federated setting (when the data is distributed across
+ edge devices) and model in a collaborative way, without moving the data to a central server.
+
+ This Ph.D. aims to explore summarization techniques and Federated Learning for scaling Data Integration tasks while guaranteeing privacy and achieving good performance.
+
+
+%A short (maximum 400 words) summary in layman's terms describing in a preliminary manner key motivation, significance, methodology, and expected outcome of the doctorate study. A reader of the local newspaper should be able to understand the summary.
 
 \begin{shaded}
 \noindent
@@ -150,27 +178,32 @@ For each publication, the following should be indicated or estimated: working ti
 \end{enumerate}
 
 \subsection*{Section 3. Co-supervisors/Candidate Co-operation Agreements}
+The project will be carried out in three years during which the PhD student will stay in one research institution and one university. During the first and the third year, the candidate will work in Athena Research Center (ARC) under the supervision of Prof. Minos Garofalakis (ARC). During the second year, the program
+will take place in Universitat Politecnica de Catalunya (UPC) under the supervision of Prof. Oscar Romero (UPC). The project will be a joint work of all parties, hence close co-operation is expected in the following way.
 
-The DEDS programme expects that the co-supervisor and candidate should meet (face to face if possible) at least once every other week.
-Each of these working meetings should produce minutes drafted by the candidate stating:
-(1) what was done since last meeting,
-(2) what will be done before next meeting,
-(3) what is slowing down or blocking the project, and
-(4) what was discovered that would be of interest, or needs to be discussed.
+The progress of the project will be validated through frequent meetings between the candidate and his supervisors. The candidate will meet on a weekly basis with his home supervisor and one or two times per month with his host supervisor (the opposite when he will be hosted at UPC). Following typical business practice, the expectations and tasks planned for each meeting will be clearly communicated in advance, with a reasonable notice, both from the supervisors to the candidate and vice-versa. Standard tools of the trade will be used to boost collaboration, such
+as a shared repository for documents and code artifacts (e.g., Mendeley Library, Github), communication platforms (e.g. Skype, Teams).
 
-In addition, periodic monitoring meetings are planned just before moving from one university of the co-tutelle to the other.
-These teleconference (e.g., skype) meetings involving the candidate and both co-supervisors allow doctoral candidates to present their results, ask questions, prepare the next stay, etc.
-Minutes of these meetings are drafted by the candidate in a Periodic Evaluation Form, reviewed by the local supervisor, and added to the candidate's portfolio.%allowing the CPC an efficient quality control and monitoring.
+%The DEDS programme expects that the co-supervisor and candidate should meet (face to face if possible) at least once every other week.
+%Each of these working meetings should produce minutes drafted by the candidate stating:
+%(1) what was done since last meeting,
+%(2) what will be done before next meeting,
+%(3) what is slowing down or blocking the project, and
+%(4) what was discovered that would be of interest, or needs to be discussed.
 
-Please detail the agreement on the relationship between the co-supervisors and the candidate (meeting frequency, communication forms, mutual expectations, etc.).
+%In addition, periodic monitoring meetings are planned just before moving from one university of the co-tutelle to the other.
+%These teleconference (e.g., skype) meetings involving the candidate and both co-supervisors allow doctoral candidates to present their results, ask questions, prepare the next stay, etc.
+%Minutes of these meetings are drafted by the candidate in a Periodic Evaluation Form, reviewed by the local supervisor, and added to the candidate's portfolio.%allowing the CPC an efficient quality control and monitoring.
 
-\begin{shaded}
-\noindent
-\emph{TPR: Status and updated agreement on the relationship between co-supervisors and candidate.}
+%Please detail the agreement on the relationship between the co-supervisors and the candidate (meeting frequency, communication forms, mutual expectations, etc.).
 
-\noindent
-\emph{RPR: Report on the achieved relationship between co-supervisors and candidate throughout the doctorate project.}
-\end{shaded}
+%\begin{shaded}
+%\noindent
+%\emph{TPR: Status and updated agreement on the relationship between co-supervisors and candidate.}
+
+%\noindent
+%\emph{RPR: Report on the achieved relationship between co-supervisors and candidate throughout the doctorate project.}
+%\end{shaded}
 
 \subsection*{Section 4. Proposed Education and Training Programme}
 
@@ -271,51 +304,56 @@ Each participation to scientific events must be accompanied by a written report 
 \end{shaded}
 
 \subsubsection*{Section 4.3. External Co-operation}
+The doctorate candidate will spend time studying both in Greece `
+and Spain. Furthermore, a secondment of three months will take place, where the candidate will join
+Spring Techno, where he will work on of a complex Federated Learning scenario with real data.
+During the following three years, all ESRs will meet in four different winter/summer schools to present their work, receive feedback, exchange ideas, and get exposed to new challenges. During these schools, candidates will have the opportunity to get in touch with academic and non-academic partners, presenting them their findings, reflecting on new opportunities, and opening the way for further collaboration. Finally, the candidate may co-operate with external researchers or research teams, in case that his work can be combined or merged with similar works of others.
 
-The doctorate candidate must participate actively in another research environment outside his/her home and host universities.
-Outline a plan for external co-operation (e.g., secondment at a partner organisation).
-One or two tentative institutions (others than that of the co-supervisors) must be described. \\
-This should include:
-\begin{itemize}
-\item Co-operation with researchers at external/international research environments (typically partner organisations).
-\item Active engagement in external research environments via, e.g., an external stay of 2-3 months.
-Activities of specific significance for the study must be included. Summer schools, conference attendance, etc. are not considered external cooperation. The co-operation must be a research co-operation in which also the visiting institution contributes to the research. The co-operation must be active and it must be with a research institution or a company doing innovation and research.
-\end{itemize}
+%The doctorate candidate must participate actively in another research environment outside his/her home and host universities.
+%Outline a plan for external co-operation (e.g., secondment at a partner organization).
+%One or two tentative institutions (others than that of the co-supervisors) must be described. \\
+%This should include:
+%\begin{itemize}
+%\item Co-operation with researchers at external/international research environments (typically partner organizations).
+%\item Active engagement in external research environments via, e.g., an external stay of 2-3 months.
+%Activities of specific significance for the study must be included. Summer schools, conference attendance, etc. are not considered external cooperation. The co-operation must be a research co-operation in which also the visiting institution contributes to the research. The co-operation must be active and it must be with a research institution or a company doing innovation and research.
+%\end{itemize}
 
-Summer schools, conference attendance, etc., are not considered external cooperation.
-The candidate can be awarded with up to 4 ECTS credits based on the Secondment Evaluation Forms of these co-operations.
+%Summer schools, conference attendance, etc., are not considered external cooperation.
+%The candidate can be awarded with up to 4 ECTS credits based on the Secondment Evaluation Forms of these co-operations.
 
-\begin{shaded}
-\noindent
-\emph{TPR: A description must be updated with hitherto completed and expected/planned co-operation activities.}
+%\begin{shaded}
+%\noindent
+%\emph{TPR: A description must be updated with hitherto completed and expected/planned co-operation activities.}
 
-\noindent
-\emph{RPR: Completed co-operation activities during the doctorate project must be reported.}
-\end{shaded}
+%\noindent
+%\emph{RPR: Completed co-operation activities during the doctorate project must be reported.}
+%\end{shaded}
 
 \subsection*{Section 5. Agreements on Immaterial Rights to Patents}
 
-Outline relevant agreements on immaterial rights to patents, etc. produced during the doctorate project. Typically it is sufficient to mention that IPR is handled via the standard university rules.
+Patents and immaterial rights will be handled according to general rules applied by Athena Research Center, National and Kapodistrian University of Athens, and Universitat Politecnica de Catalunya.
 
-\begin{shaded}
-\noindent
-\emph{TPR: Update this section if applicable.}
+%\begin{shaded}
+%\noindent
+%\emph{TPR: Update this section if applicable.}
 
-\noindent
-\emph{RPR: Update this section if applicable.}
-\end{shaded}
+%\noindent
+%\emph{RPR: Update this section if applicable.}
+%\end{shaded}
 
 \subsection*{Section 6. Financing Budget}
 
-Information on the financing budget for the doctorate project, i.e., expenses needed to complete the project (not salary). The funding source or sources should be identified. This part is for information entirely and cannot be used to demand any resources from the doctoral college - this part is governed by the specific Doctorate Candidate Agreement between the consortium and the doctorate candidate, which is agreed upon by the time of enrolment.
+This project is one of the 15 ESRs of Data Engineering for Data Science PhD programme, which is funded by the European Union's Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No 955895. The funding covers expenses related to the successful completion of the project, such as work equipment, research experiments, training activities and others
+that are relevant to the programme.
 
-\begin{shaded}
-\noindent
-\emph{TPR: Update this section if applicable.}
+%\begin{shaded}
+%\noindent
+%\emph{TPR: Update this section if applicable.}
 
-\noindent
-\emph{RPR: Update this section if applicable.}
-\end{shaded}
+%\noindent
+%\emph{RPR: Update this section if applicable.}
+%\end{shaded}
 
 \subsection*{Section 7. Career Development Plan}
 In this section, the candidate's career plan and development are described. When the thesis is handed in (M4), this section is revisited in a self-contained document called ``Career Development Plan'' (CDP) to be signed by the candidate and the supervisors.
@@ -350,16 +388,17 @@ CDP: Include also published and accepted papers as well as completed course acti
 
 
 \subsection*{Section 8. References}
+%\bibliographystyle{te}
+\printbibliography{}
+%List of essential references used in the doctorate plan (e.g., in the state of the art) including authors, title, publication outlet, pages/volume/year and for conferences also town/country/dates. Include only peer-reviewed publications (includes books from recognised publishers). The list should include the most important 10-25 references in the research field.
 
-List of essential references used in the doctorate plan (e.g., in the state of the art) including authors, title, publication outlet, pages/volume/year and for conferences also town/country/dates. Include only peer-reviewed publications (includes books from recognised publishers). The list should include the most important 10-25 references in the research field.
+%\begin{shaded}
+%\noindent
+%\emph{TPR: List of essential references used in the thesis proposal must be updated.}
 
-\begin{shaded}
-\noindent
-\emph{TPR: List of essential references used in the thesis proposal must be updated.}
-
-\noindent
-\emph{RPR: List of essential references used in the progress report must be updated.}
-\end{shaded}
+%\noindent
+%\emph{RPR: List of essential references used in the progress report must be updated.}
+%\end{shaded}
 
 \pagebreak
 
