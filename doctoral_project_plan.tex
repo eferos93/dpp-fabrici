@@ -111,7 +111,7 @@ and vice-versa. An evolving branch of Machine Learning is Federated Learning, wh
 Data Integration (DI) is the practice of consolidating data from disparate sources into a unified view. It has been studied since the birth relational databases. 
 It is characterized by three main steps: 
 \begin{enumerate}
-   \item \textbf{Schema alignment}, a process that takes as input a set of different schemas on the same domain an outputs a \textit{mediated schema}, an \textit{attribute matching} and a \textit{schema mapping} \cite*{Dong2013}.
+   \item \textbf{Schema alignment}, a process that takes as input a set of different schemas on the same domain an outputs a \textit{mediated schema}, an \textit{attribute matching} and a \textit{schema mapping}.
    \item \textbf{Record linkage}, also referred as entity resolution, computes a partitioning of the set of records from different datasets, such that each partition identifies the records that refer to a distinct entity.
    \item \textbf{Data fusion} aim is to identify which are the best records to represent a specific entity, when a source provide conflicting values.
 \end{enumerate}
@@ -138,7 +138,29 @@ privacy became of central importance in the field of Big Data Management, analyt
 
 In the particular case of Data Integration, privacy-preserving techniques
 has been used extensively in literature, especially for record linkage. In particular, differentially-private record linkage and cryptography has
-been used extensively \cite{Khurram2020,Vatsalan2017, Clifton, Kuzu2013, Gkoulalas-Divanis2021,Nobrega2021}.
+been used extensively \cite*{Khurram2020,Vatsalan2017, Clifton, Kuzu2013, Gkoulalas-Divanis2021, Nobrega2021, Bonomi2012, Kuzu2013}. 
+As regards schema matching and data fusion, there are fewer works on guaranteeing privacy, most of the work is based on guaranteeing efficiency, by using 
+both rule-based and learning-based approaches \cite*{Rodrigues2021,Riedel2013,Saleem2009}.
+
+
+\paragraph{Schema matching}
+
+\paragraph{Record linkage}
+
+
+Up to 2017, a lot of protocols proposed for secure two-party private record linkage were not able to meet the following three requirements altogether: (1) \textbf{full end-to-end privacy}, 
+(2) \textbf{perfect precision and recall} for the matching records and (3) \textbf{sub-quadratic computational complexity} \cite*{He2017}. 
+After \cite*{He2017} pointed out this problem, new approaches were proposed and resulted in meeting all the three requirements described above \cite*{Groce2019}, 
+but still limited to certain adversarial models, that do not match well with real world scenarios (e.g. \textit{honest-but-curious}), 
+and does not take into account the multi-party scenario, where the problem of 
+\textit{volume}, \textit{veracity} and \textit{velocity} needs to be addressed \cite*{Vatsalan2017}.
+Although there have been many prior works that looked
+into different security and privacy aspects of PPRL, there still remain major challenges that need to be addressed. 
+As a starting point, more research is needed to understand membership inference and attribute inference attacks on PPRL techniques.
+For example, a malicious party may create many random records with the intent of matching with the other parties' actual records \cite*{Gkoulalas-Divanis2021}. 
+To tackle this problem, blockchain technologies could be used \cite*{Nobrega2021}.
+
+
 
 %\item Statement of the project's objectives. This could be formulated as a hypothesis and/or research questions if applicable.
 

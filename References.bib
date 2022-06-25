@@ -293,3 +293,150 @@ url = {https://doi.org/10.1016/j.is.2021.101826},
 volume = {102},
 year = {2021}
 }
+
+@article{Karapiperis2021,
+abstract = {In recent years, several applications have emerged which require access to consolidated information that has to be computed and provided in near real-time. Traditional record linkage algorithms are unable to support such time-critical applications, as they perform the linkage offline and provide the result set only when the entire process has completed. To address this need, in this paper we propose the first summarization algorithms that operate in the blocking and matching steps of record linkage to speed up online linkage tasks. Our first method, called SkipBloom, efficiently summarizes the participating data sets, using their blocking keys, to allow for very fast comparisons among them. The second method, called BlockSketch, summarizes a block to achieve a constant number of comparisons for a submitted query record, during the matching phase. Our third method, SBlockSketch, operates on data streams, where the entire data set is unknown a-priori but, instead, there is a potentially unbounded stream of incoming data records. Finally, we introduce PBlockSketch, which adapts BlockSketch to privacy-preserving settings. Through extensive experimental evaluation, using real-world data sets, we show that our methods outperform the state-of-the-art algorithms for online record linkage in terms of the time needed, the memory used, and the recall and precision rates that are achieved during the linkage process. Following the evaluation of our approaches, we introduce SFEMRL, a novel framework that uses them to enable the linkage of electronic health records at large scale, while respecting patients' privacy. Under this framework, patient records first undergo a data masking process that perturbs sensitive information in data fields of the records to protect it. Subsequently, they participate in a parallel and distributed ecosystem, whose goal is to persist these records in order to be queried efficiently and accurately. We demonstrate that the integration of our framework with Map/Reduce offers robust distributed solutions for performing on-demand large-scale privacy-preserving record linkage tasks in the health domain.},
+author = {Karapiperis, Dimitrios and Gkoulalas-Divanis, Aris and Verykios, Vassilios S.},
+doi = {10.1007/s10619-019-07263-0},
+file = {:home/eferos93/Downloads/Karapiperis2021_Article_SummarizingAndLinkingElectroni.pdf:pdf},
+issn = {15737578},
+journal = {Distributed and Parallel Databases},
+number = {2},
+pages = {321--360},
+publisher = {Springer US},
+title = {{Summarizing and linking electronic health records}},
+url = {https://doi.org/10.1007/s10619-019-07263-0},
+volume = {39},
+year = {2021}
+}
+
+@article{Bonomi2012,
+abstract = {In this paper, we study the problem of privacy preserving record linkage which aims to perform record linkage without revealing anything about the non-linked records. We propose a new secure embedding strategy based on frequent variable length grams which allows record linkage on the embedded space. The frequent grams used for constructing the embedding base are mined from the original database under the framework of differential privacy. Compared with the state-of-the-art secure matching schema [15], our approach provides formal, provable privacy guarantees and achieves better scalability while providing comparable utility. {\textcopyright} 2012 ACM.},
+author = {Bonomi, Luca and Xiong, Li and Chen, Rui and Fung, Benjamin C.M.},
+doi = {10.1145/2396761.2398480},
+file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Bonomi et al. - 2012 - Frequent grams based embedding for privacy preserving record linkage.pdf:pdf},
+isbn = {9781450311564},
+journal = {ACM International Conference Proceeding Series},
+keywords = {differential privacy,privacy,record linkage,security},
+pages = {1597--1601},
+title = {{Frequent grams based embedding for privacy preserving record linkage}},
+year = {2012}
+}
+
+@article{Kuzu2013,
+abstract = {The integration of information dispersed among multiple repositories is a crucial step for accurate data analysis in various domains. In support of this goal, it is critical to devise procedures for identifying similar records across distinct data sources. At the same time, to adhere to privacy regulations and policies, such procedures should protect the confidentiality of the individuals to whom the information corresponds. Various private record linkage (PRL) protocols have been proposed to achieve this goal, involving secure multi-party computation (SMC) and similarity preserving data transformation techniques. SMC methods provide secure and accurate solutions to the PRL problem, but are prohibitively expensive in practice, mainly due to excessive computational requirements. Data transformation techniques offer more practical solutions, but incur the cost of information leakage and false matches. In this paper, we introduce a novel model for practical PRL, which 1) affords controlled and limited information leakage, 2) avoids false matches resulting from data transformation. Initially, we partition the data sources into blocks to eliminate comparisons for records that are unlikely to match. Then, to identify matches, we apply an efficient SMC technique between the candidate record pairs. To enable efficiency and privacy, our model leaks a controlled amount of obfuscated data prior to the secure computations. Applied obfuscation relies on differential privacy which provides strong privacy guarantees against adversaries with arbitrary background knowledge. In addition, we illustrate the practical nature of our approach through an empirical analysis with data derived from public voter records. {\textcopyright} 2013 ACM.},
+author = {Kuzu, Mehmet and Kantarcioglu, Murat and Inan, Ali and Bertino, Elisa and Durham, Elizabeth and Malin, Bradley},
+doi = {10.1145/2452376.2452398},
+file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Kuzu et al. - 2013 - Efficient privacy-aware record integration.pdf:pdf},
+isbn = {9781450315975},
+journal = {ACM International Conference Proceeding Series},
+keywords = {differential privacy,privacy,record linkage,security},
+pages = {167--178},
+title = {{Efficient privacy-aware record integration}},
+year = {2013}
+}
+
+@article{He2017,
+abstract = {Private record linkage (PRL) is the problem of identifying pairs of records that are similar as per an input matching rule from databases held by two parties that do not trust one another. We identify three key desiderata that a PRL solution must ensure: (1) perfect precision and high recall of matching pairs, (2) a proof of end-to-end privacy, and (3) communication and computational costs that scale subquadratically in the number of input records. We show that all of the existing solutions for PRL-including secure 2-party computation (S2PC), and their variants that use non-private or differentially private (DP) blocking to ensure subquadratic cost-violate at least one of the three desiderata. In particular, S2PC techniques guarantee end-to-end privacy but have either low recall or quadratic cost. In contrast, no end-to-end privacy guarantee has been formalized for solutions that achieve subquadratic cost. This is true even for solutions that compose DP and S2PC: DP does not permit the release of any exact information about the databases, while S2PC algorithms for PRL allow the release of matching records. In light of this deficiency, we propose a novel privacy model, called output constrained differential privacy, that shares the strong privacy protection of DP, but allows for the truthful release of the output of a certain function applied to the data. We apply this to PRL, and show that protocols satisfying this privacy model permit the disclosure of the true matching records, but their execution is insensitive to the presence or absence of a single non-matching record. We find that prior work that combine DP and S2PC techniques even fail to satisfy this end-to-end privacy model. Hence, we develop novel protocols that provably achieve this end-to-end privacy guarantee, together with the other two desiderata of PRL. Our empirical evaluation also shows that our protocols obtain high recall, scale near linearly in the size of the input databases and the output set of matching pairs, and have communication and computational costs that are at least 2 orders of magnitude smaller than S2PC baselines.},
+archivePrefix = {arXiv},
+arxivId = {1702.00535},
+author = {He, Xi and MacHanavajjhala, Ashwin and Flynn, Cheryl and Srivastava, Divesh},
+doi = {10.1145/3133956.3134030},
+eprint = {1702.00535},
+file = {:home/eferos93/Downloads/3133956.3134030.pdf:pdf},
+isbn = {9781450349468},
+issn = {15437221},
+journal = {Proceedings of the ACM Conference on Computer and Communications Security},
+pages = {1389--1406},
+title = {{Composing Differential Privacy and Secure Computation: A case study on scaling private record linkage}},
+year = {2017}
+}
+
+@article{Groce2019,
+abstract = {In this work we demonstrate that allowing differentially private leakage can significantly improve the concrete performance of secure 2-party computation (2PC) protocols. Specifically, we focus on the private set intersection (PSI) protocol of Rindal and Rosulek (CCS 2017), which is the fastest PSI protocol with security against malicious participants. We show that if differentially private leakage is allowed, the cost of the protocol can be reduced by up to 63%, depending on the desired level of differential privacy. On the technical side, we introduce a security model for differentially-private leakage in malicious-secure 2PC. We also introduce two new and improved mechanisms for “differentially private histogram overestimates,” the main technical challenge for differentially-private PSI.},
+author = {Groce, Adam and Rindal, Peter and Rosulek, Mike},
+doi = {10.2478/popets-2019-0034},
+file = {:home/eferos93/Downloads/10112292.pdf:pdf},
+journal = {Proceedings on Privacy Enhancing Technologies},
+number = {3},
+pages = {6--25},
+title = {{Cheaper Private Set Intersection via Differentially Private Leakage}},
+volume = {2019},
+year = {2019}
+}
+
+@article{Vatsalan2017,
+abstract = {The growth o fBig Data, especially personal data dispersed in multiple data sources, presents enormous opportunities and insights for businesses to explore and leverage the value of linked and integrated data. However, privacy concerns impede sharing or exchanging data for linkage across different organizations. Privacypreserving record linkage (PPRL) aims to address this problem by identifying and linking records that correspond to the same real-world entity across several data sources held by different parties without revealing any sensitive information about these entities. PPRL is increasingly being required in many real-world application areas. Examples range from public health surveillance to crime and fraud detection, and national security. PPRL for Big Data poses several challenges, with the three major ones being (1) scalability to multiple large databases, due to their massive volume and the flow of data within Big Data applications, (2) achieving high quality results of the linkage in the presence of variety and veracity of Big Data, and (3) preserving privacy and confidentiality of the entities represented in Big Data collections. In this chapter, we describe the challenges of PPRL in the context of Big Data, survey existing techniques for PPRL, and provide directions for future research.},
+author = {Vatsalan, Dinusha and Sehili, Ziad and Christen, Peter and Rahm, Erhard},
+doi = {10.1007/978-3-319-49340-4_25},
+file = {:home/eferos93/Downloads/01_Vatsalan_Privacy-Preserving_Record_2017.pdf:pdf},
+isbn = {9783319493404},
+journal = {Handbook of Big Data Technologies},
+keywords = {Big data,Privacy,Record linkage,Scalability},
+pages = {851--895},
+title = {{Privacy-preserving record linkage for big data: Current approaches and research challenges}},
+year = {2017}
+}
+
+@article{Saleem2009,
+author = {Saleem, Khalid},
+file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Saleem - 2009 - Schema Matching and Integration in Large Scale Scenarios.pdf:pdf},
+title = {{Schema Matching and Integration in Large Scale Scenarios}},
+year = {2009}
+}
+
+@article{Riedel2013,
+abstract = {Traditional relation extraction predicts relations within some fixed and finite target schema. Machine learning approaches to this task require either manual annotation or, in the case of distant supervision, existing structured sources of the same schema. The need for existing datasets can be avoided by using a universal schema: the union of all involved schemas (surface form predicates as in OpenIE, and relations in the schemas of preexisting databases). This schema has an almost unlimited set of relations (due to surface forms), and supports integration with existing structured data (through the relation types of existing databases). To populate a database of such schema we present matrix factorization models that learn latent feature vectors for entity tuples and relations. We show that such latent models achieve substantially higher accuracy than a traditional classification approach. More importantly, by operating simultaneously on relations observed in text and in pre-existing structured DBs such as Freebase, we are able to reason about unstructured and structured data in mutually-supporting ways. By doing so our approach outperforms stateof- the-Art distant supervision.},
+author = {Riedel, Sebastian and Yao, Limin and McCallum, Andrew and Marlin, Benjamin M.},
+file = {:home/eferos93/Downloads/N13-1008.pdf:pdf},
+isbn = {9781937284473},
+journal = {NAACL HLT 2013 - 2013 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Proceedings of the Main Conference},
+number = {June},
+pages = {74--84},
+title = {{Relation extraction with matrix factorization and universal schemas}},
+year = {2013}
+}
+
+@article{Rodrigues2021,
+abstract = {Schema matching is the problem of finding semantic correspondences between elements from different schemas. This is a challenging problem since disparate elements in the schemas often represent the same concept. Traditional instances of this problem involved a pair of schemas. However, recently, there has been an increasing interest in matching several related schemas at once, a problem known as schema matching networks. The goal is to identify elements from several schemas that correspond to a single concept. We propose a family of methods for schema matching networks based on machine learning, which proved to be a competitive alternative for the traditional matching problem in several domains. To overcome the issue of requiring a large amount of training data, we also propose a bootstrapping procedure to generate training data automatically. In addition, we leverage constraints that arise in network scenarios to improve the quality of this data. We also study a strategy for receiving user feedback to assert some of the matchings generated and, relying on this feedback, improve the final result's quality. Our experiments show that our methods can outperform baselines, reaching F1-score up to 0.83.},
+author = {Rodrigues, Diego and da Silva, Altigran},
+doi = {10.1186/s13173-021-00119-5},
+file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Rodrigues, Silva - 2021 - A study on machine learning techniques for the schema matching network problem.pdf:pdf},
+issn = {16784804},
+journal = {Journal of the Brazilian Computer Society},
+number = {1},
+publisher = {Journal of the Brazilian Computer Society},
+title = {{A study on machine learning techniques for the schema matching network problem}},
+volume = {27},
+year = {2021}
+}
+
+
+@article{Cruz2007,
+author = {Cruz, Isabel F. and Tamassia, Roberto and Yao, Danfeng},
+doi = {10.1007/978-3-540-73538-0_7},
+file = {:home/eferos93/Downloads/Cruz2007_Chapter_Privacy-PreservingSchemaMatchi.pdf:pdf},
+isbn = {9783540735335},
+issn = {16113349},
+journal = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
+pages = {93--94},
+title = {{Privacy-preserving schema matching using mutual information}},
+volume = {4602 LNCS},
+year = {2007}
+}
+
+@article{Nobrega2021,
+abstract = {Privacy-Preserving Record Linkage (PPRL) intends to integrate private data from several data sources held by different parties. Due to recent laws and regulations (e.g, General Data Protection Regulation), PPRL approaches are increasingly demanded in real-world application areas such as health-care, credit analysis, public policy evaluation, and national security. However, the majority of the PPRL approaches consider an unrealistic adversary model, particularly the Honest but Curious (HBC) model, which assumes that all PPRL parties will follow a pre-agreed data integration protocol, and will not try to break the confidentiality of the data handled during the process. The HBC model is hard to employ in real-world applications, mainly because of the need to trust other parties fully. To overcome the limitations associated with the majority of the adversary models considered by PPRL approaches, we propose a protocol that considers covert adversaries, i.e., adversaries that may deviate arbitrarily from the protocol specification in an attempt to cheat. In such protocol, however, the honest parties are able to detect this misbehavior with a high probability. To provide a proof-of-concept implementation of this protocol, we employ the Blockchain technology and propose an improvement in the most used anonymization technique for PPRL, the Bloom Filter. The evaluation carried out using several real-world data sources has demonstrated the effectiveness (linkage quality) obtained by our contributions, as well as the ability to detect the misbehavior of a malicious adversary during the PPRL execution.},
+author = {Nobrega, Thiago and Pires, Carlos Eduardo S. and Nascimento, Dimas Cassimiro},
+doi = {10.1016/j.is.2021.101826},
+file = {:home/eferos93/Downloads/1-s2.0-S0306437921000661-main.pdf:pdf},
+issn = {03064379},
+journal = {Information Systems},
+keywords = {Blockchain,Bloom Filter,Data privacy,Entity resolution,Privacy preserving entity resolution},
+pages = {101826},
+publisher = {Elsevier Ltd.},
+title = {{Blockchain-based Privacy-Preserving Record Linkage: enhancing data privacy in an untrusted environment}},
+url = {https://doi.org/10.1016/j.is.2021.101826},
+volume = {102},
+year = {2021}
+}
