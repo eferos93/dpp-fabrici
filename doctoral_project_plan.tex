@@ -70,10 +70,10 @@ Thesis Title \\ First Name Last Name \\
 
 %Please make sure that a proper scientific conduct is demonstrated throughout the DPP, TPR, and RPR. For guidelines see, for example, the European Code of Conduct for Research Integrity\footnote{\url{http://www.esf.org/fileadmin/Public_documents/Publications/Code_Conduct_ResearchIntegrity.pdf}}, the Singapore Statement\footnote{\url{http://www.singaporestatement.org/}}, and similar sources.
 
-\subsection*{Section 1. Project Summary}
+\section{Project Summary}
 The term Big Data refers to data sets that are too large or complex to be dealt with by traditional data processing software. 
 In particular, Big Data captures to 4 dimensions: Velocity, Variety, Veracity, and Volume. This large quantity of data available nowadays has 
-a lot of statistical and business value, therefore their analysis is of core importance for business decision making.
+a lot of statistical and business value, therefore their analysis is of core importance for business decision-making.
 
 Data Integration is the set of processes to gather and bridge data from heterogeneous sources together in order to 
 have a unified view. The premise of data integration is to make data more freely available and easier 
@@ -97,85 +97,73 @@ and vice-versa. An evolving branch of Machine Learning is Federated Learning, wh
 
 %A short (maximum 400 words) summary in layman's terms describing in a preliminary manner key motivation, significance, methodology, and expected outcome of the doctorate study. A reader of the local newspaper should be able to understand the summary.
 
-\begin{shaded}
-\noindent
-\emph{TPR: An updated version of the summary, concretising key motivation, significance, methodology, and expected outcome of the doctorate study.}
+%\begin{shaded}
+%\noindent
+%\emph{TPR: An updated version of the summary, concretising key motivation, significance, methodology, and expected outcome of the doctorate study.}
 
-\noindent
-\emph{RPR: An updated version of the summary, refining key motivation, significance, methodology, and reporting the hitherto outcome of the doctorate study.}
-\end{shaded}
+%\noindent
+%\emph{RPR: An updated version of the summary, refining key motivation, significance, methodology, and reporting the hitherto outcome of the doctorate study.}
+%\end{shaded}
 
-\subsection*{Section 2. Scientific Content of the Doctorate Project}
-
+\section{Scientific Content of the Doctorate Project}
+\subsection{Background}
+\subsubsection{Data Integration}
+Data Integration (DI) is the practice of consolidating data from disparate sources into a unified view. It has been studied since the birth relational databases. 
+It is characterized by three main steps: 
 \begin{enumerate}
-\item The background for the project problem should be described (maximum 300 words).
-\item An introduction stating the state of the art for the doctorate project. The introduction should include key references listed under Section 7. Typically, at least 10-15 references to peer-reviewed scientific material are expected. In case it is necessary to refer to non-peer-reviewed material then use a footnote (or parenthesis) to provide information to the source. Explain the relevance of the present doctorate project so the scientific contribution will be evident -- i.e., explain how the project advances current state-of-the-art. Scientific challenges should be clearly defined -- do not mistake this for technological challenges.
-
-\begin{shaded}
-\noindent
-\emph{TPR: The state of the art for the doctorate project must be updated including use of the most essential references (list references under Section 7).}
-
-\noindent
-\emph{RPR: The state of the art for the doctorate project must be updated including use of the most essential references (list references under Section 7). The relevance of the project results achieved so far should be reported and how they advance the current state-of-the-art.}
-\end{shaded}
-
-\item Statement of the project's objectives. This could be formulated as a hypothesis and/or research questions if applicable.
-
-\begin{shaded}
-\emph{TPR: Updated statement of the project's objectives followed by a formulation of the specific problem(s) that is(are) to be addressed in the study. The problem(s) could be stated as one (or more) scientific hypothesis, if relevant, that is (are) to be examined.}
-
-\emph{RPR: The final statement of the project's objectives must be specified, followed by a formulation of the specific problem(s) addressed in the study.}
-\end{shaded}
-
-\item Key methods. Coverage of the methodological needs, identification of means of meeting these needs, and the methodological design. The coverage should include techniques for evaluating or assessing the outcome of the project (e.g. empirical studies and/or theoretical studies).
-
-\begin{shaded}
-\emph{TPR: Update the preliminary key methods, planned for the doctorate project.}
-
-\emph{RPR: Report the final key methods used for the doctorate project.}
-\end{shaded}
-
-\item Potential significance and application(s) of the project's expected outcome, possibly including methodological contributions.
-
-\begin{shaded}
-\emph{TPR: Experiences and results obtained so far in the project followed by the expected outcome of the entire doctorate project. What is the potential significance of this expected outcome, possibly including methodological contributions.}
-
-\emph{RPR: Report on the experiences and results obtained in the doctorate project, as well as the expected ones.}
-\end{shaded}
-
-\item Work and time plans including measurable milestones (project milestones and deadlines for expected publications for each 6-month period, or finer).
-A practice is recommended where results are documented and submitted for publication in peer-reviewed outlets throughout the project.
-
-The planned timing for the stays at the host institution should be given. In addition to this, the plans for mobility to a partner organisation (secondment) should be stated.
-
-\begin{shaded}
-\emph{TPR: An updated time schedule for the entire project must be included. It is recommended that a number of subproject activities are identified that can be associated with milestones, so that there are milestones (at least) each six months during the project. Remember to allocate time for preparing scientific publications (conference papers, journal paper, etc.). Indicate deadlines for the expected publications. These milestones will allow the doctorate candidate and co-supervisor(s) to assess the status of the project each six months and to revise the plan if needed. The specific activities described in the time plan must be of such detail that it is clear what should be carried out.}
-
-\emph{RPR: Report on the fulfilment of the planned activities, and concrete time schedule until the finalising of the thesis.}
-\end{shaded}
-
-\item Outline of the content of the thesis.
-
-\begin{shaded}
-\emph{TPR: This description could be organised by means of an overall table of contents.}
-
-\emph{RPR: The final, refined outline of the thesis.}
-\end{shaded}
-
-\item
-Outline the publication strategy for the project.
-Tentative titles (or expected subjects) on papers, including preliminary authors list (indicate who has the primary responsibility for the publication). Three international peer-reviewed publications should be planned, at least.
-
-\begin{shaded}
-\emph{TPR:
-For each publication, the following should be indicated or estimated: working title, co-authors, length in pages, outlet (e.g. a named conference or journal), and approximate time of submission. Indicate who has the primary responsibility for the publication. 
-% At least one publication in a journal indexed in Web of Science. % or in Scopus is mandatory. % (use the ISI service at \url{http://apps.isiknowledge.com/}).
-}
-
-\emph{RPR: The list of publications, published and/or accepted as part of the doctorate project should be reported, together with the ongoing and planned ones.}
-\end{shaded}
-
+   \item \textbf{Schema alignment}, a process that takes as input a set of different schemas on the same domain an outputs a \textit{mediated schema}, an \textit{attribute matching} and a \textit{schema mapping} \cite*{Dong2013}.
+   \item \textbf{Record linkage}, also referred as entity resolution, computes a partitioning of the set of records from different datasets, such that each partition identifies the records that refer to a distinct entity.
+   \item \textbf{Data fusion} aim is to identify which are the best records to represent a specific entity, when a source provide conflicting values.
 \end{enumerate}
+
+%\begin{enumerate}
+%\item The background for the project problem should be described (maximum 300 words).
+%\item An introduction stating the state of the art for the doctorate project. The introduction should include key references listed under Section 7. Typically, at least 10-15 references to peer-reviewed scientific material are expected. In case it is necessary to refer to non-peer-reviewed material then use a footnote (or parenthesis) to provide information to the source. Explain the relevance of the present doctorate project so the scientific contribution will be evident -- i.e., explain how the project advances current state-of-the-art. Scientific challenges should be clearly defined -- do not mistake this for technological challenges.
+\subsubsection{Federated Learning}
+Federated Learning is a machine learning approach where a model is trained across multiple decentralized edge-devices, in an edge computing fashion. Each device trains a local model and then, 
+either in a centralized, decentralized or heterogeneous approach, build a global model. It differs from a distributed machine learning as the data is not expected to be identically distributed.
+Besides the advantage of having a distributed computation, guaranteeing more efficiency, it gained a lot of popularity due to the fact that data is not exchanged between the parts involved, thus guaranteeing privacy.
+
+It has gained a lot of popularity both in research and industry, in particular in transportation \cite*{Elbir2020}, Industry 4.0 \cite*{Shubyn2022} and digital health \cite*{Prayitno2021}.
+\subsubsection{Differential Privacy \& Synopses for Big Data}
+Differential Privacy (DP) is a technique for sharing datasets' information without compromising the privacy of the individuals. The idea is to add noise to the data such that the new distribution is close 
+to the real one, but not equal. 
+
+Synopses or summaries are a set of technique and probabilistic data structures to compute compact description of big datasets. They gained a lot of popularity over the last decade due to the rise of Big Data.
+
+\subsection{State of the Art}
+\subsubsection{Privacy-aware Data Integration in the Big Data Era}
+Privacy in the context of data management has gained a lot of popularity over the last decade, as public awareness about issues in management sensitive data increased. Due two this,
+privacy became of central importance in the field of Big Data Management, analytics and processing.
+
+In the particular case of Data Integration, privacy-preserving techniques
+has been used extensively in literature, especially for record linkage. In particular, differentially-private record linkage and cryptography has
+been used extensively \cite{Khurram2020,Vatsalan2017, Clifton, Kuzu2013, Gkoulalas-Divanis2021,Nobrega2021}.
+
+%\item Statement of the project's objectives. This could be formulated as a hypothesis and/or research questions if applicable.
+
+%\item Key methods. Coverage of the methodological needs, identification of means of meeting these needs, and the methodological design. The coverage should include techniques for evaluating or assessing the outcome of the project (e.g. empirical studies and/or theoretical studies).
+
+
+%\item Potential significance and application(s) of the project's expected outcome, possibly including methodological contributions.
+
+%\item Work and time plans including measurable milestones (project milestones and deadlines for expected publications for each 6-month period, or finer).
+%A practice is recommended where results are documented and submitted for publication in peer-reviewed outlets throughout the project.
+
+%The planned timing for the stays at the host institution should be given. In addition to this, the plans for mobility to a partner organisation (secondment) should be stated.
+
+
+%\item Outline of the content of the thesis.
+
+%\item
+%Outline the publication strategy for the project.
+%Tentative titles (or expected subjects) on papers, including preliminary authors list (indicate who has the primary responsibility for the publication). Three international peer-reviewed publications should be planned, at least.
+
+
+%\emph{RPR: The list of publications, published and/or accepted as part of the doctorate project should be reported, together with the ongoing and planned ones.}
+%\end{shaded}
+
+%\end{enumerate}
 
 \subsection*{Section 3. Co-supervisors/Candidate Co-operation Agreements}
 The project will be carried out in three years during which the PhD student will stay in one research institution and one university. During the first and the third year, the candidate will work in Athena Research Center (ARC) under the supervision of Prof. Minos Garofalakis (ARC). During the second year, the program
