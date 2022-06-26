@@ -19,7 +19,6 @@ publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
 url = {https://doi.org/10.1145/582095.582127},
 doi = {10.1145/582095.582127},
-abstract = {One approach to the design of a logical model for an integrated database requires each potential user or application to specify its view as a data model. An integration phase follows, where these user data models are integrated into a global database model. We address the problem of view integration when user data models are expressed using the structural model [Wi77, WE79].The structural model is built from relations in Boyce-Codd normal form [Co74]. A basic set of integrity assertions is implicit in the model. The integrity assertions are defined by classification of relations into types, and are represented by connections between relations. We will show how to integrate different representations of two related real-world entity classes.},
 booktitle = {Proceedings of the 1979 ACM SIGMOD International Conference on Management of Data},
 pages = {191–202},
 numpages = {12},
@@ -29,7 +28,6 @@ series = {SIGMOD '79}
 }
 
 @article{Dong2013,
-abstract = {The Big Data era is upon us: data is being generated, collected and analyzed at an unprecedented scale, and data-driven decision making is sweeping through all aspects of society. Since the value of data explodes when it can be linked and fused with other data, addressing the big data integration (BDI) challenge is critical to realizing the promise of Big Data. BDI differs from traditional data integration in many dimensions: (i) the number of data sources, even for a single domain, has grown to be in the tens of thousands, (ii) many of the data sources are very dynamic, as a huge amount of newly collected data are continuously made available, (iii) the data sources are extremely heterogeneous in their structure, with considerable variety even for substantially similar entities, and (iv) the data sources are of widely differing qualities, with significant differences in the coverage, accuracy and timeliness of data provided. This seminar explores the progress that has been made by the data integration community on the topics of schema mapping, record linkage and data fusion in addressing these novel challenges faced by big data integration, and identifies a range of open problems for the community. {\textcopyright} 2013 IEEE.},
 author = {Dong, Xin Luna and Srivastava, Divesh},
 doi = {10.1109/ICDE.2013.6544914},
 file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Dong, Srivastava - 2013 - Big data integration.pdf:pdf},
@@ -54,10 +52,8 @@ year = {2013}
 }
 
 @article{Cormode2011,
-abstract = {Methods for Approximate Query Processing (AQP) are essential for dealing with massive data. They are often the only means of providing interactive response times when exploring massive datasets, and are also needed to handle high speed data streams. These methods proceed by computing a lossy, compact synopsis of the data, and then executing the query of interest against the synopsis rather than the entire dataset. We describe basic principles and recent developments in AQP. We focus on four key synopses: random samples, histograms, wavelets, and sketches. We consider issues such as accuracy, space and time efficiency, optimality, practicality, range of applicability, error bounds on query answers, and incremental maintenance.We also discuss the tradeoffs between the different synopsis types. {\textcopyright} 2012 G. Cormode, M. Garofalakis, P. J. Haas and C. Jermaine.},
 author = {Cormode, Graham and Garofalakis, Minos and Haas, Peter J. and Jermaine, Chris},
 doi = {10.1561/1900000004},
-file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Cormode et al. - 2011 - Synopses for massive data Samples, histograms, wavelets, sketches.pdf:pdf},
 issn = {19317883},
 journal = {Foundations and Trends in Databases},
 number = {1-3},
@@ -69,12 +65,10 @@ year = {2011}
 
 
 @article{Gribonval2020,
-abstract = {This article considers "compressive learning," an approach to large-scale machine learning where datasets are massively compressed before learning (e.g., clustering, classification, or regression) is performed. In particular, a "sketch" is first constructed by computing carefully chosen nonlinear random features (e.g., random Fourier features) and averaging them over the whole dataset. Parameters are then learned from the sketch, without access to the original dataset. This article surveys the current state-of-the-art in compressive learning, including the main concepts and algorithms, their connections with established signal-processing methods, existing theoretical guarantees -- on both information preservation and privacy preservation, and important open problems.},
 archivePrefix = {arXiv},
 arxivId = {2008.01839},
 author = {Gribonval, R{\'{e}}mi and Chatalic, Antoine and Keriven, Nicolas and Schellekens, Vincent and Jacques, Laurent and Schniter, Philip},
 eprint = {2008.01839},
-file = {:home/eferos93/Downloads/2008.01839.pdf:pdf},
 pages = {1--35},
 title = {{Sketching Datasets for Large-Scale Learning (long version)}},
 url = {http://arxiv.org/abs/2008.01839},
@@ -82,12 +76,10 @@ year = {2020}
 }
 
 @article{Antonanzas2021,
-abstract = {Time series data can be subject to changes in the underlying process that generates them and, because of these changes, models built on old samples can become obsolete or perform poorly. In this work, we present a way to incorporate information about the current data distribution and its evolution across time into machine learning algorithms. Our solution is based on efficiently maintaining statistics, particularly the mean and the variance, of data features at different time resolutions. These data summarisations can be performed over the input attributes, in which case they can then be fed into the model as additional input features, or over latent representations learned by models, such as those of Recurrent Neural Networks. In classification tasks, the proposed techniques can significantly outperform the prediction capabilities of equivalent architectures with no feature / latent summarisations. Furthermore, these modifications do not introduce notable computational and memory overhead when properly adjusted.},
 archivePrefix = {arXiv},
 arxivId = {2108.11923},
 author = {Antonanzas, Jesus and Arias, Marta and Bifet, Albert},
 eprint = {2108.11923},
-file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Antonanzas, Arias, Bifet - 2021 - Sketches for Time-Dependent Machine Learning(2).pdf:pdf},
 keywords = {machine learning,recurrent neural networks,stream processing,time series analysis},
 number = {1},
 pages = {1--9},
@@ -101,7 +93,6 @@ year = {2021}
 abstract = {To address the challenge of explosive big data, distributed machine learning (ML) has drawn the interests of many researchers. Since many distributed ML algorithms trained by stochastic gradient descent (SGD) involve communicating gradients through the network, it is important to compress the transferred gradient. A category of low-precision algorithms can significantly reduce the size of gradients, at the expense of some precision loss. However, existing low-precision methods are not suitable for many cases where the gradients are sparse and nonuniformly distributed. In this paper, we study is there a compression method that can efficiently handle a sparse and nonuniform gradient consisting of key-value pairs? Our first contribution is a sketch based method that compresses the gradient values. Sketch is a class of algorithms using a probabilistic data structure to approximate the distribution of input data. We design a quantile-bucket quantification method that uses a quantile sketch to sort gradient values into buckets and encodes them with the bucket indexes. To further compress the bucket indexes, our second contribution is a sketch algorithm, namely MinMaxSketch. MinMaxSketch builds a set of hash tables and solves hash collisions with a MinMax strategy. The third contribution of this paper is a delta-binary encoding method that calculates the increment of the gradient keys and stores them with fewer bytes. We also theoretically discuss the correctness and the error bound of three proposed methods. To the best of our knowledge, this is the first effort combining data sketch with ML. We implement a prototype system in a real cluster of our industrial partner Tencent Inc., and show that our method is up to 10× faster than existing methods.},
 author = {Jiang, Jiawei and Fu, Fangcheng and Yang, Tong and Cui, Bin},
 doi = {10.1145/3183713.3196894},
-file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Jiang et al. - 2018 - SketchML Accelerating distributed machine learning with data sketches.pdf:pdf},
 isbn = {9781450317436},
 issn = {07308078},
 journal = {Proceedings of the ACM SIGMOD International Conference on Management of Data},
@@ -353,7 +344,6 @@ year = {2017}
 }
 
 @article{Groce2019,
-abstract = {In this work we demonstrate that allowing differentially private leakage can significantly improve the concrete performance of secure 2-party computation (2PC) protocols. Specifically, we focus on the private set intersection (PSI) protocol of Rindal and Rosulek (CCS 2017), which is the fastest PSI protocol with security against malicious participants. We show that if differentially private leakage is allowed, the cost of the protocol can be reduced by up to 63%, depending on the desired level of differential privacy. On the technical side, we introduce a security model for differentially-private leakage in malicious-secure 2PC. We also introduce two new and improved mechanisms for “differentially private histogram overestimates,” the main technical challenge for differentially-private PSI.},
 author = {Groce, Adam and Rindal, Peter and Rosulek, Mike},
 doi = {10.2478/popets-2019-0034},
 file = {:home/eferos93/Downloads/10112292.pdf:pdf},
@@ -366,7 +356,6 @@ year = {2019}
 }
 
 @article{Vatsalan2017,
-abstract = {The growth o fBig Data, especially personal data dispersed in multiple data sources, presents enormous opportunities and insights for businesses to explore and leverage the value of linked and integrated data. However, privacy concerns impede sharing or exchanging data for linkage across different organizations. Privacypreserving record linkage (PPRL) aims to address this problem by identifying and linking records that correspond to the same real-world entity across several data sources held by different parties without revealing any sensitive information about these entities. PPRL is increasingly being required in many real-world application areas. Examples range from public health surveillance to crime and fraud detection, and national security. PPRL for Big Data poses several challenges, with the three major ones being (1) scalability to multiple large databases, due to their massive volume and the flow of data within Big Data applications, (2) achieving high quality results of the linkage in the presence of variety and veracity of Big Data, and (3) preserving privacy and confidentiality of the entities represented in Big Data collections. In this chapter, we describe the challenges of PPRL in the context of Big Data, survey existing techniques for PPRL, and provide directions for future research.},
 author = {Vatsalan, Dinusha and Sehili, Ziad and Christen, Peter and Rahm, Erhard},
 doi = {10.1007/978-3-319-49340-4_25},
 file = {:home/eferos93/Downloads/01_Vatsalan_Privacy-Preserving_Record_2017.pdf:pdf},
@@ -386,7 +375,6 @@ year = {2009}
 }
 
 @article{Riedel2013,
-abstract = {Traditional relation extraction predicts relations within some fixed and finite target schema. Machine learning approaches to this task require either manual annotation or, in the case of distant supervision, existing structured sources of the same schema. The need for existing datasets can be avoided by using a universal schema: the union of all involved schemas (surface form predicates as in OpenIE, and relations in the schemas of preexisting databases). This schema has an almost unlimited set of relations (due to surface forms), and supports integration with existing structured data (through the relation types of existing databases). To populate a database of such schema we present matrix factorization models that learn latent feature vectors for entity tuples and relations. We show that such latent models achieve substantially higher accuracy than a traditional classification approach. More importantly, by operating simultaneously on relations observed in text and in pre-existing structured DBs such as Freebase, we are able to reason about unstructured and structured data in mutually-supporting ways. By doing so our approach outperforms stateof- the-Art distant supervision.},
 author = {Riedel, Sebastian and Yao, Limin and McCallum, Andrew and Marlin, Benjamin M.},
 file = {:home/eferos93/Downloads/N13-1008.pdf:pdf},
 isbn = {9781937284473},
@@ -398,7 +386,6 @@ year = {2013}
 }
 
 @article{Rodrigues2021,
-abstract = {Schema matching is the problem of finding semantic correspondences between elements from different schemas. This is a challenging problem since disparate elements in the schemas often represent the same concept. Traditional instances of this problem involved a pair of schemas. However, recently, there has been an increasing interest in matching several related schemas at once, a problem known as schema matching networks. The goal is to identify elements from several schemas that correspond to a single concept. We propose a family of methods for schema matching networks based on machine learning, which proved to be a competitive alternative for the traditional matching problem in several domains. To overcome the issue of requiring a large amount of training data, we also propose a bootstrapping procedure to generate training data automatically. In addition, we leverage constraints that arise in network scenarios to improve the quality of this data. We also study a strategy for receiving user feedback to assert some of the matchings generated and, relying on this feedback, improve the final result's quality. Our experiments show that our methods can outperform baselines, reaching F1-score up to 0.83.},
 author = {Rodrigues, Diego and da Silva, Altigran},
 doi = {10.1186/s13173-021-00119-5},
 file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Rodrigues, Silva - 2021 - A study on machine learning techniques for the schema matching network problem.pdf:pdf},
@@ -426,7 +413,6 @@ year = {2007}
 }
 
 @article{Nobrega2021,
-abstract = {Privacy-Preserving Record Linkage (PPRL) intends to integrate private data from several data sources held by different parties. Due to recent laws and regulations (e.g, General Data Protection Regulation), PPRL approaches are increasingly demanded in real-world application areas such as health-care, credit analysis, public policy evaluation, and national security. However, the majority of the PPRL approaches consider an unrealistic adversary model, particularly the Honest but Curious (HBC) model, which assumes that all PPRL parties will follow a pre-agreed data integration protocol, and will not try to break the confidentiality of the data handled during the process. The HBC model is hard to employ in real-world applications, mainly because of the need to trust other parties fully. To overcome the limitations associated with the majority of the adversary models considered by PPRL approaches, we propose a protocol that considers covert adversaries, i.e., adversaries that may deviate arbitrarily from the protocol specification in an attempt to cheat. In such protocol, however, the honest parties are able to detect this misbehavior with a high probability. To provide a proof-of-concept implementation of this protocol, we employ the Blockchain technology and propose an improvement in the most used anonymization technique for PPRL, the Bloom Filter. The evaluation carried out using several real-world data sources has demonstrated the effectiveness (linkage quality) obtained by our contributions, as well as the ability to detect the misbehavior of a malicious adversary during the PPRL execution.},
 author = {Nobrega, Thiago and Pires, Carlos Eduardo S. and Nascimento, Dimas Cassimiro},
 doi = {10.1016/j.is.2021.101826},
 file = {:home/eferos93/Downloads/1-s2.0-S0306437921000661-main.pdf:pdf},
