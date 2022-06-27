@@ -143,12 +143,23 @@ As regards schema matching and data fusion, there are fewer works on guaranteein
 both rule-based and learning-based approaches \cite*{Rodrigues2021,Riedel2013,Saleem2009}.
 
 
-\paragraph{Schema matching}
+\paragraph{Schema matching.}
+Original schema matching techniques can be categorized as it follows:
+\begin{itemize}
+   \item \textbf{Schema-level matchers}, where only the metadata is considered (e.g. column labels, data-types).
+   \item \textbf{Content-level matchers}, where the content of the columns is used for matching by using probabilistic approaches \cite*{Szymczak2016,Dasu2002}.
+   \item \textbf{Hybrid matchers} that combine the two matchers just described.
+\end{itemize}
 
-\paragraph{Record linkage}
+In schema matching the problem of \textit{volume} does not take place, namely there is no need to increase computational performance, rather 
+exploring new techniques for having more precise matchers could be necessary. Nevertheless, the availability of big data, brought recent 
+research towards \textbf{learning-based} matchers, where pre-existing mappings are used to train machine learning algorithms that 
 
 
-Up to 2017, a lot of protocols proposed for secure two-party private record linkage were not able to meet the following three requirements altogether: (1) \textbf{full end-to-end privacy}, 
+
+\paragraph{Record linkage.}
+
+Up to 2017, a lot of Privacy-Preserving Record Linkage (PPRL) protocols proposed for secure two-party private record linkage were not able to meet the following three requirements altogether: (1) \textbf{full end-to-end privacy}, 
 (2) \textbf{perfect precision and recall} for the matching records and (3) \textbf{sub-quadratic computational complexity} \cite*{He2017}. 
 After \cite*{He2017} pointed out this problem, new approaches were proposed and resulted in meeting all the three requirements described above \cite*{Groce2019}, 
 but still limited to certain adversarial models, that do not match well with real world scenarios (e.g. \textit{honest-but-curious}), 
@@ -158,7 +169,7 @@ Although there have been many prior works that looked
 into different security and privacy aspects of PPRL, there still remain major challenges that need to be addressed. 
 As a starting point, more research is needed to understand membership inference and attribute inference attacks on PPRL techniques.
 For example, a malicious party may create many random records with the intent of matching with the other parties' actual records \cite*{Gkoulalas-Divanis2021}. 
-To tackle this problem, blockchain technologies could be used \cite*{Nobrega2021}.
+To tackle this problem, blockchain technologies are recently being proposed in literature \cite*{Nobrega2021}.
 
 
 
