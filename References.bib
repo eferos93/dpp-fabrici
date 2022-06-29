@@ -90,7 +90,6 @@ year = {2021}
 
 
 @article{Jiang2018,
-abstract = {To address the challenge of explosive big data, distributed machine learning (ML) has drawn the interests of many researchers. Since many distributed ML algorithms trained by stochastic gradient descent (SGD) involve communicating gradients through the network, it is important to compress the transferred gradient. A category of low-precision algorithms can significantly reduce the size of gradients, at the expense of some precision loss. However, existing low-precision methods are not suitable for many cases where the gradients are sparse and nonuniformly distributed. In this paper, we study is there a compression method that can efficiently handle a sparse and nonuniform gradient consisting of key-value pairs? Our first contribution is a sketch based method that compresses the gradient values. Sketch is a class of algorithms using a probabilistic data structure to approximate the distribution of input data. We design a quantile-bucket quantification method that uses a quantile sketch to sort gradient values into buckets and encodes them with the bucket indexes. To further compress the bucket indexes, our second contribution is a sketch algorithm, namely MinMaxSketch. MinMaxSketch builds a set of hash tables and solves hash collisions with a MinMax strategy. The third contribution of this paper is a delta-binary encoding method that calculates the increment of the gradient keys and stores them with fewer bytes. We also theoretically discuss the correctness and the error bound of three proposed methods. To the best of our knowledge, this is the first effort combining data sketch with ML. We implement a prototype system in a real cluster of our industrial partner Tencent Inc., and show that our method is up to 10× faster than existing methods.},
 author = {Jiang, Jiawei and Fu, Fangcheng and Yang, Tong and Cui, Bin},
 doi = {10.1145/3183713.3196894},
 isbn = {9781450317436},
@@ -103,7 +102,6 @@ year = {2018}
 }
 
 @article{Dwork2013,
-abstract = {The problem of privacy-preserving data analysis has a long history spanning multiple disciplines. As electronic data about individuals becomes increasingly detailed, and as technology enables ever more powerful collection and curation of these data, the need increases for a robust, meaningful, and mathematically rigorous definition of privacy, together with a computationally rich class of algorithms that satisfy this definition. Differential Privacy is such a definition. After motivating and discussing the meaning of differential privacy, the preponderance of this monograph is devoted to fundamental techniques for achieving differential privacy, and application of these techniques in creative combinations, using the query-release problem as an ongoing example. A key point is that, by rethinking the computational goal, one can often obtain far better results than would be achieved by methodically replacing each step of a non-private computation with a differentially private implementation. Despite some astonishingly powerful computational results, there are still fundamental limitations - not just on what can be achieved with differential privacy but on what can be achieved with any method that protects against a complete breakdown in privacy. Virtually all the algorithms discussed herein maintain differential privacy against adversaries of arbitrary computational power. Certain algorithms are computationally intensive, others are efficient. Computational complexity for the adversary and the algorithm are both discussed. We then turn from fundamentals to applications other than queryrelease, discussing differentially private methods for mechanism design and machine learning. The vast majority of the literature on differentially private algorithms considers a single, static, database that is subject to many analyses. Differential privacy in other models, including distributed databases and computations on data streams is discussed. Finally, we note that this work is meant as a thorough introduction to the problems and techniques of differential privacy, but is not intended to be an exhaustive survey- there is by now a vast amount of work in differential privacy, and we can cover only a small portion of it. {\textcopyright} 2014 C. Dwork and A. Roth.},
 author = {Dwork, Cynthia and Roth, Aaron},
 doi = {10.1561/0400000042},
 file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Dwork, Roth - 2013 - The algorithmic foundations of differential privacy(2).pdf:pdf},
@@ -118,7 +116,6 @@ year = {2013}
 
 
 @article{Dong2019,
-abstract = {As data volume and variety have increased, so have the ties between machine learning and data integration become stronger. For machine learning to be effective, one must utilize data from the greatest possible variety of sources; and this is why data integration plays a key role. At the same time machine learning is driving automation in data integration, resulting in overall reduction of integration costs and improved accuracy. This tutorial focuses on three aspects of the synergistic relationship between data integration and machine learning: (1) we survey how state-of-the-art data integration solutions rely on machine learning-based approaches for accurate results and effective human-in-the-loop pipelines, (2) we review how end-to-end machine learning applications rely on data integration to identify accurate, clean, and relevant data for their analytics exercises, and (3) we discuss open research challenges and opportunities that span across data integration and machine learning.},
 author = {Dong, Xin Luna and Rekatsinas, Theodoros},
 doi = {10.1145/3292500.3332296},
 file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Dong, Rekatsinas - 2019 - Data integration and machine learning A natural synergy.pdf:pdf},
@@ -168,12 +165,10 @@ year="2022",
 publisher="Springer International Publishing",
 address="Cham",
 pages="409--421",
-abstract="Intelligent production requires maximum downtime avoidance since downtimes lead to economic loss. Thus, Industry 4.0 (today's IoT-driven industrial revolution) is aimed at automated production with real-time decision-making and maximal uptime. To achieve this, new technologies such as Machine Learning (ML), Artificial Intelligence (AI), and Autonomous Guided Vehicles (AGVs) are integrated into production to optimize and automate many production processes. The increasing use of AGVs in production has far-reaching consequences for industrial communication systems. To make AGVs in production even more effective, we propose to use Federated Learning (FL) which provides a secure exchange of experience between intelligent manufacturing devices to improve prediction accuracy. We conducted research in which we exchanged experiences between the three virtual devices, and the results confirm the effectiveness of this approach in production environments.",
 isbn="978-3-031-08760-8"
 }
 
 @article{Prayitno2021,
-abstract = {Recent advances in deep learning have shown many successful stories in smart healthcare applications with data‐driven insight into improving clinical institutions' quality of care. Excellent deep learning models are heavily data‐driven. The more data trained, the more robust and more generalizable the performance of the deep learning model. However, pooling the medical data into centralized storage to train a robust deep learning model faces privacy, ownership, and strict regulation challenges. Federated learning resolves the previous challenges with a shared global deep learning model using a central aggregator server. At the same time, patient data remain with the local party, maintaining data anonymity and security. In this study, first, we provide a comprehensive, up‐to‐date review of research employing federated learning in healthcare applications. Second, we evaluate a set of recent challenges from a data‐centric perspective in federated learning, such as data partitioning characteristics, data distributions, data protection mechanisms, and benchmark datasets. Finally, we point out several potential challenges and future research directions in healthcare applications.},
 author = {Prayitno and Shyu, Chi Ren and Putra, Karisma Trinanda and Chen, Hsing Chung and Tsai, Yuan Yu and {Tozammel Hossain}, K. S.M. and Jiang, Wei and Shae, Zon Yin},
 doi = {10.3390/app112311191},
 file = {:home/eferos93/Downloads/applsci-11-11191-v2.pdf:pdf},
@@ -188,7 +183,6 @@ year = {2021}
 
 
 @article{Yan2018,
-abstract = {Item-based collaborative filtering (i.e., ICF) technique has been widely recruited to make service recommendations in the big data environment. However, the ICF technique only performs well when the data for service recommendation decision-making are stored in a physically centralized manner, while they often fail to recommend appropriate services to a target user in the distributed environment where the involved multiple parties are reluctant to release their data to each other due to privacy concerns. Considering this drawback, we improve the traditional ICF approach by integrating the locality-sensitive hashing (LSH) technique, to realize secure and reliable data publishing. Furthermore, through integrating the published data with little privacy across different platforms, appropriate services are recommended based on our suggested recommendation approach named ICFLSH. At last, simulated experiments are conducted on WS-DREAM data set. Experiment results show that ICFLSH performs better than the competitive approaches in terms of service recommendation accuracy, efficiency, and the capability of privacy-preservation.},
 author = {Yan, Chao and Cui, Xinchun and Qi, Lianyong and Xu, Xiaolong and Zhang, Xuyun},
 doi = {10.1109/ACCESS.2018.2863050},
 file = {:home/eferos93/Downloads/Privacy-Aware_Data_Publishing_and_Integration_for_Collaborative_Service_Recommendation.pdf:pdf},
@@ -204,7 +198,6 @@ year = {2018}
 
 
 @article{Khurram2020,
-abstract = {The prevalence of various (and increasingly large) datasets presents the challenging problem of discovering common entities dispersed across disparate datasets. Solutions to the private record linkage problem (PRL) aim to enable such explorations of datasets in a secure manner. A two-party PRL protocol allows two parties to determine for which entities they each possess a record (either an exact matching record or a fuzzy matching record) in their respective datasets - without revealing to one another information about any entities for which they do not both possess records. Although several solutions have been proposed to solve the PRL problem, no current solution offers a fully cryptographic security guarantee while maintaining both high accuracy of output and subquadratic runtime efficiency. To this end, we propose the first known efficient PRL protocol that runs in subquadratic time, provides high accuracy, and guarantees cryptographic security in the semi-honest security model.},
 author = {Khurram, Basit and Kerschbaum, Florian},
 doi = {10.1109/ICDE48307.2020.00031},
 file = {:home/eferos93/Downloads/SFour_A_Protocol_for_Cryptographically_Secure_Record_Linkage_at_Scale.pdf:pdf},
@@ -220,7 +213,6 @@ year = {2020}
 
 
 @article{Vatsalan2017,
-abstract = {The growth ofBig Data, especially personal data dispersed inmultiple data sources, presents enormous opportunities and insights for businesses to explore and leverage the value of linked and integrated data. However, privacy concerns impede sharing or exchanging data for linkage across different organizations. Privacypreserving record linkage (PPRL) aims to address this problem by identifying and linking records that correspond to the same real-world entity across several data sources held by different parties without revealing any sensitive information about these entities. PPRL is increasingly being required in many real-world application areas. Examples range from public health surveillance to crime and fraud detection, and national security. PPRL for Big Data poses several challenges, with the three major ones being (1) scalability to multiple large databases, due to their massive volume and the flow of data within Big Data applications, (2) achieving high quality results of the linkage in the presence of variety and veracity of Big Data, and (3) preserving privacy and confidentiality of the entities represented in Big Data collections. In this chapter, we describe the challenges of PPRL in the context of Big Data, survey existing techniques for PPRL, and provide directions for future research.},
 author = {Vatsalan, Dinusha and Sehili, Ziad and Christen, Peter and Rahm, Erhard},
 doi = {10.1007/978-3-319-49340-4_25},
 file = {:home/eferos93/Downloads/01_Vatsalan_Privacy-Preserving_Record_2017.pdf:pdf},
@@ -240,7 +232,6 @@ title = {{Privacy Preserving Data Integration and Sharing}}
 }
 
 @article{Kuzu2013,
-abstract = {The integration of information dispersed among multiple repositories is a crucial step for accurate data analysis in various domains. In support of this goal, it is critical to devise procedures for identifying similar records across distinct data sources. At the same time, to adhere to privacy regulations and policies, such procedures should protect the confidentiality of the individuals to whom the information corresponds. Various private record linkage (PRL) protocols have been proposed to achieve this goal, involving secure multi-party computation (SMC) and similarity preserving data transformation techniques. SMC methods provide secure and accurate solutions to the PRL problem, but are prohibitively expensive in practice, mainly due to excessive computational requirements. Data transformation techniques offer more practical solutions, but incur the cost of information leakage and false matches. In this paper, we introduce a novel model for practical PRL, which 1) affords controlled and limited information leakage, 2) avoids false matches resulting from data transformation. Initially, we partition the data sources into blocks to eliminate comparisons for records that are unlikely to match. Then, to identify matches, we apply an efficient SMC technique between the candidate record pairs. To enable efficiency and privacy, our model leaks a controlled amount of obfuscated data prior to the secure computations. Applied obfuscation relies on differential privacy which provides strong privacy guarantees against adversaries with arbitrary background knowledge. In addition, we illustrate the practical nature of our approach through an empirical analysis with data derived from public voter records. {\textcopyright} 2013 ACM.},
 author = {Kuzu, Mehmet and Kantarcioglu, Murat and Inan, Ali and Bertino, Elisa and Durham, Elizabeth and Malin, Bradley},
 doi = {10.1145/2452376.2452398},
 file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Kuzu et al. - 2013 - Efficient privacy-aware record integration.pdf:pdf},
@@ -254,7 +245,6 @@ year = {2013}
 
 
 @article{Gkoulalas-Divanis2021,
-abstract = {Record linkage is the challenging task of deciding which records, coming from disparate data sources, refer to the same entity. Established back in 1946 by Halbert L. Dunn, the area of record linkage has received tremendous attention over the years due to its numerous real-world applications, and has led to a plethora of technologies, methods, metrics, and systems. A major direction in record linkage regards methods for linking records in a privacy-preserving manner, where sensitive and personally identifiable information in the records is not leaked as part of the linkage process. In this article, we provide an overview of the large body of research literature in privacy-preserving record linkage, discuss the different generations of techniques that have been proposed, their advantages and limitations, and present a taxonomy as well as an extensive survey on the latest generation of methods. We conclude this work with a roadmap to the new generation of analytics-driven techniques that aims to address some of the major challenges in the field.},
 author = {Gkoulalas-Divanis, Aris and Vatsalan, Dinusha and Karapiperis, Dimitrios and Kantarcioglu, Murat},
 doi = {10.1109/TIFS.2021.3114026},
 file = {:home/eferos93/Downloads/Modern_Privacy-Preserving_Record_Linkage_Techniques_An_Overview.pdf:pdf},
@@ -270,7 +260,6 @@ year = {2021}
 
 
 @article{Nobrega2021,
-abstract = {Privacy-Preserving Record Linkage (PPRL) intends to integrate private data from several data sources held by different parties. Due to recent laws and regulations (e.g, General Data Protection Regulation), PPRL approaches are increasingly demanded in real-world application areas such as health-care, credit analysis, public policy evaluation, and national security. However, the majority of the PPRL approaches consider an unrealistic adversary model, particularly the Honest but Curious (HBC) model, which assumes that all PPRL parties will follow a pre-agreed data integration protocol, and will not try to break the confidentiality of the data handled during the process. The HBC model is hard to employ in real-world applications, mainly because of the need to trust other parties fully. To overcome the limitations associated with the majority of the adversary models considered by PPRL approaches, we propose a protocol that considers covert adversaries, i.e., adversaries that may deviate arbitrarily from the protocol specification in an attempt to cheat. In such protocol, however, the honest parties are able to detect this misbehavior with a high probability. To provide a proof-of-concept implementation of this protocol, we employ the Blockchain technology and propose an improvement in the most used anonymization technique for PPRL, the Bloom Filter. The evaluation carried out using several real-world data sources has demonstrated the effectiveness (linkage quality) obtained by our contributions, as well as the ability to detect the misbehavior of a malicious adversary during the PPRL execution.},
 author = {N{\'{o}}brega, Thiago and Pires, Carlos Eduardo S. and Nascimento, Dimas Cassimiro},
 doi = {10.1016/j.is.2021.101826},
 file = {:home/eferos93/Downloads/1-s2.0-S0306437921000661-main.pdf:pdf},
@@ -286,7 +275,6 @@ year = {2021}
 }
 
 @article{Karapiperis2021,
-abstract = {In recent years, several applications have emerged which require access to consolidated information that has to be computed and provided in near real-time. Traditional record linkage algorithms are unable to support such time-critical applications, as they perform the linkage offline and provide the result set only when the entire process has completed. To address this need, in this paper we propose the first summarization algorithms that operate in the blocking and matching steps of record linkage to speed up online linkage tasks. Our first method, called SkipBloom, efficiently summarizes the participating data sets, using their blocking keys, to allow for very fast comparisons among them. The second method, called BlockSketch, summarizes a block to achieve a constant number of comparisons for a submitted query record, during the matching phase. Our third method, SBlockSketch, operates on data streams, where the entire data set is unknown a-priori but, instead, there is a potentially unbounded stream of incoming data records. Finally, we introduce PBlockSketch, which adapts BlockSketch to privacy-preserving settings. Through extensive experimental evaluation, using real-world data sets, we show that our methods outperform the state-of-the-art algorithms for online record linkage in terms of the time needed, the memory used, and the recall and precision rates that are achieved during the linkage process. Following the evaluation of our approaches, we introduce SFEMRL, a novel framework that uses them to enable the linkage of electronic health records at large scale, while respecting patients' privacy. Under this framework, patient records first undergo a data masking process that perturbs sensitive information in data fields of the records to protect it. Subsequently, they participate in a parallel and distributed ecosystem, whose goal is to persist these records in order to be queried efficiently and accurately. We demonstrate that the integration of our framework with Map/Reduce offers robust distributed solutions for performing on-demand large-scale privacy-preserving record linkage tasks in the health domain.},
 author = {Karapiperis, Dimitrios and Gkoulalas-Divanis, Aris and Verykios, Vassilios S.},
 doi = {10.1007/s10619-019-07263-0},
 file = {:home/eferos93/Downloads/Karapiperis2021_Article_SummarizingAndLinkingElectroni.pdf:pdf},
@@ -302,7 +290,6 @@ year = {2021}
 }
 
 @article{Bonomi2012,
-abstract = {In this paper, we study the problem of privacy preserving record linkage which aims to perform record linkage without revealing anything about the non-linked records. We propose a new secure embedding strategy based on frequent variable length grams which allows record linkage on the embedded space. The frequent grams used for constructing the embedding base are mined from the original database under the framework of differential privacy. Compared with the state-of-the-art secure matching schema [15], our approach provides formal, provable privacy guarantees and achieves better scalability while providing comparable utility. {\textcopyright} 2012 ACM.},
 author = {Bonomi, Luca and Xiong, Li and Chen, Rui and Fung, Benjamin C.M.},
 doi = {10.1145/2396761.2398480},
 file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Bonomi et al. - 2012 - Frequent grams based embedding for privacy preserving record linkage.pdf:pdf},
@@ -315,7 +302,6 @@ year = {2012}
 }
 
 @article{Kuzu2013,
-abstract = {The integration of information dispersed among multiple repositories is a crucial step for accurate data analysis in various domains. In support of this goal, it is critical to devise procedures for identifying similar records across distinct data sources. At the same time, to adhere to privacy regulations and policies, such procedures should protect the confidentiality of the individuals to whom the information corresponds. Various private record linkage (PRL) protocols have been proposed to achieve this goal, involving secure multi-party computation (SMC) and similarity preserving data transformation techniques. SMC methods provide secure and accurate solutions to the PRL problem, but are prohibitively expensive in practice, mainly due to excessive computational requirements. Data transformation techniques offer more practical solutions, but incur the cost of information leakage and false matches. In this paper, we introduce a novel model for practical PRL, which 1) affords controlled and limited information leakage, 2) avoids false matches resulting from data transformation. Initially, we partition the data sources into blocks to eliminate comparisons for records that are unlikely to match. Then, to identify matches, we apply an efficient SMC technique between the candidate record pairs. To enable efficiency and privacy, our model leaks a controlled amount of obfuscated data prior to the secure computations. Applied obfuscation relies on differential privacy which provides strong privacy guarantees against adversaries with arbitrary background knowledge. In addition, we illustrate the practical nature of our approach through an empirical analysis with data derived from public voter records. {\textcopyright} 2013 ACM.},
 author = {Kuzu, Mehmet and Kantarcioglu, Murat and Inan, Ali and Bertino, Elisa and Durham, Elizabeth and Malin, Bradley},
 doi = {10.1145/2452376.2452398},
 file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Kuzu et al. - 2013 - Efficient privacy-aware record integration.pdf:pdf},
@@ -328,7 +314,6 @@ year = {2013}
 }
 
 @article{He2017,
-abstract = {Private record linkage (PRL) is the problem of identifying pairs of records that are similar as per an input matching rule from databases held by two parties that do not trust one another. We identify three key desiderata that a PRL solution must ensure: (1) perfect precision and high recall of matching pairs, (2) a proof of end-to-end privacy, and (3) communication and computational costs that scale subquadratically in the number of input records. We show that all of the existing solutions for PRL-including secure 2-party computation (S2PC), and their variants that use non-private or differentially private (DP) blocking to ensure subquadratic cost-violate at least one of the three desiderata. In particular, S2PC techniques guarantee end-to-end privacy but have either low recall or quadratic cost. In contrast, no end-to-end privacy guarantee has been formalized for solutions that achieve subquadratic cost. This is true even for solutions that compose DP and S2PC: DP does not permit the release of any exact information about the databases, while S2PC algorithms for PRL allow the release of matching records. In light of this deficiency, we propose a novel privacy model, called output constrained differential privacy, that shares the strong privacy protection of DP, but allows for the truthful release of the output of a certain function applied to the data. We apply this to PRL, and show that protocols satisfying this privacy model permit the disclosure of the true matching records, but their execution is insensitive to the presence or absence of a single non-matching record. We find that prior work that combine DP and S2PC techniques even fail to satisfy this end-to-end privacy model. Hence, we develop novel protocols that provably achieve this end-to-end privacy guarantee, together with the other two desiderata of PRL. Our empirical evaluation also shows that our protocols obtain high recall, scale near linearly in the size of the input databases and the output set of matching pairs, and have communication and computational costs that are at least 2 orders of magnitude smaller than S2PC baselines.},
 archivePrefix = {arXiv},
 arxivId = {1702.00535},
 author = {He, Xi and MacHanavajjhala, Ashwin and Flynn, Cheryl and Srivastava, Divesh},
@@ -450,7 +435,6 @@ url="https://doi.org/10.1007/978-3-319-30165-5_14"
 }
 
 @article{Dasu2002,
-abstract = {Data mining research typically assumes that the data to be analyzed has been identified, gathered, cleaned, and processed into a convenient form. While data mining tools greatly enhance the ability of the analyst to make data-driven discoveries, most of the time spent in performing an analysis is spent in data identification, gathering, cleaning and processing the data. Similarly, schema mapping tools have been developed to help automate the task of using legacy or federated data sources for a new purpose, but assume that the structure of the data sources is well understood. However the data sets to be federated may come from dozens of databases containing thousands of tables and tens of thousands of fields, with little reliable documentation about primary keys or foreign keys. We are developing a system, Bellman, which performs data mining on the structure of the database. In this paper, we present techniques for quickly identifying which fields have similar values, identifying join paths, estimating join directions and sizes, and identifying structures in the database. The results of the database structure mining allow the analyst to make sense of the database content. This information can be used to e.g., prepare data for data mining, find foreign key joins for schema mapping, or identify steps to be taken to prevent the database from collapsing under the weight of its complexity.},
 author = {Dasu, Tamraparni and Johnson, Theodore and Muthukrishnan, S. and Shkapenyuk, Vladislav},
 doi = {10.1145/564691.564719},
 file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Dasu et al. - 2002 - Mining database structure or, how to build a data quality browser.pdf:pdf},
@@ -460,4 +444,307 @@ title = {{Mining database structure; or, how to build a data quality browser}},
 year = {2002}
 }
 
+@article{Riedel2013,
+author = {Riedel, Sebastian and Yao, Limin and McCallum, Andrew and Marlin, Benjamin M.},
+file = {:home/eferos93/Downloads/N13-1008.pdf:pdf},
+isbn = {9781937284473},
+journal = {NAACL HLT 2013 - 2013 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Proceedings of the Main Conference},
+number = {June},
+pages = {74--84},
+title = {{Relation extraction with matrix factorization and universal schemas}},
+year = {2013}
+}
+
+@article{Bernstein2011,
+author = {Bernstein, Philip and Madhavan, Jayant and Rahm, Erhard},
+year = {2011},
+month = {08},
+pages = {695-701},
+title = {Generic Schema Matching, Ten Years Later},
+volume = {4},
+journal = {PVLDB},
+doi = {10.14778/3402707.3402710}
+}
+
+
+@article{Pimplikar2012,
+	doi = {10.14778/2336664.2336665},
+  
+	url = {https://doi.org/10.14778%2F2336664.2336665},
+  
+	year = 2012,
+	month = {jun},
+  
+	publisher = {{VLDB} Endowment},
+  
+	volume = {5},
+  
+	number = {10},
+  
+	pages = {908--919},
+  
+	author = {Rakesh Pimplikar and Sunita Sarawagi},
+  
+	title = {Answering table queries on the web using column keywords},
+  
+	journal = {Proceedings of the {VLDB} Endowment}
+}
+
+@misc{Das2016,
+  doi = {10.48550/ARXIV.1607.01426},
+  
+  url = {https://arxiv.org/abs/1607.01426},
+  
+  author = {Das, Rajarshi and Neelakantan, Arvind and Belanger, David and McCallum, Andrew},
+  
+  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Chains of Reasoning over Entities, Relations, and Text using Recurrent Neural Networks},
+  
+  publisher = {arXiv},
+  
+  year = {2016},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
+@misc{Nee2015,
+  doi = {10.48550/ARXIV.1504.06662},
+  
+  url = {https://arxiv.org/abs/1504.06662},
+  
+  author = {Neelakantan, Arvind and Roth, Benjamin and McCallum, Andrew},
+  
+  keywords = {Computation and Language (cs.CL), Machine Learning (stat.ML), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Compositional Vector Space Models for Knowledge Base Completion},
+  
+  publisher = {arXiv},
+  
+  year = {2015},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
+
+@article{Gal2011,
+author = {Galhardas, Helena and Florescu, Daniela and Shasha, Dennis and Simon, Eric and Saita, Cristian-augustin},
+year = {2001},
+month = {07},
+pages = {},
+title = {Declarative Data Cleaning: Language, Model, and Algorithms},
+journal = {VLDB}
+}
+
+@article{Hass2009,
+author = {Hassanzadeh, Oktie and Chiang, Fei and Lee, Hyun Chul and Miller, Ren\'{e}e J.},
+title = {Framework for Evaluating Clustering Algorithms in Duplicate Detection},
+year = {2009},
+issue_date = {August 2009},
+publisher = {VLDB Endowment},
+volume = {2},
+number = {1},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/1687627.1687771},
+doi = {10.14778/1687627.1687771},
+journal = {Proc. VLDB Endow.},
+month = {aug},
+pages = {1282–1293},
+numpages = {12}
+}
+
+@article{Kop2010,
+author = {K\"{o}pcke, Hanna and Thor, Andreas and Rahm, Erhard},
+title = {Evaluation of Entity Resolution Approaches on Real-World Match Problems},
+year = {2010},
+issue_date = {September 2010},
+publisher = {VLDB Endowment},
+volume = {3},
+number = {1–2},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/1920841.1920904},
+doi = {10.14778/1920841.1920904},
+journal = {Proc. VLDB Endow.},
+month = {sep},
+pages = {484–493},
+numpages = {10}
+}
+
+@inproceedings{Das2017,
+author = {Das, Sanjib and G.C., Paul Suganthan and Doan, AnHai and Naughton, Jeffrey F. and Krishnan, Ganesh and Deep, Rohit and Arcaute, Esteban and Raghavendra, Vijay and Park, Youngchoon},
+title = {Falcon: Scaling Up Hands-Off Crowdsourced Entity Matching to Build Cloud Services},
+year = {2017},
+isbn = {9781450341974},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3035918.3035960},
+doi = {10.1145/3035918.3035960},
+booktitle = {Proceedings of the 2017 ACM International Conference on Management of Data},
+pages = {1431–1446},
+numpages = {16},
+keywords = {crowdsourcing, entity matching, hands-off, cloud services},
+location = {Chicago, Illinois, USA},
+series = {SIGMOD '17}
+}
+
+@inproceedings{Dong2018,
+author = {Dong, Xin Luna},
+title = {Challenges and Innovations in Building a Product Knowledge Graph},
+year = {2018},
+isbn = {9781450355520},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3219819.3219938},
+doi = {10.1145/3219819.3219938},
+booktitle = {Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining},
+pages = {2869},
+numpages = {1},
+keywords = {entity linkage, graph mining, knowledge fusion, human-in-the-loop, knowledge extraction, data cleaning},
+location = {London, United Kingdom},
+series = {KDD '18}
+}
+
+@inproceedings{paillier1999public,
+  title={Public-key cryptosystems based on composite degree residuosity classes},
+  author={Paillier, Pascal},
+  booktitle={International conference on the theory and applications of cryptographic techniques},
+  pages={223--238},
+  year={1999},
+  organization={Springer}
+}
+
+@article{Bonomi2013,
+author = {Bonomi, Luca and Xiong, Li and Lu, James J.},
+doi = {10.1145/2463676.2465259},
+file = {:home/eferos93/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Bonomi, Xiong, Lu - 2013 - LinkIT Privacy preserving record linkage and integration via transformations.pdf:pdf},
+isbn = {9781450320375},
+issn = {07308078},
+journal = {Proceedings of the ACM SIGMOD International Conference on Management of Data},
+keywords = {Privacy,Record Linkage,Security},
+pages = {1029--1032},
+title = {{LinkIT: Privacy preserving record linkage and integration via transformations}},
+year = {2013}
+}
+
+@article{Vatsalan2016,
+author = {Vatsalan, Dinusha and Christen, Peter and Rahm, Erhard},
+doi = {10.1109/ICDMW.2016.0130},
+file = {:home/eferos93/Downloads/Scalable_Privacy-Preserving_Linking_of_Multiple_Databases_Using_Counting_Bloom_Filters.pdf:pdf},
+isbn = {9781509054725},
+issn = {23759259},
+journal = {IEEE International Conference on Data Mining Workshops, ICDMW},
+keywords = {Approximate matching,Counting Bloom filters,Multiple databases,Privacy,Record linkage,Scalability},
+pages = {882--889},
+publisher = {IEEE},
+title = {{Scalable Privacy-Preserving Linking of Multiple Databases Using Counting Bloom Filters}},
+volume = {0},
+year = {2016}
+}
+
+@article{Vatsalan2020,
+archivePrefix = {arXiv},
+arxivId = {1911.12930},
+author = {Vatsalan, Dinusha and Christen, Peter and Rahm, Erhard},
+doi = {10.1016/j.datak.2020.101809},
+eprint = {1911.12930},
+file = {:home/eferos93/Downloads/1-s2.0-S0169023X19303015-main.pdf:pdf},
+issn = {0169023X},
+journal = {Data and Knowledge Engineering},
+keywords = {Data linkage,Graph matching,Multiple databases,Privacy,Scalability,Subset matching},
+number = {November 2019},
+pages = {101809},
+publisher = {Elsevier Ltd},
+title = {{Incremental clustering techniques for multi-party Privacy-Preserving Record Linkage}},
+url = {https://doi.org/10.1016/j.datak.2020.101809},
+volume = {128},
+year = {2020}
+}
+
+@article{dong2009data,
+  title={Data fusion: resolving data conflicts for integration},
+  author={Dong, Xin Luna and Naumann, Felix},
+  journal={Proceedings of the VLDB Endowment},
+  volume={2},
+  number={2},
+  pages={1654--1655},
+  year={2009},
+  publisher={VLDB Endowment}
+}
+
+@inproceedings{Pas2010,
+author = {Pasternack, Jeff and Roth, Dan},
+title = {Knowing What to Believe (When You Already Know Something)},
+year = {2010},
+publisher = {Association for Computational Linguistics},
+address = {USA},
+booktitle = {Proceedings of the 23rd International Conference on Computational Linguistics},
+pages = {877–885},
+numpages = {9},
+location = {Beijing, China},
+series = {COLING '10}
+}
+
+@inproceedings{Gao2016,
+author = {Gao, Jing and Li, Qi and Zhao, Bo and Fan, Wei and Han, Jiawei},
+title = {Mining Reliable Information from Passively and Actively Crowdsourced Data},
+year = {2016},
+isbn = {9781450342322},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2939672.2945389},
+doi = {10.1145/2939672.2945389},
+booktitle = {Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+pages = {2121–2122},
+numpages = {2},
+keywords = {crowdsourcing},
+location = {San Francisco, California, USA},
+series = {KDD '16}
+}
+
+
+@inproceedings{Reka2017,
+author = {Rekatsinas, Theodoros and Joglekar, Manas and Garcia-Molina, Hector and Parameswaran, Aditya and R\'{e}, Christopher},
+title = {SLiMFast: Guaranteed Results for Data Fusion and Source Reliability},
+year = {2017},
+isbn = {9781450341974},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3035918.3035951},
+doi = {10.1145/3035918.3035951},
+booktitle = {Proceedings of the 2017 ACM International Conference on Management of Data},
+pages = {1399–1414},
+numpages = {16},
+keywords = {data explanation, data fusion, data quality, truth discovery, valuable sources, unreliable sources, data conflict resolution, data integration},
+location = {Chicago, Illinois, USA},
+series = {SIGMOD '17}
+}
+
+
+@article{DING2019129,
+title = {A survey on data fusion in internet of things: Towards secure and privacy-preserving fusion},
+journal = {Information Fusion},
+volume = {51},
+pages = {129-144},
+year = {2019},
+issn = {1566-2535},
+doi = {https://doi.org/10.1016/j.inffus.2018.12.001},
+url = {https://www.sciencedirect.com/science/article/pii/S1566253518304731},
+author = {Wenxiu Ding and Xuyang Jing and Zheng Yan and Laurence T. Yang},
+keywords = {Data fusion, Internet of Things, Data privacy, Security, Smart home, Smart grid, Smart transportation},
+}
+
+@article{Gati2021,
+author = {Gati, Nicholaus J. and Yang, Laurence T. and Feng, Jun and Nie, Xin and Ren, Zhian and Tarus, Samwel K.},
+doi = {10.1016/j.inffus.2021.04.017},
+issn = {15662535},
+journal = {Information Fusion},
+keywords = {CPSS,Data fusion,Deep computation,Differential privacy},
+number = {April},
+pages = {298--314},
+publisher = {Elsevier B.V.},
+title = {{Differentially private data fusion and deep learning Framework for Cyber–Physical–Social Systems: State-of-the-art and perspectives}},
+url = {https://doi.org/10.1016/j.inffus.2021.04.017},
+volume = {76},
+year = {2021}
+}
 

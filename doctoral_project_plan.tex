@@ -144,32 +144,77 @@ both rule-based and learning-based approaches \cite*{Rodrigues2021,Riedel2013,Sa
 
 
 \paragraph{Schema matching.}
-Original schema matching techniques can be categorized as it follows:
+Schema matching aligns attributes and data types. It is one of the oldest problems studied for data integration and the 
+traditional approaches consist in extracting knowledge according to a predefined schema. They can be categorized as it follows:
 \begin{itemize}
-   \item \textbf{Schema-level matchers}, where only the metadata is considered (e.g. column labels, data-types).
-   \item \textbf{Content-level matchers}, where the content of the columns is used for matching by using probabilistic approaches \cite*{Szymczak2016,Dasu2002}.
+   \item \textbf{Schema-level matchers}, where only the metadata is considered (e.g. column labels, data-types). Linguistic matching is mostly used here (stemming, tokenization, etc.) \cite*{Bernstein2011}.
+   \item \textbf{Instance-level matchers}, where the content of the columns is used for matching by using probabilistic approaches \cite*{Szymczak2016, Dasu2002} or rule-based approaches.
    \item \textbf{Hybrid matchers} that combine the two matchers just described.
 \end{itemize}
 
-In schema matching the problem of \textit{volume} does not take place, namely there is no need to increase computational performance, rather 
-exploring new techniques for having more precise matchers could be necessary. Nevertheless, the availability of big data, brought recent 
-research towards \textbf{learning-based} matchers, where pre-existing mappings are used to train machine learning algorithms that 
+In schema matching the problem of \textit{volume} have to be taken into account only in few specific cases, for example when we consider millions sources from the web \cite*{Pimplikar2012}, but not in typical DI scenarios, 
+where the number of sources is limited.
+Universal Schema \cite*{Riedel2013} has revolutionized schema alignment. It consists in extracting (subject, predicate, object) triples, where the predicate can be any word or phrase from texts and instead of outputting 
+mappings between predicates, it adds inferred triples. This is done through matrix factorization \cite*{Riedel2013}, while recently it is improved by using 
+Recurrent Neural Networks \cite*{Das2016,Nee2015}.
+
+For what we know so far, there is no work in literature regarding privacy-aware schema matching. This because most of the techniques are based on the schemas' metadata. 
+Nevertheless, if Instance-level approaches are used, it may be useful to use techniques for guaranteeing the privacy of the individuals, e.g. differential privacy.
+
+%namely there is no need to increase computational performance, rather 
+%exploring new techniques for having more precise matchers could be necessary. Nevertheless, the availability of big data, brought recent 
+%research towards \textbf{learning-based} matchers, where pre-existing mappings are used to train machine learning algorithms that 
 
 
 
 \paragraph{Record linkage.}
+Record Linkage, also called Entity Resolution, consists in finding records, among different data sources, that refers to the same real world entity. 
+It is the most important problem in integrating data from different sources. 
 
-Up to 2017, a lot of Privacy-Preserving Record Linkage (PPRL) protocols proposed for secure two-party private record linkage were not able to meet the following three requirements altogether: (1) \textbf{full end-to-end privacy}, 
-(2) \textbf{perfect precision and recall} for the matching records and (3) \textbf{sub-quadratic computational complexity} \cite*{He2017}. 
-After \cite*{He2017} pointed out this problem, new approaches were proposed and resulted in meeting all the three requirements described above \cite*{Groce2019}, 
-but still limited to certain adversarial models, that do not match well with real world scenarios (e.g. \textit{honest-but-curious}), 
-and does not take into account the multi-party scenario, where the problem of 
-\textit{volume}, \textit{veracity} and \textit{velocity} needs to be addressed \cite*{Vatsalan2017}.
-Although there have been many prior works that looked
-into different security and privacy aspects of PPRL, there still remain major challenges that need to be addressed. 
-As a starting point, more research is needed to understand membership inference and attribute inference attacks on PPRL techniques.
-For example, a malicious party may create many random records with the intent of matching with the other parties' actual records \cite*{Gkoulalas-Divanis2021}. 
-To tackle this problem, blockchain technologies are recently being proposed in literature \cite*{Nobrega2021}.
+Generally, it proceeds in three steps: 
+\begin{enumerate}
+   \item \textbf{blocking records} that are likely to be a match;
+   \item \textbf{compare pairs of records} to decide if it's a match;
+   \item \textbf{clustering records} according to the previous step's results.
+\end{enumerate}
+
+Approaches consisted mostly in rule-based techniques \cite*{recordLinkTheory, Gal2011} for the first two steps, while for clustering either 
+rule-based or optimizing a particular objective function \cite*{Hass2009}. 
+
+Recently, supervised learning approaches (e.g. Support Vector Machines, Decision Trees, Random Forest) showed to obtain high precision and recall \cite*{Das2017}, 
+at the cost of generating training labels, i.e. to obtain a precision and recall of 99\% on linking a pair of datasets, 1.5M training labels are required \cite*{Dong2018}.
+
+Performance and efficiency is not only the main concern of Record Linkage. In a real-world scenario, the data involved in the linkage may be sensitive, and methods to guarantee 
+the privacy of the individuals is a major concern. Privacy-Preserving Record Linkage (PPRL) identifies the set of techniques that aim to link different datasets in 
+a privacy-preserving manner.
+Initially, Secure Multiparty Computation (SMC) techniques were used, in particular, the Paillier crypto-system \cite*{paillier1999public}. 
+These protocols are reliable and very effective, with the downside of a very prohibitive computational cost. 
+In other to improve performance, by applying secure transformations to the data \cite*{Bonomi2013}, such as embedding records to different spaces and then mining them with differential privacy.
+This comes with the cost of having less accurate results. 
+
+Generally, the PPRL protocols proposed for secure two-party private record linkage are not able to meet the following three requirements altogether, without making strict assumptions: 
+(1) \textbf{full end-to-end privacy}, 
+(2) \textbf{perfect precision and recall} for the matching records and (3) \textbf{sub-quadratic computational complexity} \cite*{He2017, Groce2019}. 
+%After \cite*{He2017} pointed out this problem, new approaches were proposed and resulted in meeting all the three requirements described above \cite*{Groce2019}, 
+%but still limited to certain adversarial models, that do not match well with real world scenarios (e.g. \textit{honest-but-curious}), 
+Moreover, multi-party PPRL is a more realistic scenario and only in the last years it has been tackled, with still limited results \cite*{Vatsalan2016, Vatsalan2017, Vatsalan2020}.
+%Although there have been many prior works that looked into different security and privacy aspects of PPRL \cite*{Gkoulalas-Divanis2021}, there still remain major challenges that need to be addressed. 
+%For example, inference
+%For example, a malicious party may create many random records with the intent of matching with the other parties' actual records \cite*{Gkoulalas-Divanis2021}. 
+%To tackle this problem, blockchain technologies are recently being proposed in literature \cite*{Nobrega2021}.
+
+\paragraph{Data Fusion.} Data fusion resolves conflicts between different data sources, by selecting the best record per entity. 
+Access to highly accurate data is critical for industry applications, such as knowledge graph search, so data fusion is often 
+an important step in data integration.
+
+The main methods for data fusion are rule-based \cite*{dong2009data} and also data-mining based \cite*{Pas2010}. 
+Graphical models are also used in this context \cite*{Gao2016} as well as semi-unsupervised approaches \cite*{Reka2017}.
+
+Privacy-preserving data fusion has not been studied deeply in literature. There are a few context specific works, for example \cite*{DING2019129} 
+identifies privacy issues and future research directions for data fusion in Internet-Of-Things and \cite*{Gati2021} which focuses on Differential Privacy in the 
+context of Cyber-Physical Systems.
+
+\subsubsection{Federated Learning}
 
 
 
