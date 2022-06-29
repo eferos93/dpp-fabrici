@@ -218,7 +218,15 @@ identifies privacy issues and future research directions for data fusion in Inte
 context of Cyber-Physical Systems.
 
 \subsubsection{Federated Learning}
-
+Federated Learning (FL) has been proposed by Google \cite*{Kon2016}. The idea is to build a global ML model from datasets that are 
+distributed across edge devices, without moving the data. 
+An unbalanced and non-IID (identically and independently distributed) data partitioning across a massive number of unreliable 
+devices with limited communication bandwidth was introduced as the defining set of challenges \cite*{Kairouz2021}.
+%TODO add references in this paragraph
+Privacy is one of the essential properties of FL. Many techniques exist in literature (e.g. Secure Multiparty Computation, homomorphic encryption), but 
+\textbf{Differential Privacy} represents \textit{de facto} standard for Privacy in many areas (querying, synthetic data generation, etc.) as it guarantees a 
+better computational performance rather than cryptographic approaches.
+%in many areas such as queries, synthetic data generation and in ML training
 
 
 %\item Statement of the project's objectives. This could be formulated as a hypothesis and/or research questions if applicable.
