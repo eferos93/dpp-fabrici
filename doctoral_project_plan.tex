@@ -73,26 +73,29 @@ Thesis Title \\ First Name Last Name \\
 \section{Project Summary}
 The term Big Data refers to data sets that are too large or complex to be dealt with by traditional data processing software. 
 In particular, Big Data captures to 4 dimensions: Velocity, Variety, Veracity, and Volume. This large quantity of data available nowadays has 
-a lot of statistical and business value, therefore their analysis is of core importance for business decision-making.
+a lot of statistical and business value, therefore their analysis is of core importance for business decision-making. Nevertheless, the data 
+involved in those processes contains a lot of sensitive information regarding individuals (e.g. health sector). There is therefore also the need to 
+guarantee the privacy of the individuals while being able to extract insights and patterns from the data. 
 
 Data Integration is the set of processes to gather and bridge data from heterogeneous sources together in order to 
 have a unified view. The premise of data integration is to make data more freely available and easier 
 to consume and process by systems and users.
 Research on Data Integration started more than 50 years ago \cite*{recordLinkTheory,dataModelIntegration1980} but as we entered the Big Data era, new challenges arose,
- which include scaling \cite*{Dong2013} data integration while guaranteeing the privacy \cite*{yu2016big} of the individuals involved in the datasets.
+ which include scaling \cite*{Dong2013} data integration while guaranteeing the privacy \cite*{yu2016big, Gkoulalas-Divanis2021} of the individuals involved in the datasets.
 Over the last decade new techniques have been applied for improving computational performance, consisting of the use of parallelizing the computation by using big data processing platforms \cite*{Dong2013},
  or algorithmically, namely using summarization techniques \cite*{Cormode2011}, used for 
 approximate fast and approximate querying, improving the performance of Machine Learning processes \cite*{Gribonval2020, Antonanzas2021, Jiang2018} as well as in some data integration scenarios.
+Despite the progress made, it is difficult to combine efficiency (the integration is completed with no, or very few, errors), computational performance and privacy altogether \cite*{He2017}. 
 
-Analyzing Big Data may involve accessing sensitive information, especially in the health sector. For these reasons, in Data Integration, 
-techniques like Secure Multi-Party Computation and Differential Privacy \cite*{Dwork2013} have been used. One big concern in private Data Integration is that it is 
-difficult to guarantee privacy, accuracy, and good performance at the same time.
+%Analyzing Big Data may involve accessing sensitive information, especially in the health sector. For these reasons, in Data Integration, 
+%techniques like Secure Multi-Party Computation and Differential Privacy \cite*{Dwork2013} have been used. One big concern in private Data Integration is that it is 
+%difficult to guarantee privacy, accuracy, and good performance at the same time.
 
 Machine Learning and Data Integration have really close relationship \cite*{Dong2019}. In particular, it is possible to leverage the first to improve the performance of the second
 and vice-versa. An evolving branch of Machine Learning is Federated Learning, which consists in building a Machine Learning model in a federated setting (when the data is distributed across
  edge devices) and model in a collaborative way, without moving the data to a central server.
 
- This Ph.D. aims to explore summarization techniques and Federated Learning for scaling Data Integration tasks while guaranteeing privacy and achieving good performance.
+ This Ph.D. aims to explore algorithms, data structures and Federated Learning for scaling Data Integration tasks while guaranteeing privacy and achieving good performance.
 
 
 %A short (maximum 400 words) summary in layman's terms describing in a preliminary manner key motivation, significance, methodology, and expected outcome of the doctorate study. A reader of the local newspaper should be able to understand the summary.
