@@ -218,7 +218,43 @@ identifies privacy issues and future research directions for data fusion in Inte
 context of Cyber-Physical Systems.
 
 \subsubsection{Federated Learning}
+Federated Learning (FL) has been proposed by Google \cite*{Kon2016}. The idea is to build a global ML model from datasets that are 
+distributed across edge devices, without moving the data. 
+An unbalanced and non-IID (identically and independently distributed) data partitioning across a massive number of unreliable 
+devices with limited communication bandwidth was introduced as the defining set of challenges \cite*{Kairouz2021}.
+%TODO add references in this paragraph
+Privacy is one of the essential properties of FL. Many techniques exist in literature (e.g. Secure Multiparty Computation, homomorphic encryption), but 
+\textbf{Differential Privacy} represents \textit{de facto} standard for Privacy in many areas (querying, synthetic data generation, etc.) as it guarantees a 
+better computational performance rather than cryptographic approaches.
 
+FL can be categorized as it follows: 
+\begin{itemize}
+   \item \textbf{Horizontal Federated Learning}. Horizontal FL refers when the federated datasets share the same feature space (the column names) but not the sample space (rows). This system
+   assumes that all the participants are honest and security against an honest-but-curious server \cite*{Yang2019}. Usually, the learning steps in this system are: (1) 
+   each data owner \textit{train a local model} then the (2) \textit{gradients are sent} to the central server, which applies a (3) \textit{secure aggregation} on them and  
+   received by the federation. Finally, the (4) \textit{model updates} computed by the central server are sent back to the data owners and their local models get updated.
+   \item \textbf{Vertical Federated Learning}. Vertical FL is applicable when the datasets share the sample ID space, but the features are different. In this scenario, data pre-processing is required, in particular 
+   \textit{schema alignment} and \textit{entity resolution}. These phases require exchanging data with a third party to do the pre-computation, therefore security is more difficult to guarantee in this case.
+\end{itemize}
+%in many areas such as queries, synthetic data generation and in ML training
+
+\subsection{Project Objectives}
+
+\subsection{Key Methods}
+We will try to apply the following methods to achieve the
+project's objectives and ensure the production of high quality results:
+\begin{itemize}
+   \item Study the literature review of the current Privacy-Preserving Data Integration techniques and analyze their strengths 
+   and weaknesses. %This step can be considered as a continuous loop as more and more scientific papers are
+   %published in the top tier conferences and journals.
+   \item After understanding and analyzing the offerings of current solutions, we will propose algorithms that will use Differential Privacy 
+   and Synopses that will satisfy all the three requirements mentioned in the state of the art. 
+   The goal here is to design and implement the solution in a simulated federated environment.
+   \item Regarding the evaluation of the proposed solutions, appropriate benchmarks will be considered
+   ensuring the correctness of our results.
+\end{itemize}
+
+\subsection{Significance and Outcome}
 
 
 %\item Statement of the project's objectives. This could be formulated as a hypothesis and/or research questions if applicable.
@@ -246,12 +282,12 @@ context of Cyber-Physical Systems.
 
 %\end{enumerate}
 
-\subsection*{Section 3. Co-supervisors/Candidate Co-operation Agreements}
+\section{Co-supervisors/Candidate Co-operation Agreements}
 The project will be carried out in three years during which the PhD student will stay in one research institution and one university. During the first and the third year, the candidate will work in Athena Research Center (ARC) under the supervision of Prof. Minos Garofalakis (ARC). During the second year, the program
 will take place in Universitat Politecnica de Catalunya (UPC) under the supervision of Prof. Oscar Romero (UPC). The project will be a joint work of all parties, hence close co-operation is expected in the following way.
 
 The progress of the project will be validated through frequent meetings between the candidate and his supervisors. The candidate will meet on a weekly basis with his home supervisor and one or two times per month with his host supervisor (the opposite when he will be hosted at UPC). Following typical business practice, the expectations and tasks planned for each meeting will be clearly communicated in advance, with a reasonable notice, both from the supervisors to the candidate and vice-versa. Standard tools of the trade will be used to boost collaboration, such
-as a shared repository for documents and code artifacts (e.g., Mendeley Library, Github), communication platforms (e.g. Skype, Teams).
+as a shared repository for documents and code artifacts (e.g., Mendeley Library, GitHub, etc.), communication platforms (e.g. Skype, Teams).
 
 %The DEDS programme expects that the co-supervisor and candidate should meet (face to face if possible) at least once every other week.
 %Each of these working meetings should produce minutes drafted by the candidate stating:
@@ -274,7 +310,7 @@ as a shared repository for documents and code artifacts (e.g., Mendeley Library,
 %\emph{RPR: Report on the achieved relationship between co-supervisors and candidate throughout the doctorate project.}
 %\end{shaded}
 
-\subsection*{Section 4. Proposed Education and Training Programme}
+\section{Proposed Education and Training Programme}
 
 The DEDS education and training programme is composed of several activities.
 \begin{itemize}
@@ -348,15 +384,14 @@ Only courses at doctorate level are approved. If a course at master level is dee
 
 \subsubsection*{Section 4.2. Knowledge Dissemination and Participation to Scientific Events}
 
-Detail the plan for dissemination of knowledge and findings from the project.\\
-
-This could for instance be:
-\begin{itemize}
-\item Poster presentations at conferences/seminars.
-\item Presentations at conferences/seminars
-\item Newspaper articles or other popular presentations
-\item Teaching (lecturing and project supervision)
-\end{itemize}
+We plan to disseminate the product knowledge by publishing papers in top tier conferences, such as ACM
+SIGMOD, VLDB, IEEE ICDE, EDBT etc. and journals, such as VLDB J., ACM TODS, IEEE TKDE,
+Information Systems, etc. Moreover, we will pursue opportunities to expose our work to additional
+outlets (e.g., AI Summit, ACM/IEEE local chapters, meet-ups) through presenting talks and tutorials or
+giving demonstrations, in order to open a communication channel with the big data engineering,
+and big data management communities. In this way, we will (a) advertise our work and explore collaboration
+and exploitation opportunities, and (b) collect valuable feedback that will ameliorate and/or redirect our
+research.
 
 
 %, e.g., newspaper articles, seminars, conference presentations, teaching, etc.
