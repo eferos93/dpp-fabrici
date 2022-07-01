@@ -3,6 +3,7 @@
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm, a4paper]{geometry}
 \usepackage[latin1]{inputenc}
 \usepackage{eurosym}
+\usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage{framed}
@@ -93,9 +94,11 @@ Despite the progress made, it is difficult to combine efficiency (the integratio
 
 Machine Learning and Data Integration have really close relationship \cite*{Dong2019}. In particular, it is possible to leverage the first to improve the performance of the second
 and vice-versa. An evolving branch of Machine Learning is Federated Learning, which consists in building a Machine Learning model in a federated setting (when the data is distributed across
- edge devices) and model in a collaborative way, without moving the data to a central server.
+ edge devices) and model in a collaborative way, without moving the data to a central server. This new technique is a good match with the need of privacy in ML nowadays. Despite its advantages, 
+ there are a lot of open problems in FL \cite*{Kairouz2021}. In particular, data in FL needs to be pre-processed (e.g. align the schemas, record linkage) in order to start the training process. This would 
+ require the data to move out of the edge-devices, therefore threatening privacy.
 
- This Ph.D. aims to explore algorithms, data structures and Federated Learning for scaling Data Integration tasks while guaranteeing privacy and achieving good performance.
+ This Ph.D. aims to explore algorithms, data structures and ML for scaling Data Integration tasks while guaranteeing privacy and achieving good performance, tailored to the Federated Learning pre-processing workflow.
 
 
 %A short (maximum 400 words) summary in layman's terms describing in a preliminary manner key motivation, significance, methodology, and expected outcome of the doctorate study. A reader of the local newspaper should be able to understand the summary.
@@ -238,7 +241,22 @@ FL can be categorized as it follows:
 \end{itemize}
 %in many areas such as queries, synthetic data generation and in ML training
 
+\subsubsection{Future Directions}
+FL is getting more and more used in many areas, in particular in the health care \cite*{Che2022,Bou2019,app112311191}. Despite the fact 
+that FL brought us new hope for the of data privacy in Artificial Intelligence, various challenges needs to be addressed \cite*{Kairouz2021}. 
+In particular, FL applications usually require engineers to align and link the datasets manually. Therefore, it would be critical to work 
+on new methods to automate scale the data preparation steps while guaranteeing the privacy.
+
 \subsection{Project Objectives}
+The goal of this PhD can be divided in two main objectives. The first is to improve the state of the art of Privacy Preserving DI (PPDI) by 
+bringing it in a more practical scenario, namely, the FL data preparation step. Secondly, after having identified strength and weaknesses of 
+the actual PPDI techniques, design and develop a framework to integrate with the FL process. We aim to use techniques like synopses, 
+probabilistic data structures and differential privacy.
+\begin{enumerate}
+   \item \textbf{O1.} Improve the state of the art of Privacy Preserving DI techniques by tackling the limitations that make them unfeasible to apply to 
+   real world scenarios.
+   \item \textbf{O2.} Propose a framework to integrate to real world scenarios, namely the FL preprocessing steps.
+\end{enumerate}
 
 \subsection{Key Methods}
 We will try to apply the following methods to achieve the
@@ -256,6 +274,92 @@ project's objectives and ensure the production of high quality results:
 
 \subsection{Significance and Outcome}
 
+Federated Learning is getting more and more used in the real world as satisfies privacy requirements. 
+Unfortunately, it is still challenging to apply it in real world scenario, and it requires a lot of effort by 
+engineers to prepare the data for FL tasks. 
+
+The expected outcome of this project includes (1) presentation of our work in top tier conferences
+and journals, (2) collaboration with other research teams and/or industrial partners (e.g. secondment), to
+exchange ideas and boost the results of our work, and (3) open-sourcing critical components of our work.
+
+\section{Co-supervisors/Candidate Co-operation Agreements}
+The project will be carried out in three years during which the PhD student will stay in one research institution and one university. During the first and the third year, the candidate will work in Athena Research Center (ARC) under the supervision of Prof. Minos Garofalakis (ARC). During the second year, the program
+will take place in Universitat Politecnica de Catalunya (UPC) under the supervision of Prof. Oscar Romero (UPC). The project will be a joint work of all parties, hence close co-operation is expected in the following way.
+
+The progress of the project will be validated through frequent meetings between the candidate and his supervisors. The candidate will meet on a weekly basis with his home supervisor and one or two times per month with his host supervisor (the opposite when he will be hosted at UPC). Following typical business practice, the expectations and tasks planned for each meeting will be clearly communicated in advance, with a reasonable notice, both from the supervisors to the candidate and vice-versa. Standard tools of the trade will be used to boost collaboration, such
+as a shared repository for documents and code artifacts (e.g., Mendeley Library, GitHub, etc.), communication platforms (e.g. Skype, Teams).
+
+
+\section{Work Plan}
+\subsection{Timetable}
+The PhD is a 3-year-long study, spanning from May 1st, 2022 to February 28th, 2025.
+\begin{table}[h]
+   \centering
+   \begin{tabular}{lp{.8\textwidth}}
+       \textbf{Time}        & \textbf{Plan}                                                               \\
+       \toprule
+       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       \textbf{Spring 2022}   &
+       Winter School at ARC \newline
+       Preparation of the two months study plan                         \newline
+       Literature review of Privacy Preserving Data Integration    \newline
+       Summer School at ULB \\
+       \textbf{Milestones}  &
+       \textbf{Submission of two months study plan}                                                       \\
+       \midrule
+       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       \textbf{Fall 2022} &
+       Participation in 1 PhD courses as shown in the courses' table \newline
+       Preparation of the 11 months study plan \newline
+       Survey the current state of the art in Privacy Preserving DI \newline
+       Summer School at ULB \\
+       \textbf{Milestones}  &
+       \textbf{Submission of 11 months study plan}                                                        \\
+       \midrule
+       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       \textbf{Spring 2023}   &
+       Create an efficient algorithm based of synopses and differential privacy for schema alignment \newline
+       Summer School at UPC                                                                               \\
+       \midrule
+       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       \textbf{Fall 2023} &
+       Participation in 2 PhD courses as shown in the courses' table \newline
+       Design and develop an algorithm for PPRL using synopses and differential privacy \\                                                                              \\
+       \midrule
+       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       \textbf{Spring 2024}   &
+       Prototype a framework for PPDI for Federated Learning systems                                         \\
+       \midrule
+       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       \textbf{Fall 2024} &
+       Write the thesis                               \\
+       \textbf{Milestones}  &
+       \textbf{Submission of the PhD thesis}                                                              \\
+       \bottomrule
+   \end{tabular}
+   % \caption{The plan for the PhD study}\label{table:timeplan}
+\end{table}
+
+\subsection{Thesis Outline}
+The thesis will be constituted by the research papers that will be written during the whole duration of
+the project. The thesis report will include (1) an introduction chapter providing background knowledge,
+motivation, research challenges, objectives and contributions, (2) a chapter about the state of the art
+(survey paper), (3) one chapter for each published research paper that will include technical details of the
+implementation, evaluation etc., and (4) a last chapter concluding the work, discussing lessons learned
+and providing future directions.
+
+\subsubsection{Tentative Publication List}
+The publications that can be considered at the moment of writing the Doctorate Project Plan are the
+following:
+\begin{enumerate}
+   \item A survey paper targeting to illustrate the state of the art of Privacy Preserving Data Integration. Our
+   main contributions will be to initiate a new reader to the field of PPDI,
+   by illustrating the current applied techniques through examples. Comparison of the methods,
+   limitations, research challenges, and future work will also be included.
+   \item A research and a demo paper about learning for each of the following: (a) Differentially Private and Synopses-driven schema alignment for FL and (b) PPRL for FL and show how it can be used 
+   for tracking the patient history.
+   \item A research paper about the framework for Privacy Preserving DI for FL systems.
+\end{enumerate}
 
 %\item Statement of the project's objectives. This could be formulated as a hypothesis and/or research questions if applicable.
 
@@ -282,13 +386,6 @@ project's objectives and ensure the production of high quality results:
 
 %\end{enumerate}
 
-\section{Co-supervisors/Candidate Co-operation Agreements}
-The project will be carried out in three years during which the PhD student will stay in one research institution and one university. During the first and the third year, the candidate will work in Athena Research Center (ARC) under the supervision of Prof. Minos Garofalakis (ARC). During the second year, the program
-will take place in Universitat Politecnica de Catalunya (UPC) under the supervision of Prof. Oscar Romero (UPC). The project will be a joint work of all parties, hence close co-operation is expected in the following way.
-
-The progress of the project will be validated through frequent meetings between the candidate and his supervisors. The candidate will meet on a weekly basis with his home supervisor and one or two times per month with his host supervisor (the opposite when he will be hosted at UPC). Following typical business practice, the expectations and tasks planned for each meeting will be clearly communicated in advance, with a reasonable notice, both from the supervisors to the candidate and vice-versa. Standard tools of the trade will be used to boost collaboration, such
-as a shared repository for documents and code artifacts (e.g., Mendeley Library, GitHub, etc.), communication platforms (e.g. Skype, Teams).
-
 %The DEDS programme expects that the co-supervisor and candidate should meet (face to face if possible) at least once every other week.
 %Each of these working meetings should produce minutes drafted by the candidate stating:
 %(1) what was done since last meeting,
@@ -311,78 +408,27 @@ as a shared repository for documents and code artifacts (e.g., Mendeley Library,
 %\end{shaded}
 
 \section{Proposed Education and Training Programme}
-
-The DEDS education and training programme is composed of several activities.
-\begin{itemize}
-\item \textbf{Research}, where doctoral candidates work on a novel research problem 
-guided by two supervisors who will advise them to gradually become independent researchers.
-\item \textbf{Research-specific courses}, aimed at providing doctoral candidates with focused
-state-of-the art technical skills pertaining to their research topic.
-\item \textbf{Innovation and entrepreneurship courses}, aimed at complementing the scientific training
-of doctoral candidates with business-related aspects such as entrepreneurship,
-intellectual property rights, etc.
-\item \textbf{Methodological and communication courses}, aimed at introducing the necessary
-research methods and communication skills.
-\item \textbf{Language courses}, aimed at introducing the local language at each partner university.
-\item \textbf{Summer and winter schools}, wherein candidates will obtain 
-feedback about their research from invited researchers and practitioners,
-as well as get international contacts in both academia and industry.
-\item \textbf{Tutoring}, whereby candidates will be involved in teaching activities
-(e.g., supervising student projects and delivering exercises) 
-while being coached by their supervisors or other experienced staff.
-\item \textbf{Knowledge dissemination and participation to scientific events}, aimed at allowing
-doctoral candidates to present and confront their findings, thereby familiarising
-themselves with essential practices such as peer-review and public debating.
-\item \textbf{External cooperation and secondments}, aimed at ensuring that the candidate
-participate actively in another research environment outside his/her home and host universities.
-These activities are realised typically with DEDS partner organisations.
-\end{itemize}
-
-Please detail in the following subsections your personalised education and training programme,
-taking into account your previous background and future career prospects. This programme must
-be approved from both co-supervisors.
-
-Activities adding at least 30 ECTS credits must be outlined.
-A tabular listing of all activities performed or to be performed during the doctorate project is to be included. Group the activities according to the categories specified above. For each activity, the title, time, location, organiser, and ECTS credits must be included together with an indication of whether the activity has been completed.
-Please use this table:
-
+During the PhD studies, it is necessary to have research activities adding up to at least 30 ECTS credits. 
+The ECTS points should be divided between general and research-related courses. Courses can either
+be taken in National and Kapodistrian University of Athens or in Universitat Politecnica de Catalunya,
+with conference attendance and other activities contributing as well.
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|}\hline
-\makebox[5cm]{Activity} & Place/Organised by & ECTS & General/Project course & Status \\\hline\hline
-& & & & \\\hline
-& & & & \\\hline
-& & & & \\\hline
-& & & & \\\hline
-& & & & \\\hline
-& & & & \\\hline
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+\makebox[5cm]{Activity} & At & ECTS & Type & Time & Status \\\hline\hline
+Distributed Systems & NKUA & 6 & General & Autumn'22 & Planned \\
+Big Data Management & UPC & 6 & Project & Autumn'23 & Planned \\
+Research Methods & UPC & 6 & General & Autumn'23 & Planned \\\hline
+Winter School (ARC) & ARC & 3 & Project & Spring'22 & Completed \\
+Summer School (ULB) & ULB & 3 & Project & Spring'22 & Mandatory \\
+Winter School (AAU) & AAU & 3 & General & Fall'22 & Mandatory \\
+Summer School (UPC) & UPC & 3 & General & Spring'23 & Mandatory\\\hline
+Conference Attendance & TBD & 6 & Project & Multiple & Planned\\\hline
+Secondment & SPR & 4 & Project & Summer'24 & Planned\\\hline
+Greek Language course & NKUA & - & Project & Multiple & Planned\\\hline
 \end{tabular}
 \end{center}
 
-\begin{shaded}
-\noindent
-\emph{TPR: The table of activities must be updated with planned and hitherto completed activities.}
-
-\noindent
-\emph{RPR: The contents and the extent of the completed activities must be reported.
-It is expected that all training activities have been finalised in order to devote the last year of the project for finalising the Doctoral Dissertation.}
-\end{shaded}
-
-
-\subsubsection*{Section 4.1. Planned Courses}
-
-Courses adding at least 20 ECTS credits must be outlined.
-
-Only courses at doctorate level are approved. If a course at master level is deemed to be highly relevant for the doctorate project, the co-supervisors can establish a study group on the topic, which includes the master course and additional reading/discussion to bring it up to doctorate level. A written report on participation in a study group must be completed to get course credit. To ensure the scientific level, the study circle must be headed by a member of the scientific staff, who is Professor or Associate Professor (senior scientist level). A 2-3 ECTS study circle organised by the co-supervisors on the state of the art in the research field of the doctorate study is recommended.
-
-\begin{shaded}
-\noindent
-\emph{TPR: The course table should be updated with more specific information for the completed courses, as well as with the rest of planned courses for the rest of the doctorate project.}
-
-\noindent
-\emph{RPR: The table must be updated, reporting the complete set of courses that are completed in the doctorate project.}
-\end{shaded}
-
-\subsubsection*{Section 4.2. Knowledge Dissemination and Participation to Scientific Events}
+\section{Knowledge Dissemination and Participation to Scientific Events}
 
 We plan to disseminate the product knowledge by publishing papers in top tier conferences, such as ACM
 SIGMOD, VLDB, IEEE ICDE, EDBT etc. and journals, such as VLDB J., ACM TODS, IEEE TKDE,
@@ -397,18 +443,8 @@ research.
 %, e.g., newspaper articles, seminars, conference presentations, teaching, etc.
 %As seen, dissemination is not only teaching but can also be other activities.
 
-Each participation to scientific events must be accompanied by a written report by the doctorate candidate that relates the specific activity to the doctorate project. This report must be of general value for the project. Activities that relate to workshop and conference participation must not exceed 6 ECTS credits.
-
-\begin{shaded}
-\noindent
-\emph{TPR: Updated plan for dissemination of knowledge and findings from the doctorate project other than those listed in Section 2 must be specified. }
-
-\noindent
-\emph{RPR: The final realisation of the knowledge and findings dissemination from the doctorate project other than those listed in Section 2 must be reported. }
-\end{shaded}
-
-\subsubsection*{Section 4.3. External Co-operation}
-The doctorate candidate will spend time studying both in Greece `
+\section{External Co-operation}
+The doctorate candidate will spend time studying both in Greece 
 and Spain. Furthermore, a secondment of three months will take place, where the candidate will join
 Spring Techno, where he will work on of a complex Federated Learning scenario with real data.
 During the following three years, all ESRs will meet in four different winter/summer schools to present their work, receive feedback, exchange ideas, and get exposed to new challenges. During these schools, candidates will have the opportunity to get in touch with academic and non-academic partners, presenting them their findings, reflecting on new opportunities, and opening the way for further collaboration. Finally, the candidate may co-operate with external researchers or research teams, in case that his work can be combined or merged with similar works of others.
@@ -434,7 +470,7 @@ During the following three years, all ESRs will meet in four different winter/su
 %\emph{RPR: Completed co-operation activities during the doctorate project must be reported.}
 %\end{shaded}
 
-\subsection*{Section 5. Agreements on Immaterial Rights to Patents}
+\section{Agreements on Immaterial Rights to Patents}
 
 Patents and immaterial rights will be handled according to general rules applied by Athena Research Center, National and Kapodistrian University of Athens, and Universitat Politecnica de Catalunya.
 
@@ -446,8 +482,8 @@ Patents and immaterial rights will be handled according to general rules applied
 %\emph{RPR: Update this section if applicable.}
 %\end{shaded}
 
-\subsection*{Section 6. Financing Budget}
-
+\section{Financing Budget}
+As regards the long-term career ambitions and objective of the candidate, pursuing a PhD offers 
 This project is one of the 15 ESRs of Data Engineering for Data Science PhD programme, which is funded by the European Union's Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No 955895. The funding covers expenses related to the successful completion of the project, such as work equipment, research experiments, training activities and others
 that are relevant to the programme.
 
@@ -459,39 +495,15 @@ that are relevant to the programme.
 %\emph{RPR: Update this section if applicable.}
 %\end{shaded}
 
-\subsection*{Section 7. Career Development Plan}
-In this section, the candidate's career plan and development are described. When the thesis is handed in (M4), this section is revisited in a self-contained document called ``Career Development Plan'' (CDP) to be signed by the candidate and the supervisors.
-
-\subsubsection*{Section 7.1. Long-Term Career Objectives}
-\begin{shaded}
-\noindent
-\emph{DPP: Describe long-term career goals (over 5 years) and how to become able to reach those goals.}
-
-\noindent
-\emph{TPR, RPR, CDP: Update as needed if the career plans have evolved.}
-
-\end{shaded}
-
-\subsubsection*{Section 7.2. Objectives Covered in Project}
-Describe which development objectives will be/have been achieved in the project with respect to
-\begin{enumerate}
-\item Research skills and techniques
-\item Research management and co-operation
-\item Communication skills
-\item Other professional training
-\item Networking activities and opportunities
-\item Other activities with professional relevance
-\end{enumerate}
-
-\begin{shaded}
-\noindent
-\emph{
-CDP: Include also published and accepted papers as well as completed course activities such that the document is self-contained.}
-\end{shaded}
+\section{Career Development Plan}
+After completing the three years 
+programme, the candidate will be an independent researcher, ready to join the academia or pursue a competitive professional career in the industry. 
+During the PhD programme, the candidate will be initiated 
+into research by acquiring competitive research skills, will gain expertise in state-of-the-art technologies, 
+cultivate soft skills, such as communication, presentation and co-operation, and work within a professional environment.
 
 
-
-\subsection*{Section 8. References}
+%\section{References}
 %\bibliographystyle{te}
 \printbibliography{}
 %List of essential references used in the doctorate plan (e.g., in the state of the art) including authors, title, publication outlet, pages/volume/year and for conferences also town/country/dates. Include only peer-reviewed publications (includes books from recognised publishers). The list should include the most important 10-25 references in the research field.
