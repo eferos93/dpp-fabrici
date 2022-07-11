@@ -93,8 +93,7 @@ Despite the progress made, it is difficult to combine efficiency (the integratio
 %difficult to guarantee privacy, accuracy, and good performance at the same time.
 
 Machine Learning and Data Integration have really close relationship \cite*{Dong2019}. In particular, it is possible to leverage the first to improve the performance of the second
-and vice-versa. An evolving branch of Machine Learning is Federated Learning, which consists in building a Machine Learning model in a federated setting (when the data is distributed across
- edge devices) and model in a collaborative way, without moving the data to a central server. This new technique is a good match with the need of privacy in ML nowadays. Despite its advantages, 
+and vice-versa. An evolving branch of Machine Learning (ML) is Federated Learning (FL), which consists in building a model in a federated setting (when the data is distributed across different data owners) and model in a collaborative way, without moving the data to a central server. This new technique is a good match with the need of privacy in ML nowadays. Despite its advantages, 
  there are a lot of open problems in FL \cite*{Kairouz2021}. In particular, data in FL needs to be pre-processed (e.g. align the schemas, record linkage) in order to start the training process. This would 
  require the data to move out of the edge-devices, therefore threatening privacy.
 
@@ -126,16 +125,28 @@ It is characterized by three main steps:
 %\item The background for the project problem should be described (maximum 300 words).
 %\item An introduction stating the state of the art for the doctorate project. The introduction should include key references listed under Section 7. Typically, at least 10-15 references to peer-reviewed scientific material are expected. In case it is necessary to refer to non-peer-reviewed material then use a footnote (or parenthesis) to provide information to the source. Explain the relevance of the present doctorate project so the scientific contribution will be evident -- i.e., explain how the project advances current state-of-the-art. Scientific challenges should be clearly defined -- do not mistake this for technological challenges.
 \subsubsection{Federated Learning}
-Federated Learning is a machine learning approach where a model is trained across multiple decentralized edge-devices, in an edge computing fashion. Each device trains a local model and then, 
-either in a centralized, decentralized or heterogeneous approach, build a global model. It differs from a distributed machine learning as the data is not expected to be identically distributed.
-Besides the advantage of having a distributed computation, guaranteeing more efficiency, it gained a lot of popularity due to the fact that data is not exchanged between the parts involved, thus guaranteeing privacy.
+FL is a ML approach where a model is trained across multiple decentralized data owners. Each data owner trains a local model and then, 
+either in a centralized, decentralized or heterogeneous approach, build a global model. It differs from a distributed machine learning 
+as the data is not expected to be identically distributed. Besides the advantage of having a distributed computation, 
+guaranteeing more efficiency, it gained a lot of popularity due to the fact that data is not exchanged between the parts involved, thus guaranteeing privacy.
 
 It has gained a lot of popularity both in research and industry, in particular in transportation \cite*{Elbir2020}, Industry 4.0 \cite*{Shubyn2022} and digital health \cite*{Prayitno2021}.
 \subsubsection{Differential Privacy \& Synopses for Big Data}
-Differential Privacy (DP) is a technique for sharing datasets' information without compromising the privacy of the individuals. The idea is to add noise to the data such that the new distribution is close 
-to the real one, but not equal. 
+Differential Privacy (DP) is a technique for sharing datasets' information without compromising the privacy of the individuals. 
+The idea is to add noise to the data such that the new distribution is close to the real one, but not equal. 
 
-Synopses or summaries are a set of technique and probabilistic data structures to compute compact description of big datasets. They gained a lot of popularity over the last decade due to the rise of Big Data.
+More specifically, it guarantees that any sequence of outputs (response to a query) is equally likely 
+to occur, independent of the presence or absence of any individual in the dataset. The main advantage of DP is that it is robust 
+against membership and information inference attacks, i.e. when an attacker is able to de-anonymize an anonymized dataset via 
+linkage attacks. A good example of de-anonymization attack is the one proposed by Narayanan et.al. \cite*{Nara2008} where from an 
+anonymized dataset of Netflix subscribers' viewing history, they de-anonymized it through a linkage attack with the Internet Movies Database, 
+revealing the users' apparent political preferences and other sensitive information.
+
+
+Synopses or summaries are a set of technique and probabilistic data structures to compute compact description of big datasets. 
+These methods compute lossy, compact summaries of data, from which it is possible to carry out interactive analyses and queries. 
+They have been used extensively for streaming data, now ganing popularity also in ML and FL.
+%They gained a lot of popularity over the last decade due to the rise of Big Data.
 
 \subsection{State of the Art}
 \subsubsection{Privacy-aware Data Integration in the Big Data Era}
