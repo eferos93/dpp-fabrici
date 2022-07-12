@@ -260,14 +260,20 @@ In particular, FL applications usually require engineers to align and link the d
 on new methods to automate and scale the data preparation steps while guaranteeing the privacy.
 
 \subsection{Project Objectives}
-The goal of this PhD can be divided in two main objectives. The first is to improve the state of the art of Privacy Preserving DI (PPDI) by 
-bringing it in a more practical scenario, namely, the FL data preparation step. Secondly, after having identified strength and weaknesses of 
-the actual PPDI techniques, design and develop a framework to integrate with the FL process. We aim to use techniques like synopses, 
-probabilistic data structures and differential privacy.
+The goal of this PhD can be divided in two main objectives. The first is to develop Privacy Preserving DI algorithms to improve the computational 
+performance with respect to state-of-the-art algorithms, by also extending to a multi-party scenario.
+The second objective is to experiment those algorithms in the FL process, namely alignment the schemas of the datasets and linking the records to 
+in particular in the DI phase and observe how the performance of the learned models changes, with respect to FL solutions that does not align the data. 
+%bringing it in a more practical scenario, namely, the FL data preparation step. Secondly, after having identified strength and weaknesses of 
+%the actual PPDI techniques, design and develop a framework to integrate with the FL process. %We aim to use techniques like synopses, 
+%probabilistic data structures and differential privacy.
+
+Briefly, our objectives are:
 \begin{enumerate}
-   \item \textbf{O1.} Improve the state of the art of Privacy Preserving DI techniques by tackling the limitations that make them unfeasible to apply to 
-   real world scenarios.
-   \item \textbf{O2.} Propose a framework to integrate to real world scenarios, namely the FL preprocessing steps.
+   \item \textbf{O1.} Provide Privacy Preserving DI solutions (i.e. schema alignment and PPRL) by tackling the computational performance limitations 
+   presented above and extending them to multi-party scenarios.
+   \item \textbf{O2.} Prototype a DI plugin to integrate to the FL data integration phase, with the aim of improving the 
+   learned models' performance.
 \end{enumerate}
 
 \subsection{Key Methods}
@@ -277,9 +283,11 @@ project's objectives and ensure the production of high quality results:
    \item Study the literature review of the current Privacy-Preserving Data Integration techniques and analyze their strengths 
    and weaknesses. %This step can be considered as a continuous loop as more and more scientific papers are
    %published in the top tier conferences and journals.
-   \item After understanding and analyzing the offerings of current solutions, we will propose algorithms that will use Differential Privacy 
-   and Synopses that will satisfy all the three requirements mentioned in the state of the art. 
-   The goal here is to design and implement the solution in a simulated federated environment.
+   \item Study Differential Privacy and Synopses in order to understand how to apply them for DI integration algorithms.
+   \item After understanding and analyzing the offerings of current solutions, we will propose algorithms that will 
+   use Differential Privacy and Synopses with the aim of obtaining solutions that are computationally performant, differentially 
+   private, without losing efficacy (i.e. precision and recall). 
+   The goal here is to prototype those solutions in a simulated federated environment.
    \item Regarding the evaluation of the proposed solutions, appropriate benchmarks will be considered
    ensuring the correctness of our results.
 \end{itemize}
