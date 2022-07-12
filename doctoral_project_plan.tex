@@ -176,7 +176,7 @@ Universal Schema \cite*{Riedel2013} has revolutionized schema alignment. It cons
 mappings between predicates, it adds inferred triples. This is done through matrix factorization \cite*{Riedel2013}, while recently it is improved by using 
 Recurrent Neural Networks \cite*{Das2016,Nee2015}.
 
-For what we know so far, there is no work in literature regarding privacy-aware schema matching. This because most of the techniques are based on the schemas' metadata. 
+For what we know so far, there is no work in literature regarding privacy-aware schema matching, due to the fact that most of the techniques are based on the schemas' metadata. 
 Nevertheless, if Instance-level approaches are used, it may be useful to use techniques for guaranteeing the privacy of the individuals, e.g. differential privacy.
 
 %namely there is no need to increase computational performance, rather 
@@ -192,7 +192,7 @@ It is the most important problem in integrating data from different sources.
 Generally, it proceeds in three steps: 
 \begin{enumerate}
    \item \textbf{blocking records} that are likely to be a match;
-   \item \textbf{compare pairs of records} to decide if it's a match;
+   \item \textbf{compare pairs of records} in order to decide if it's a match;
    \item \textbf{clustering records} according to the previous step's results.
 \end{enumerate}
 
@@ -207,7 +207,7 @@ the privacy of the individuals is a major concern. Privacy-Preserving Record Lin
 a privacy-preserving manner.
 Initially, Secure Multiparty Computation (SMC) techniques were used, in particular, the Paillier crypto-system \cite*{paillier1999public}. 
 These protocols are reliable and very effective, with the downside of a very prohibitive computational cost. 
-In other to improve performance, by applying secure transformations to the data \cite*{Bonomi2013}, such as embedding records to different spaces and then mining them with differential privacy.
+In order to improve performance, by applying secure transformations to the data \cite*{Bonomi2013}, such as embedding records to different spaces and then mining them with differential privacy.
 This comes with the cost of having less accurate results. 
 
 Generally, the PPRL protocols proposed for secure two-party private record linkage are not able to meet the following three requirements altogether, without making strict assumptions: 
@@ -221,7 +221,7 @@ Moreover, multi-party PPRL is a more realistic scenario and only in the last yea
 %For example, a malicious party may create many random records with the intent of matching with the other parties' actual records \cite*{Gkoulalas-Divanis2021}. 
 %To tackle this problem, blockchain technologies are recently being proposed in literature \cite*{Nobrega2021}.
 
-\paragraph{Data Fusion.} Data fusion resolves conflicts between different data sources, by selecting the best record per entity. 
+\paragraph{Data Fusion.} Data fusion resolves conflicts between different data sources, namely, for each entity choose the best record to represent it. 
 Access to highly accurate data is critical for industry applications, such as knowledge graph search, so data fusion is often 
 an important step in data integration.
 
@@ -246,8 +246,8 @@ FL can be categorized as it follows:
 \begin{itemize}
    \item \textbf{Horizontal Federated Learning}. Horizontal FL refers when the federated datasets share the same feature space (the column names) but not the sample space (rows). This system
    assumes that all the participants are honest and security against an honest-but-curious server \cite*{Yang2019}. Usually, the learning steps in this system are: (1) 
-   each data owner \textit{train a local model} then the (2) \textit{gradients are sent} to the central server, which applies a (3) \textit{secure aggregation} on them and  
-   received by the federation. Finally, the (4) \textit{model updates} computed by the central server are sent back to the data owners and their local models get updated.
+   each data owner \textit{trains a local model} then the (2) \textit{gradients are sent} to the central server, which applies a (3) \textit{secure aggregation}. 
+   Finally, the (4) \textit{model updates} computed by the central server are sent back to the data owners and their local models get updated.
    \item \textbf{Vertical Federated Learning}. Vertical FL is applicable when the datasets share the sample ID space, but the features are different. In this scenario, data pre-processing is required, in particular 
    \textit{schema alignment} and \textit{entity resolution}. These phases require exchanging data with a third party to do the pre-computation, therefore security is more difficult to guarantee in this case.
 \end{itemize}
@@ -257,7 +257,7 @@ FL can be categorized as it follows:
 FL is getting more and more used in many areas, in particular in the health care \cite*{Che2022,Bou2019,app112311191}. Despite the fact 
 that FL brought us new hope for the of data privacy in Artificial Intelligence, various challenges needs to be addressed \cite*{Kairouz2021}. 
 In particular, FL applications usually require engineers to align and link the datasets manually. Therefore, it would be critical to work 
-on new methods to automate scale the data preparation steps while guaranteeing the privacy.
+on new methods to automate and scale the data preparation steps while guaranteeing the privacy.
 
 \subsection{Project Objectives}
 The goal of this PhD can be divided in two main objectives. The first is to improve the state of the art of Privacy Preserving DI (PPDI) by 
