@@ -50,7 +50,7 @@
 \begin{tabular}{c}
 European Joint Doctorate in  \\
 Data Engineering for Data Science (DEDS) \\*[2mm]
-Doctoral Project Plan\footnotemark \\
+Doctoral Project Plan \\ %\footnotemark
 Synopses-Driven Data Integration and Federated Learning \\ Eros Fabrici \\
 \end{tabular}
 }\\[5mm]
@@ -93,8 +93,7 @@ Despite the progress made, it is difficult to combine efficiency (the integratio
 %difficult to guarantee privacy, accuracy, and good performance at the same time.
 
 Machine Learning and Data Integration have really close relationship \cite*{Dong2019}. In particular, it is possible to leverage the first to improve the performance of the second
-and vice-versa. An evolving branch of Machine Learning is Federated Learning, which consists in building a Machine Learning model in a federated setting (when the data is distributed across
- edge devices) and model in a collaborative way, without moving the data to a central server. This new technique is a good match with the need of privacy in ML nowadays. Despite its advantages, 
+and vice-versa. An evolving branch of Machine Learning (ML) is Federated Learning (FL), which consists in building a model in a federated setting (when the data is distributed across different data owners) and model in a collaborative way, without moving the data to a central server. This new technique is a good match with the need of privacy in ML nowadays. Despite its advantages, 
  there are a lot of open problems in FL \cite*{Kairouz2021}. In particular, data in FL needs to be pre-processed (e.g. align the schemas, record linkage) in order to start the training process. This would 
  require the data to move out of the edge-devices, therefore threatening privacy.
 
@@ -126,23 +125,36 @@ It is characterized by three main steps:
 %\item The background for the project problem should be described (maximum 300 words).
 %\item An introduction stating the state of the art for the doctorate project. The introduction should include key references listed under Section 7. Typically, at least 10-15 references to peer-reviewed scientific material are expected. In case it is necessary to refer to non-peer-reviewed material then use a footnote (or parenthesis) to provide information to the source. Explain the relevance of the present doctorate project so the scientific contribution will be evident -- i.e., explain how the project advances current state-of-the-art. Scientific challenges should be clearly defined -- do not mistake this for technological challenges.
 \subsubsection{Federated Learning}
-Federated Learning is a machine learning approach where a model is trained across multiple decentralized edge-devices, in an edge computing fashion. Each device trains a local model and then, 
-either in a centralized, decentralized or heterogeneous approach, build a global model. It differs from a distributed machine learning as the data is not expected to be identically distributed.
-Besides the advantage of having a distributed computation, guaranteeing more efficiency, it gained a lot of popularity due to the fact that data is not exchanged between the parts involved, thus guaranteeing privacy.
+FL is a ML approach where a model is trained across multiple decentralized data owners. Each data owner trains a local model and then, 
+either in a centralized, decentralized or heterogeneous approach, build a global model. It differs from a distributed machine learning 
+as the data is not expected to be identically distributed. Besides the advantage of having a distributed computation, 
+guaranteeing more efficiency, it gained a lot of popularity due to the fact that data is not exchanged between the parts involved, thus guaranteeing privacy.
 
 It has gained a lot of popularity both in research and industry, in particular in transportation \cite*{Elbir2020}, Industry 4.0 \cite*{Shubyn2022} and digital health \cite*{Prayitno2021}.
 \subsubsection{Differential Privacy \& Synopses for Big Data}
-Differential Privacy (DP) is a technique for sharing datasets' information without compromising the privacy of the individuals. The idea is to add noise to the data such that the new distribution is close 
-to the real one, but not equal. 
+Differential Privacy (DP) is a technique for sharing datasets' information without compromising the privacy of the individuals. 
+The idea is to add noise to the data such that the new distribution is close to the real one, but not equal. 
 
-Synopses or summaries are a set of technique and probabilistic data structures to compute compact description of big datasets. They gained a lot of popularity over the last decade due to the rise of Big Data.
+More specifically, it guarantees that any sequence of outputs (response to a query) is equally likely 
+to occur, independent of the presence or absence of any individual in the dataset. The main advantage of DP is that it is robust 
+against membership and information inference attacks, i.e. when an attacker is able to de-anonymize an anonymized dataset via 
+linkage attacks. A good example of de-anonymization attack is the one proposed by Narayanan et.al. \cite*{Nara2008} where from an 
+anonymized dataset of Netflix subscribers' viewing history, they de-anonymized it through a linkage attack with the Internet Movies Database, 
+revealing the users' apparent political preferences and other sensitive information.
+
+
+Synopses or summaries are a set of technique and probabilistic data structures to compute compact description of big datasets. 
+These methods compute lossy, compact summaries of data, from which it is possible to carry out interactive analyses and queries. 
+They have been used extensively for streaming data, now gaining popularity also in ML and FL.
+%They gained a lot of popularity over the last decade due to the rise of Big Data.
 
 \subsection{State of the Art}
 \subsubsection{Privacy-aware Data Integration in the Big Data Era}
-Privacy in the context of data management has gained a lot of popularity over the last decade, as public awareness about issues in management sensitive data increased. Due two this,
-privacy became of central importance in the field of Big Data Management, analytics and processing.
+Privacy in the context of data management has gained a lot of popularity over the last decade, as public awareness about 
+issues in management sensitive data increased. Due to this, privacy became of central importance in the field of Big Data 
+Management, analytics and processing.
 
-In the particular case of Data Integration, privacy-preserving techniques
+In the particular case of DI, privacy-preserving techniques
 has been used extensively in literature, especially for record linkage. In particular, differentially-private record linkage and cryptography has
 been used extensively \cite*{Khurram2020,Vatsalan2017, Clifton, Kuzu2013, Gkoulalas-Divanis2021, Nobrega2021, Bonomi2012, Kuzu2013}. 
 As regards schema matching and data fusion, there are fewer works on guaranteeing privacy, most of the work is based on guaranteeing efficiency, by using 
@@ -164,8 +176,9 @@ Universal Schema \cite*{Riedel2013} has revolutionized schema alignment. It cons
 mappings between predicates, it adds inferred triples. This is done through matrix factorization \cite*{Riedel2013}, while recently it is improved by using 
 Recurrent Neural Networks \cite*{Das2016,Nee2015}.
 
-For what we know so far, there is no work in literature regarding privacy-aware schema matching. This because most of the techniques are based on the schemas' metadata. 
-Nevertheless, if Instance-level approaches are used, it may be useful to use techniques for guaranteeing the privacy of the individuals, e.g. differential privacy.
+For what we know so far, there is no work in literature regarding privacy-aware schema matching, due to the fact that most 
+of the techniques are based on the schemas' metadata. Nevertheless, if Instance-level approaches are used, it may be useful 
+to use techniques for guaranteeing the privacy of the individuals, e.g. differential privacy.
 
 %namely there is no need to increase computational performance, rather 
 %exploring new techniques for having more precise matchers could be necessary. Nevertheless, the availability of big data, brought recent 
@@ -180,7 +193,7 @@ It is the most important problem in integrating data from different sources.
 Generally, it proceeds in three steps: 
 \begin{enumerate}
    \item \textbf{blocking records} that are likely to be a match;
-   \item \textbf{compare pairs of records} to decide if it's a match;
+   \item \textbf{compare pairs of records} in order to decide if it's a match;
    \item \textbf{clustering records} according to the previous step's results.
 \end{enumerate}
 
@@ -195,7 +208,7 @@ the privacy of the individuals is a major concern. Privacy-Preserving Record Lin
 a privacy-preserving manner.
 Initially, Secure Multiparty Computation (SMC) techniques were used, in particular, the Paillier crypto-system \cite*{paillier1999public}. 
 These protocols are reliable and very effective, with the downside of a very prohibitive computational cost. 
-In other to improve performance, by applying secure transformations to the data \cite*{Bonomi2013}, such as embedding records to different spaces and then mining them with differential privacy.
+In order to improve performance, by applying secure transformations to the data \cite*{Bonomi2013}, such as embedding records to different spaces and then mining them with differential privacy.
 This comes with the cost of having less accurate results. 
 
 Generally, the PPRL protocols proposed for secure two-party private record linkage are not able to meet the following three requirements altogether, without making strict assumptions: 
@@ -209,7 +222,7 @@ Moreover, multi-party PPRL is a more realistic scenario and only in the last yea
 %For example, a malicious party may create many random records with the intent of matching with the other parties' actual records \cite*{Gkoulalas-Divanis2021}. 
 %To tackle this problem, blockchain technologies are recently being proposed in literature \cite*{Nobrega2021}.
 
-\paragraph{Data Fusion.} Data fusion resolves conflicts between different data sources, by selecting the best record per entity. 
+\paragraph{Data Fusion.} Data fusion resolves conflicts between different data sources, namely, for each entity choose the best record to represent it. 
 Access to highly accurate data is critical for industry applications, such as knowledge graph search, so data fusion is often 
 an important step in data integration.
 
@@ -234,28 +247,35 @@ FL can be categorized as it follows:
 \begin{itemize}
    \item \textbf{Horizontal Federated Learning}. Horizontal FL refers when the federated datasets share the same feature space (the column names) but not the sample space (rows). This system
    assumes that all the participants are honest and security against an honest-but-curious server \cite*{Yang2019}. Usually, the learning steps in this system are: (1) 
-   each data owner \textit{train a local model} then the (2) \textit{gradients are sent} to the central server, which applies a (3) \textit{secure aggregation} on them and  
-   received by the federation. Finally, the (4) \textit{model updates} computed by the central server are sent back to the data owners and their local models get updated.
+   each data owner \textit{trains a local model} then the (2) \textit{gradients are sent} to the central server, which applies a (3) \textit{secure aggregation}. 
+   Finally, the (4) \textit{model updates} computed by the central server are sent back to the data owners and their local models get updated.
    \item \textbf{Vertical Federated Learning}. Vertical FL is applicable when the datasets share the sample ID space, but the features are different. In this scenario, data pre-processing is required, in particular 
    \textit{schema alignment} and \textit{entity resolution}. These phases require exchanging data with a third party to do the pre-computation, therefore security is more difficult to guarantee in this case.
 \end{itemize}
 %in many areas such as queries, synthetic data generation and in ML training
 
-\subsubsection{Future Directions}
-FL is getting more and more used in many areas, in particular in the health care \cite*{Che2022,Bou2019,app112311191}. Despite the fact 
-that FL brought us new hope for the of data privacy in Artificial Intelligence, various challenges needs to be addressed \cite*{Kairouz2021}. 
-In particular, FL applications usually require engineers to align and link the datasets manually. Therefore, it would be critical to work 
-on new methods to automate scale the data preparation steps while guaranteeing the privacy.
+%\subsubsection{Future Directions}
+%FL is getting more and more used in many areas, in particular in the health care \cite*{Che2022,Bou2019,app112311191}. Despite the fact 
+%that FL brought us new hope for the of data privacy in Artificial Intelligence, various challenges needs to be addressed \cite*{Kairouz2021}. 
+%In particular, FL applications usually require engineers to align and link the datasets manually. Therefore, it would be critical to work 
+%on new methods to automate and scale the data preparation steps while guaranteeing the privacy.
 
 \subsection{Project Objectives}
-The goal of this PhD can be divided in two main objectives. The first is to improve the state of the art of Privacy Preserving DI (PPDI) by 
-bringing it in a more practical scenario, namely, the FL data preparation step. Secondly, after having identified strength and weaknesses of 
-the actual PPDI techniques, design and develop a framework to integrate with the FL process. We aim to use techniques like synopses, 
-probabilistic data structures and differential privacy.
+The goal of this PhD can be divided in two main objectives. The first is to develop Privacy Preserving DI algorithms to improve the computational 
+performance with respect to state-of-the-art algorithms, by also extending to a multi-party scenario.
+The second objective is to experiment those algorithms in the FL process, namely alignment the schemas of the datasets and linking the records. 
+In particular, we plan to experiment how these novel algorithms impact the performance of the FL models, with respect to FL solutions that does not align the data or 
+that use other DI algorithms. 
+%bringing it in a more practical scenario, namely, the FL data preparation step. Secondly, after having identified strength and weaknesses of 
+%the actual PPDI techniques, design and develop a framework to integrate with the FL process. %We aim to use techniques like synopses, 
+%probabilistic data structures and differential privacy.
+
+Briefly, our objectives are:
 \begin{enumerate}
-   \item \textbf{O1.} Improve the state of the art of Privacy Preserving DI techniques by tackling the limitations that make them unfeasible to apply to 
-   real world scenarios.
-   \item \textbf{O2.} Propose a framework to integrate to real world scenarios, namely the FL preprocessing steps.
+   \item \textbf{O1.} Provide Privacy Preserving DI solutions (i.e. schema alignment and PPRL) by tackling the computational performance limitations 
+   presented above and extending them to multi-party scenarios.
+   \item \textbf{O2.} Prototype a DI plugin to integrate to the FL data integration phase, with the aim of improving the 
+   learned models' performance.
 \end{enumerate}
 
 \subsection{Key Methods}
@@ -263,28 +283,49 @@ We will try to apply the following methods to achieve the
 project's objectives and ensure the production of high quality results:
 \begin{itemize}
    \item Study the literature review of the current Privacy-Preserving Data Integration techniques and analyze their strengths 
-   and weaknesses. %This step can be considered as a continuous loop as more and more scientific papers are
+   and weaknesses. This step can be considered continuous over the course of the PhD as more and more scientific content is 
+   published continuously at top tier conferences and journals.%This step can be considered as a continuous loop as more and more scientific papers are
    %published in the top tier conferences and journals.
-   \item After understanding and analyzing the offerings of current solutions, we will propose algorithms that will use Differential Privacy 
-   and Synopses that will satisfy all the three requirements mentioned in the state of the art. 
-   The goal here is to design and implement the solution in a simulated federated environment.
+   \item Study Differential Privacy and Synopses in order to understand how to apply them for DI integration algorithms.
+   \item After understanding and analyzing the offerings of current solutions, we will propose algorithms that will 
+   use Differential Privacy and Synopses with the aim of obtaining solutions that are computationally performant and differentially 
+   private, without losing efficacy (i.e. precision and recall). 
+   The goal here is to prototype those solutions in a simulated federated environment.
    \item Regarding the evaluation of the proposed solutions, appropriate benchmarks will be considered
    ensuring the correctness of our results.
 \end{itemize}
 
 \subsection{Significance and Outcome}
+Big Data is the core of most businesses nowadays. Data are being generated, analyzed, and used at an unprecedented scale, 
+and data-driven decision-making regards all aspects of society. As the value of data increases when it can be linked with other 
+data, addressing big data integration is critical. Big Data introduced also privacy concerns, that have been dealt with policy 
+regulations (e.g. GDPR).
 
-Federated Learning is getting more and more used in the real world as satisfies privacy requirements. 
-Unfortunately, it is still challenging to apply it in real world scenario, and it requires a lot of effort by 
-engineers to prepare the data for FL tasks. 
+However, most of the solutions applied now struggle to guarantee good privacy, good efficacy and good computational performance 
+altogether. 
+Moreover, the actual literature made a small use of techniques like Differential Privacy and Synopses, which are de facto standard in 
+other areas (e.g. private data analysis and processing big data streams). The doctoral project will investigate further the application of 
+these techniques to improve the performance of DI algorithms. Finally, these techniques will be applied to FL scenarios, to observe 
+how the Synopses-driven and differentially-private DI algorithms can improve the quality of the learned models.
+
+%Federated Learning is gaining more and more importance, and it is already applied at scale. Google use it extensively for various tasks, 
+%one example is using FL for improving Gboard query suggestions \cite*{Gboard2018}. It has also been applied in other domains, like finance, 
+%smart-manufacturing and, the most relevant one, in digital healthcare \cite*{Che2022,Xu2021}. 
+
+%Federated Learning is getting more and more used in the real world as satisfies privacy requirements. 
+%Unfortunately, it is still challenging to apply it in real world scenario, and it requires a lot of effort by 
+%engineers to prepare the data for FL tasks. 
 
 The expected outcome of this project includes (1) presentation of our work in top tier conferences
 and journals, (2) collaboration with other research teams and/or industrial partners (e.g. secondment), to
 exchange ideas and boost the results of our work, and (3) open-sourcing critical components of our work.
 
 \section{Co-supervisors/Candidate Co-operation Agreements}
-The project will be carried out in three years during which the PhD student will stay in one research institution and one university. During the first and the third year, the candidate will work in Athena Research Center (ARC) under the supervision of Prof. Minos Garofalakis (ARC). During the second year, the program
-will take place in Universitat Politecnica de Catalunya (UPC) under the supervision of Prof. Oscar Romero (UPC). The project will be a joint work of all parties, hence close co-operation is expected in the following way.
+The project will be carried out in three years during which the PhD student will stay in one research institution and one university. 
+During the first and the third year, the candidate will work in Athena Research Center (ARC) under the supervision of Prof. 
+Minos Garofalakis (ARC). During the second year, the program will take place in Universitat Politecnica de Catalunya (UPC) under 
+the supervision of \textbf{PLACEHOLDER} (UPC). The project will be a joint work of all parties, hence close co-operation is 
+expected in the following way.
 
 The progress of the project will be validated through frequent meetings between the candidate and his supervisors. The candidate will meet on a weekly basis with his home supervisor and one or two times per month with his host supervisor (the opposite when he will be hosted at UPC). Following typical business practice, the expectations and tasks planned for each meeting will be clearly communicated in advance, with a reasonable notice, both from the supervisors to the candidate and vice-versa. Standard tools of the trade will be used to boost collaboration, such
 as a shared repository for documents and code artifacts (e.g., Mendeley Library, GitHub, etc.), communication platforms (e.g. Skype, Teams).
@@ -295,44 +336,47 @@ as a shared repository for documents and code artifacts (e.g., Mendeley Library,
 The PhD is a 3-year-long study, spanning from May 1st, 2022 to February 28th, 2025.
 \begin{table}[h]
    \centering
-   \begin{tabular}{lp{.8\textwidth}}
+   \begin{tabular}{lp{.6\textwidth}}
        \textbf{Time}        & \textbf{Plan}                                                               \\
        \toprule
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       \textbf{Spring 2022}   &
+       \textbf{05/22 - 09/22 (ARC)}   &
        Winter School at ARC \newline
        Preparation of the two months study plan                         \newline
        Literature review of Privacy Preserving Data Integration    \newline
-       Summer School at ULB \\
+       eBISS 2022 Summer School \\
        \textbf{Milestones}  &
        \textbf{Submission of two months study plan}                                                       \\
        \midrule
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       \textbf{Fall 2022} &
+       \textbf{09/22 - 05/23 (ARC)} &
        Participation in 1 PhD courses as shown in the courses' table \newline
        Preparation of the 11 months study plan \newline
        Survey the current state of the art in Privacy Preserving DI \newline
-       Summer School at ULB \\
+       Winter School at AAU \\
        \textbf{Milestones}  &
        \textbf{Submission of 11 months study plan}                                                        \\
        \midrule
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       \textbf{Spring 2023}   &
-       Create an efficient algorithm based of synopses and differential privacy for schema alignment \newline
+       \textbf{05/23 - 09/23 (UPC)}   &
+       Create an efficient algorithm based of synopses and\newline differential privacy for schema alignment \newline
        Summer School at UPC                                                                               \\
        \midrule
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       \textbf{Fall 2023} &
+       \textbf{09/23 - 02/24 (UPC)} &
        Participation in 2 PhD courses as shown in the courses' table \newline
-       Design and develop an algorithm for PPRL using synopses and differential privacy \\                                                                              \\
+       Design and develop an algorithm for\newline PPRL using synopses and differential privacy \\                                                                              \\
        \midrule
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       \textbf{Spring 2024}   &
-       Prototype a framework for PPDI for Federated Learning systems                                         \\
+       \textbf{02/24 - 05/24 (SPR)} &
+       %\textbf{Spring 2024}   &
+       Secondment at Spring Techno                                         \\
        \midrule
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       \textbf{Fall 2024} &
-       Write the thesis                               \\
+       \textbf{05/2024 - 02/2025 (ARC)} &
+       Prototype a plugin for integrating PPDI to\newline Federated Learning systems \newline
+       Evaluate the plugin \newline
+       Write the thesis    \\
        \textbf{Milestones}  &
        \textbf{Submission of the PhD thesis}                                                              \\
        \bottomrule
@@ -356,9 +400,22 @@ following:
    main contributions will be to initiate a new reader to the field of PPDI,
    by illustrating the current applied techniques through examples. Comparison of the methods,
    limitations, research challenges, and future work will also be included.
-   \item A research and a demo paper about learning for each of the following: (a) Differentially Private and Synopses-driven schema alignment for FL and (b) PPRL for FL and show how it can be used 
-   for tracking the patient history.
-   \item A research paper about the framework for Privacy Preserving DI for FL systems.
+   \begin{itemize}
+      \item Journal: ACM Surveys
+   \end{itemize}
+   %\item A research and a demo paper about learning for each of the following: (a) Differentially Private and Synopses-driven schema alignment for FL and (b) PPRL for FL and show how it can be used 
+   %for tracking the patient history.
+
+   \item Two research papers presenting, respectively, a Differentially Private (DP) and Synopses-driven multi-party schema 
+   alignment algorithm and a DP and Synopses-driven Record Linkage algorithm. Both papers will include an evaluation of the algorithms (e.g. computational complexity, benchmarks).
+   \begin{itemize}
+      \item Conferences: respectively VLDB, SIGMOD
+   \end{itemize}
+   \item A demo paper introducing a plugin for Privacy Preserving DI for FL systems, which will include an evaluation of how 
+   the FL model performance is impacted by the proposed DI algorithms.
+   \begin{itemize}
+      \item Conference: IEEE ICDE
+   \end{itemize}
 \end{enumerate}
 
 %\item Statement of the project's objectives. This could be formulated as a hypothesis and/or research questions if applicable.
@@ -419,19 +476,20 @@ Distributed Systems & NKUA & 6 & General & Autumn'22 & Planned \\
 Big Data Management & UPC & 6 & Project & Autumn'23 & Planned \\
 Research Methods & UPC & 6 & General & Autumn'23 & Planned \\\hline
 Winter School (ARC) & ARC & 3 & Project & Spring'22 & Completed \\
-Summer School (ULB) & ULB & 3 & Project & Spring'22 & Mandatory \\
-Winter School (AAU) & AAU & 3 & General & Fall'22 & Mandatory \\
-Summer School (UPC) & UPC & 3 & General & Spring'23 & Mandatory\\\hline
+Summer School (ULB) & ULB & 3 & Project & Spring'22 & Completed \\
+Winter School (AAU) & AAU & 3 & General & Fall'22 & Planned \\
+Summer School (UPC) & UPC & 3 & General & Spring'23 & Planned\\\hline
 Conference Attendance & TBD & 6 & Project & Multiple & Planned\\\hline
-Secondment & SPR & 4 & Project & Summer'24 & Planned\\\hline
+%Secondment & SPR & 4 & Project & Summer'24 & Planned\\\hline
 Greek Language course & NKUA & - & Project & Multiple & Planned\\\hline
+Spanish Language course & UPC & - & Project & Multiple & Planned\\\hline
 \end{tabular}
 \end{center}
 
 \section{Knowledge Dissemination and Participation to Scientific Events}
 
 We plan to disseminate the product knowledge by publishing papers in top tier conferences, such as ACM
-SIGMOD, VLDB, IEEE ICDE, EDBT etc. and journals, such as VLDB J., ACM TODS, IEEE TKDE,
+SIGMOD, VLDB, IEEE ICDE, EDBT, etc. and journals, such as VLDB J., ACM Surveys, IEEE TKDE,
 Information Systems, etc. Moreover, we will pursue opportunities to expose our work to additional
 outlets (e.g., AI Summit, ACM/IEEE local chapters, meet-ups) through presenting talks and tutorials or
 giving demonstrations, in order to open a communication channel with the big data engineering,
@@ -446,7 +504,7 @@ research.
 \section{External Co-operation}
 The doctorate candidate will spend time studying both in Greece 
 and Spain. Furthermore, a secondment of three months will take place, where the candidate will join
-Spring Techno, where he will work on of a complex Federated Learning scenario with real data.
+Spring Techno, where he will work on a complex Federated Learning scenario with real data.
 During the following three years, all ESRs will meet in four different winter/summer schools to present their work, receive feedback, exchange ideas, and get exposed to new challenges. During these schools, candidates will have the opportunity to get in touch with academic and non-academic partners, presenting them their findings, reflecting on new opportunities, and opening the way for further collaboration. Finally, the candidate may co-operate with external researchers or research teams, in case that his work can be combined or merged with similar works of others.
 
 %The doctorate candidate must participate actively in another research environment outside his/her home and host universities.
