@@ -176,8 +176,9 @@ Universal Schema \cite*{Riedel2013} has revolutionized schema alignment. It cons
 mappings between predicates, it adds inferred triples. This is done through matrix factorization \cite*{Riedel2013}, while recently it is improved by using 
 Recurrent Neural Networks \cite*{Das2016,Nee2015}.
 
-For what we know so far, there is no work in literature regarding privacy-aware schema matching, due to the fact that most of the techniques are based on the schemas' metadata. 
-Nevertheless, if Instance-level approaches are used, it may be useful to use techniques for guaranteeing the privacy of the individuals, e.g. differential privacy.
+For what we know so far, there is no work in literature regarding privacy-aware schema matching, due to the fact that most 
+of the techniques are based on the schemas' metadata. Nevertheless, if Instance-level approaches are used, it may be useful 
+to use techniques for guaranteeing the privacy of the individuals, e.g. differential privacy.
 
 %namely there is no need to increase computational performance, rather 
 %exploring new techniques for having more precise matchers could be necessary. Nevertheless, the availability of big data, brought recent 
@@ -294,18 +295,36 @@ project's objectives and ensure the production of high quality results:
 \end{itemize}
 
 \subsection{Significance and Outcome}
+Big Data is the core of most businesses nowadays. Data are being generated, analyzed, and used at an unprecedented scale, 
+and data-driven decision-making regards all aspects of society. As the value of data increases when it can be linked with other 
+data, addressing big data integration is critical. Big Data introduced also privacy concerns, that have been dealt with policy 
+regulations (e.g. GDPR).
 
-Federated Learning is getting more and more used in the real world as satisfies privacy requirements. 
-Unfortunately, it is still challenging to apply it in real world scenario, and it requires a lot of effort by 
-engineers to prepare the data for FL tasks. 
+However, most of the solutions applied now struggle to guarantee good privacy, good efficacy and good computational performance 
+altogether. 
+Moreover, the actual literature made a small use of techniques like Differential Privacy and Synopses, which are de facto standard in 
+other areas (e.g. private data analysis and processing big data streams). The doctoral project will investigate further the application of 
+these techniques to improve the performance of DI algorithms. Finally, these techniques will be applied to FL scenarios, to observe 
+how the Synopses-driven and differentially-private DI algorithms can improve the quality of the learned models.
+
+%Federated Learning is gaining more and more importance, and it is already applied at scale. Google use it extensively for various tasks, 
+%one example is using FL for improving Gboard query suggestions \cite*{Gboard2018}. It has also been applied in other domains, like finance, 
+%smart-manufacturing and, the most relevant one, in digital healthcare \cite*{Che2022,Xu2021}. 
+
+%Federated Learning is getting more and more used in the real world as satisfies privacy requirements. 
+%Unfortunately, it is still challenging to apply it in real world scenario, and it requires a lot of effort by 
+%engineers to prepare the data for FL tasks. 
 
 The expected outcome of this project includes (1) presentation of our work in top tier conferences
 and journals, (2) collaboration with other research teams and/or industrial partners (e.g. secondment), to
 exchange ideas and boost the results of our work, and (3) open-sourcing critical components of our work.
 
 \section{Co-supervisors/Candidate Co-operation Agreements}
-The project will be carried out in three years during which the PhD student will stay in one research institution and one university. During the first and the third year, the candidate will work in Athena Research Center (ARC) under the supervision of Prof. Minos Garofalakis (ARC). During the second year, the program
-will take place in Universitat Politecnica de Catalunya (UPC) under the supervision of Prof. Oscar Romero (UPC). The project will be a joint work of all parties, hence close co-operation is expected in the following way.
+The project will be carried out in three years during which the PhD student will stay in one research institution and one university. 
+During the first and the third year, the candidate will work in Athena Research Center (ARC) under the supervision of Prof. 
+Minos Garofalakis (ARC). During the second year, the program will take place in Universitat Politecnica de Catalunya (UPC) under 
+the supervision of \textbf{PLACEHOLDER} (UPC). The project will be a joint work of all parties, hence close co-operation is 
+expected in the following way.
 
 The progress of the project will be validated through frequent meetings between the candidate and his supervisors. The candidate will meet on a weekly basis with his home supervisor and one or two times per month with his host supervisor (the opposite when he will be hosted at UPC). Following typical business practice, the expectations and tasks planned for each meeting will be clearly communicated in advance, with a reasonable notice, both from the supervisors to the candidate and vice-versa. Standard tools of the trade will be used to boost collaboration, such
 as a shared repository for documents and code artifacts (e.g., Mendeley Library, GitHub, etc.), communication platforms (e.g. Skype, Teams).
