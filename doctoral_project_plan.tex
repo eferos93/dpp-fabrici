@@ -50,7 +50,7 @@
 \begin{tabular}{c}
 European Joint Doctorate in  \\
 Data Engineering for Data Science (DEDS) \\*[2mm]
-Doctoral Project Plan\footnotemark \\
+Doctoral Project Plan \\ %\footnotemark
 Synopses-Driven Data Integration and Federated Learning \\ Eros Fabrici \\
 \end{tabular}
 }\\[5mm]
@@ -254,17 +254,18 @@ FL can be categorized as it follows:
 \end{itemize}
 %in many areas such as queries, synthetic data generation and in ML training
 
-\subsubsection{Future Directions}
-FL is getting more and more used in many areas, in particular in the health care \cite*{Che2022,Bou2019,app112311191}. Despite the fact 
-that FL brought us new hope for the of data privacy in Artificial Intelligence, various challenges needs to be addressed \cite*{Kairouz2021}. 
-In particular, FL applications usually require engineers to align and link the datasets manually. Therefore, it would be critical to work 
-on new methods to automate and scale the data preparation steps while guaranteeing the privacy.
+%\subsubsection{Future Directions}
+%FL is getting more and more used in many areas, in particular in the health care \cite*{Che2022,Bou2019,app112311191}. Despite the fact 
+%that FL brought us new hope for the of data privacy in Artificial Intelligence, various challenges needs to be addressed \cite*{Kairouz2021}. 
+%In particular, FL applications usually require engineers to align and link the datasets manually. Therefore, it would be critical to work 
+%on new methods to automate and scale the data preparation steps while guaranteeing the privacy.
 
 \subsection{Project Objectives}
 The goal of this PhD can be divided in two main objectives. The first is to develop Privacy Preserving DI algorithms to improve the computational 
 performance with respect to state-of-the-art algorithms, by also extending to a multi-party scenario.
-The second objective is to experiment those algorithms in the FL process, namely alignment the schemas of the datasets and linking the records to 
-in particular in the DI phase and observe how the performance of the learned models changes, with respect to FL solutions that does not align the data. 
+The second objective is to experiment those algorithms in the FL process, namely alignment the schemas of the datasets and linking the records. 
+In particular, we plan to experiment how these novel algorithms impact the performance of the FL models, with respect to FL solutions that does not align the data or 
+that use other DI algorithms. 
 %bringing it in a more practical scenario, namely, the FL data preparation step. Secondly, after having identified strength and weaknesses of 
 %the actual PPDI techniques, design and develop a framework to integrate with the FL process. %We aim to use techniques like synopses, 
 %probabilistic data structures and differential privacy.
@@ -335,44 +336,47 @@ as a shared repository for documents and code artifacts (e.g., Mendeley Library,
 The PhD is a 3-year-long study, spanning from May 1st, 2022 to February 28th, 2025.
 \begin{table}[h]
    \centering
-   \begin{tabular}{lp{.8\textwidth}}
+   \begin{tabular}{lp{.6\textwidth}}
        \textbf{Time}        & \textbf{Plan}                                                               \\
        \toprule
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       \textbf{Spring 2022}   &
+       \textbf{05/22 - 09/22 (ARC)}   &
        Winter School at ARC \newline
        Preparation of the two months study plan                         \newline
        Literature review of Privacy Preserving Data Integration    \newline
-       Summer School at ULB \\
+       eBISS 2022 Summer School \\
        \textbf{Milestones}  &
        \textbf{Submission of two months study plan}                                                       \\
        \midrule
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       \textbf{Fall 2022} &
+       \textbf{09/22 - 05/23 (ARC)} &
        Participation in 1 PhD courses as shown in the courses' table \newline
        Preparation of the 11 months study plan \newline
        Survey the current state of the art in Privacy Preserving DI \newline
-       Summer School at ULB \\
+       Winter School at AAU \\
        \textbf{Milestones}  &
        \textbf{Submission of 11 months study plan}                                                        \\
        \midrule
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       \textbf{Spring 2023}   &
-       Create an efficient algorithm based of synopses and differential privacy for schema alignment \newline
+       \textbf{05/23 - 09/23 (UPC)}   &
+       Create an efficient algorithm based of synopses and\newline differential privacy for schema alignment \newline
        Summer School at UPC                                                                               \\
        \midrule
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       \textbf{Fall 2023} &
+       \textbf{09/23 - 02/24 (UPC)} &
        Participation in 2 PhD courses as shown in the courses' table \newline
-       Design and develop an algorithm for PPRL using synopses and differential privacy \\                                                                              \\
+       Design and develop an algorithm for\newline PPRL using synopses and differential privacy \\                                                                              \\
        \midrule
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       \textbf{Spring 2024}   &
-       Prototype a framework for PPDI for Federated Learning systems                                         \\
+       \textbf{02/24 - 05/24 (SPR)} &
+       %\textbf{Spring 2024}   &
+       Secondment at Spring Techno                                         \\
        \midrule
        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-       \textbf{Fall 2024} &
-       Write the thesis                               \\
+       \textbf{05/2024 - 02/2025 (ARC)} &
+       Prototype a plugin for integrating PPDI to\newline Federated Learning systems \newline
+       Evaluate the plugin \newline
+       Write the thesis    \\
        \textbf{Milestones}  &
        \textbf{Submission of the PhD thesis}                                                              \\
        \bottomrule
@@ -396,9 +400,22 @@ following:
    main contributions will be to initiate a new reader to the field of PPDI,
    by illustrating the current applied techniques through examples. Comparison of the methods,
    limitations, research challenges, and future work will also be included.
-   \item A research and a demo paper about learning for each of the following: (a) Differentially Private and Synopses-driven schema alignment for FL and (b) PPRL for FL and show how it can be used 
-   for tracking the patient history.
-   \item A research paper about the framework for Privacy Preserving DI for FL systems.
+   \begin{itemize}
+      \item Journal: ACM Surveys
+   \end{itemize}
+   %\item A research and a demo paper about learning for each of the following: (a) Differentially Private and Synopses-driven schema alignment for FL and (b) PPRL for FL and show how it can be used 
+   %for tracking the patient history.
+
+   \item Two research papers presenting, respectively, a Differentially Private (DP) and Synopses-driven multi-party schema 
+   alignment algorithm and a DP and Synopses-driven Record Linkage algorithm. Both papers will include an evaluation of the algorithms (e.g. computational complexity, benchmarks).
+   \begin{itemize}
+      \item Conferences: respectively VLDB, SIGMOD
+   \end{itemize}
+   \item A demo paper introducing a plugin for Privacy Preserving DI for FL systems, which will include an evaluation of how 
+   the FL model performance is impacted by the proposed DI algorithms.
+   \begin{itemize}
+      \item Conference: IEEE ICDE
+   \end{itemize}
 \end{enumerate}
 
 %\item Statement of the project's objectives. This could be formulated as a hypothesis and/or research questions if applicable.
@@ -459,19 +476,20 @@ Distributed Systems & NKUA & 6 & General & Autumn'22 & Planned \\
 Big Data Management & UPC & 6 & Project & Autumn'23 & Planned \\
 Research Methods & UPC & 6 & General & Autumn'23 & Planned \\\hline
 Winter School (ARC) & ARC & 3 & Project & Spring'22 & Completed \\
-Summer School (ULB) & ULB & 3 & Project & Spring'22 & Mandatory \\
-Winter School (AAU) & AAU & 3 & General & Fall'22 & Mandatory \\
-Summer School (UPC) & UPC & 3 & General & Spring'23 & Mandatory\\\hline
+Summer School (ULB) & ULB & 3 & Project & Spring'22 & Completed \\
+Winter School (AAU) & AAU & 3 & General & Fall'22 & Planned \\
+Summer School (UPC) & UPC & 3 & General & Spring'23 & Planned\\\hline
 Conference Attendance & TBD & 6 & Project & Multiple & Planned\\\hline
-Secondment & SPR & 4 & Project & Summer'24 & Planned\\\hline
+%Secondment & SPR & 4 & Project & Summer'24 & Planned\\\hline
 Greek Language course & NKUA & - & Project & Multiple & Planned\\\hline
+Spanish Language course & UPC & - & Project & Multiple & Planned\\\hline
 \end{tabular}
 \end{center}
 
 \section{Knowledge Dissemination and Participation to Scientific Events}
 
 We plan to disseminate the product knowledge by publishing papers in top tier conferences, such as ACM
-SIGMOD, VLDB, IEEE ICDE, EDBT etc. and journals, such as VLDB J., ACM TODS, IEEE TKDE,
+SIGMOD, VLDB, IEEE ICDE, EDBT, etc. and journals, such as VLDB J., ACM Surveys, IEEE TKDE,
 Information Systems, etc. Moreover, we will pursue opportunities to expose our work to additional
 outlets (e.g., AI Summit, ACM/IEEE local chapters, meet-ups) through presenting talks and tutorials or
 giving demonstrations, in order to open a communication channel with the big data engineering,
@@ -486,7 +504,7 @@ research.
 \section{External Co-operation}
 The doctorate candidate will spend time studying both in Greece 
 and Spain. Furthermore, a secondment of three months will take place, where the candidate will join
-Spring Techno, where he will work on of a complex Federated Learning scenario with real data.
+Spring Techno, where he will work on a complex Federated Learning scenario with real data.
 During the following three years, all ESRs will meet in four different winter/summer schools to present their work, receive feedback, exchange ideas, and get exposed to new challenges. During these schools, candidates will have the opportunity to get in touch with academic and non-academic partners, presenting them their findings, reflecting on new opportunities, and opening the way for further collaboration. Finally, the candidate may co-operate with external researchers or research teams, in case that his work can be combined or merged with similar works of others.
 
 %The doctorate candidate must participate actively in another research environment outside his/her home and host universities.
