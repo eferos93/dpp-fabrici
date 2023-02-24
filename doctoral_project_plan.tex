@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm, a4paper]{geometry}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{eurosym}
 \usepackage{booktabs}
 \usepackage{graphicx}
@@ -11,6 +11,7 @@
 \usepackage{biblatex}
 %\bibliography{References.bib}
 \addbibresource{References.bib}
+%\addbibresource{My Library.bib}
 %\usepackage{natbib}
 %\bibliographystyle{apaeng}
 \definecolor{shadecolor}{gray}{0.95}
@@ -44,6 +45,7 @@
 \pagestyle{fancy}
 
 \begin{document}
+!TEX encoding = UTF-8 Unicode
 
 \noindent\framebox[\textwidth][c]{
 \bf\large
@@ -155,8 +157,8 @@ issues in management sensitive data increased. Due to this, privacy became of ce
 Management, analytics and processing.
 
 In the particular case of DI, privacy-preserving techniques
-has been used extensively in literature, especially for record linkage. In particular, differentially-private record linkage and cryptography has
-been used extensively \cite*{Khurram2020,Vatsalan2017, Clifton, Kuzu2013, Gkoulalas-Divanis2021, Nobrega2021, Bonomi2012, Kuzu2013}. 
+has been used extensively in literature, especially for record linkage. %In particular, differentially-private record linkage and cryptography has
+%been used extensively \cite*{Khurram2020,Vatsalan2017, Clifton, Kuzu2013, Gkoulalas-Divanis2021, Nobrega2021, Bonomi2012, Kuzu2013}. 
 As regards schema matching and data fusion, there are fewer works on guaranteeing privacy, most of the work is based on guaranteeing efficiency, by using 
 both rule-based and learning-based approaches \cite*{Rodrigues2021,Riedel2013,Saleem2009}.
 
@@ -172,13 +174,13 @@ traditional approaches consist in extracting knowledge according to a predefined
 
 In schema matching the problem of \textit{volume} have to be taken into account only in few specific cases, for example when we consider millions sources from the web \cite*{Pimplikar2012}, but not in typical DI scenarios, 
 where the number of sources is limited.
-Universal Schema \cite*{Riedel2013} has revolutionized schema alignment. It consists in extracting (subject, predicate, object) triples, where the predicate can be any word or phrase from texts and instead of outputting 
-mappings between predicates, it adds inferred triples. This is done through matrix factorization \cite*{Riedel2013}, while recently it is improved by using 
-Recurrent Neural Networks \cite*{Das2016,Nee2015}.
+%Universal Schema \cite*{Riedel2013} has revolutionized schema alignment. It consists in extracting (subject, predicate, object) triples, where the predicate can be any word or phrase from texts and instead of outputting 
+%mappings between predicates, it adds inferred triples. This is done through matrix factorization \cite*{Riedel2013}, while recently it is improved by using 
+%Recurrent Neural Networks \cite*{Das2016,Nee2015}.
 
-For what we know so far, there is no work in literature regarding privacy-aware schema matching, due to the fact that most 
-of the techniques are based on the schemas' metadata. Nevertheless, if Instance-level approaches are used, it may be useful 
-to use techniques for guaranteeing the privacy of the individuals, e.g. differential privacy.
+For what we know so far, there is only one work in the field \cite{scannapieco_privacy_2007}. The idea is that two parties map their schemas to a globla one, which is defined by a third party. Subsequently, they send the encrypted mapped schemas to the third party that will run an interection between the two and then send back the results to the parties. 
+
+This is basic and effective technique, but this implies the schemas to be non-opaque. If that is not the case, the only way to infer the relationships between the columns is to use information therethic techniques or synopses to estimate the inclusion dependencies between the columns. 
 
 %namely there is no need to increase computational performance, rather 
 %exploring new techniques for having more precise matchers could be necessary. Nevertheless, the availability of big data, brought recent 
@@ -563,7 +565,7 @@ cultivate soft skills, such as communication, presentation and co-operation, and
 
 %\section{References}
 %\bibliographystyle{te}
-\printbibliography{}
+\printbibliography
 %List of essential references used in the doctorate plan (e.g., in the state of the art) including authors, title, publication outlet, pages/volume/year and for conferences also town/country/dates. Include only peer-reviewed publications (includes books from recognised publishers). The list should include the most important 10-25 references in the research field.
 
 %\begin{shaded}
