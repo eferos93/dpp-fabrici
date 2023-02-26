@@ -11,6 +11,7 @@
 \usepackage{biblatex}
 %\bibliography{References.bib}
 \addbibresource{References.bib}
+\addbibresource{DI_synopses_discovery.bib}
 %\addbibresource{My Library.bib}
 %\usepackage{natbib}
 %\bibliographystyle{apaeng}
@@ -45,7 +46,6 @@
 \pagestyle{fancy}
 
 \begin{document}
-!TEX encoding = UTF-8 Unicode
 
 \noindent\framebox[\textwidth][c]{
 \bf\large
@@ -168,7 +168,7 @@ Schema matching aligns attributes and data types. It is one of the oldest proble
 traditional approaches consist in extracting knowledge according to a predefined schema. They can be categorized as it follows:
 \begin{itemize}
    \item \textbf{Schema-level matchers}, where only the metadata is considered (e.g. column labels, data-types). Linguistic matching is mostly used here (stemming, tokenization, etc.) \cite*{Bernstein2011}.
-   \item \textbf{Instance-level matchers}, where the content of the columns is used for matching by using probabilistic approaches \cite*{Szymczak2016, Dasu2002} or rule-based approaches.
+   \item \textbf{Instance-level matchers}, where the content of the columns is used for matching by using probabilistic approaches \cite*{Dasu2002} or rule-based approaches.
    \item \textbf{Hybrid matchers} that combine the two matchers just described.
 \end{itemize}
 
@@ -178,9 +178,17 @@ where the number of sources is limited.
 %mappings between predicates, it adds inferred triples. This is done through matrix factorization \cite*{Riedel2013}, while recently it is improved by using 
 %Recurrent Neural Networks \cite*{Das2016,Nee2015}.
 
-For what we know so far, there is only one work in the field \cite{scannapieco_privacy_2007}. The idea is that two parties map their schemas to a globla one, which is defined by a third party. Subsequently, they send the encrypted mapped schemas to the third party that will run an interection between the two and then send back the results to the parties. 
+For what we know so far, there is only one work in the field \cite*{scannapieco_privacy_2007}. The idea is that two parties map their schemas to a globla one, which is defined by a third party. Subsequently, they send the encrypted mapped schemas to the third party that will run an interection between the two and then send back the results to the parties. 
 
-This is basic and effective technique, but this implies the schemas to be non-opaque. If that is not the case, the only way to infer the relationships between the columns is to use information therethic techniques or synopses to estimate the inclusion dependencies between the columns. 
+This is basic and effective technique, but this implies the schemas to be non-opaque. If that is not the case, the only way to infer the relationships between the columns is to use information therethic techniques or synopses to estimate the inclusion dependencies between the columns. \cite*{kang_schema_nodate} implement such an algorithm. More precisely, they capture the relationships between the columns of a dataset with a graph containing information theoretic values. In this way they reduce the problem to a graph matching problem. 
+
+Another work \cite*{Dasu2002} consist in using synopses about the data mine the structure of a database. In particular, they use MinHashes, q-grams, and linear sketches to estimate joinability, join directions and composite attributes. It does not use any privacy preserving technique, but it is straitfoward the chance to use differential privacy algorithms.
+
+Other works \cite*{zhu_lsh_2016} we explored that make the use of Locality Sensitive Hashing (LSH) and MinHashes, called LSH Esemble. MinHash is a technique for quickly estimating how similar two sets are. LSH is dimensionality reduction method, that make use of hash functions that guarantees that the hashed elements maintain a similar distance in the reduced space. Briefly, LSH Esemble split the single MinHash signatures in $b$ bags. Then each bag is hashed with LSH in a bucket. Given a query column, in is first indexed with the algorithm just described, then a hashed column is a candidate where at least one signature maps in the same bucket where the query column is hashed. Here, differential privacy can be applied to guarantee a formal privacy guarantee, as similarly done in \cite*{fernandes_locality_2021}. 
+
+A line of work \cite*{santos_sketch-based_2022, santos_correlation_2021} use a sketching technique for reducing a column to a small sample, to then compute the correlation between different columns.
+
+As it is possible to deduce from the above, there is very few work on privacy preserving techniques for schema alignment.
 
 %namely there is no need to increase computational performance, rather 
 %exploring new techniques for having more precise matchers could be necessary. Nevertheless, the availability of big data, brought recent 
