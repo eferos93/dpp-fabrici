@@ -216,8 +216,13 @@ at the cost of generating training labels, i.e. to obtain a precision and recall
 Performance and efficiency is not only the main concern of Record Linkage. In a real-world scenario, the data involved in the linkage may be sensitive, and methods to guarantee 
 the privacy of the individuals is a major concern. Privacy-Preserving Record Linkage (PPRL) identifies the set of techniques that aim to link different datasets in 
 a privacy-preserving manner.
+There are four main approaches for guaranteeing privacy, which may also be used together (hybrid solutions) in RL: cryptographic protocol and Secure Multiparty Computation (SMC), differential privacy, masching and generalization techniques (e.g. k-anonimity). 
+
 Initially, Secure Multiparty Computation (SMC) techniques were used, in particular, the Paillier crypto-system \cite*{paillier1999public}. 
-These protocols are reliable and very effective, with the downside of a very prohibitive computational cost. 
+These protocols are reliable and very effective, with the downside of a very prohibitive computational cost.
+A line of research that aims to improve security while guaranteeing privacy consist in a series of work that use embedding techniques with or without differential privacy.
+
+  
 In order to improve performance, by applying secure transformations to the data \cite*{Bonomi2013}, such as embedding records to different spaces and then mining them with differential privacy.
 This comes with the cost of having less accurate results. 
 
