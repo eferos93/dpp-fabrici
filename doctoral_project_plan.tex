@@ -75,7 +75,7 @@ Synopses-Driven Data Integration and Federated Learning \\ Eros Fabrici \\
 
 \section{Project Summary}
 The term Big Data refers to data sets that are too large or complex to be dealt with by traditional data processing software. 
-In particular, Big Data captures to 4 dimensions: Velocity, Variety, Veracity, and Volume. This large quantity of data available nowadays has 
+In particular, Big Data capture 4 dimensions: Velocity, Variety, Veracity, and Volume. This large quantity of data available nowadays has 
 a lot of statistical and business value, therefore their analysis is of core importance for business decision-making. Nevertheless, the data 
 involved in those processes contains a lot of sensitive information regarding individuals (e.g. health sector). There is therefore also the need to 
 guarantee the privacy of the individuals while being able to extract insights and patterns from the data. 
@@ -84,11 +84,11 @@ Data Integration is the set of processes to gather and bridge data from heteroge
 have a unified view. The premise of data integration is to make data more freely available and easier 
 to consume and process by systems and users.
 Research on Data Integration started more than 50 years ago \cite*{recordLinkTheory,dataModelIntegration1980} but as we entered the Big Data era, new challenges arose,
- which include scaling \cite*{Dong2013} data integration while guaranteeing the privacy \cite*{yu2016big, Gkoulalas-Divanis2021} of the individuals involved in the datasets.
+ which include scaling \cite*{Dong2013} data integration processes while guaranteeing the privacy \cite*{yu2016big, Gkoulalas-Divanis2021} of the individuals involved in the datasets.
 Over the last decade new techniques have been applied for improving computational performance, consisting of the use of parallelizing the computation by using big data processing platforms \cite*{Dong2013},
  or algorithmically, namely using summarization techniques \cite*{Cormode2011}, used for 
 approximate fast and approximate querying, improving the performance of Machine Learning processes \cite*{Gribonval2020, Antonanzas2021, Jiang2018} as well as in some data integration scenarios.
-Despite the progress made, it is difficult to combine efficiency (the integration is completed with no, or very few, errors), computational performance and privacy altogether \cite*{He2017}. 
+Despite the progress made, it is difficult to combine efficiency (the integration is completed with no, or very few errors), computational performance and privacy altogether \cite*{He2017}. 
 
 %Analyzing Big Data may involve accessing sensitive information, especially in the health sector. For these reasons, in Data Integration, 
 %techniques like Secure Multi-Party Computation and Differential Privacy \cite*{Dwork2013} have been used. One big concern in private Data Integration is that it is 
@@ -115,12 +115,12 @@ and vice-versa. An evolving branch of Machine Learning (ML) is Federated Learnin
 \section{Scientific Content of the Doctorate Project}
 \subsection{Background}
 \subsubsection{Data Integration}
-Data Integration (DI) is the practice of consolidating data from disparate sources into a unified view. It has been studied since the birth relational databases. 
+Data Integration (DI) is the practice of consolidating data from disparate sources into a unified view. It has been studied since the birth of relational databases. 
 It is characterized by three main steps: 
 \begin{enumerate}
-   \item \textbf{Schema alignment}, a process that takes as input a set of different schemas on the same domain an outputs a \textit{mediated schema}, an \textit{attribute matching} and a \textit{schema mapping}.
+   \item \textbf{Schema alignment}, a process that takes as input a set of different schemas on the same domain and outputs a \textit{mediated schema}, an \textit{attribute matching} and a \textit{schema mapping}.
    \item \textbf{Record linkage}, also referred as entity resolution, computes a partitioning of the set of records from different datasets, such that each partition identifies the records that refer to a distinct entity.
-   \item \textbf{Data fusion} aim is to identify which are the best records to represent a specific entity, when a source provide conflicting values.
+   \item \textbf{Data fusion}, whose aim is to identify which are the best records to represent a specific entity, when a source provides conflicting values.
 \end{enumerate}
 
 %\begin{enumerate}
@@ -128,7 +128,7 @@ It is characterized by three main steps:
 %\item An introduction stating the state of the art for the doctorate project. The introduction should include key references listed under Section 7. Typically, at least 10-15 references to peer-reviewed scientific material are expected. In case it is necessary to refer to non-peer-reviewed material then use a footnote (or parenthesis) to provide information to the source. Explain the relevance of the present doctorate project so the scientific contribution will be evident -- i.e., explain how the project advances current state-of-the-art. Scientific challenges should be clearly defined -- do not mistake this for technological challenges.
 \subsubsection{Federated Learning}
 FL is a ML approach where a model is trained across multiple decentralized data owners. Each data owner trains a local model and then, 
-either in a centralized, decentralized or heterogeneous approach, build a global model. It differs from a distributed machine learning 
+either in a centralized, decentralized or heterogeneous approach, builds a global model. It differs from a distributed machine learning 
 as the data is not expected to be identically distributed. Besides the advantage of having a distributed computation, 
 guaranteeing more efficiency, it gained a lot of popularity due to the fact that data is not exchanged between the parts involved, thus guaranteeing privacy.
 
@@ -159,7 +159,7 @@ Management, analytics and processing.
 In the particular case of DI, privacy-preserving techniques
 has been used extensively in literature, especially for record linkage. %In particular, differentially-private record linkage and cryptography has
 %been used extensively \cite*{Khurram2020,Vatsalan2017, Clifton, Kuzu2013, Gkoulalas-Divanis2021, Nobrega2021, Bonomi2012, Kuzu2013}. 
-As regards schema matching and data fusion, there are fewer works on guaranteeing privacy, most of the work is based on guaranteeing efficiency, by using 
+With regards to schema matching and data fusion, there are fewer works on guaranteeing privacy, most of the works are based on guaranteeing efficiency, by using 
 both rule-based and learning-based approaches \cite*{Riedel2013}.
 
 
@@ -172,7 +172,7 @@ traditional approaches consist in extracting knowledge according to a predefined
    \item \textbf{Hybrid matchers} that combine the two matchers just described.
 \end{itemize}
 
-In schema matching the problem of \textit{volume} have to be taken into account only in few specific cases, for example when we consider millions sources from the web \cite*{Pimplikar2012}, but not in typical DI scenarios, 
+In schema matching the problem of \textit{volume} has to be taken into account only in few specific cases, for example when we consider millions sources from the web \cite*{Pimplikar2012}, but not in typical DI scenarios, 
 where the number of sources is limited.
 %Universal Schema \cite*{Riedel2013} has revolutionized schema alignment. It consists in extracting (subject, predicate, object) triples, where the predicate can be any word or phrase from texts and instead of outputting 
 %mappings between predicates, it adds inferred triples. This is done through matrix factorization \cite*{Riedel2013}, while recently it is improved by using 
@@ -180,15 +180,15 @@ where the number of sources is limited.
 
 For what we know so far, there is only one work in the field of \textbf{Privacy-Preserving Schema Alignment} \cite*{scannapieco_privacy_2007}. The idea is that two parties map their schemas to a global one, which is defined by a third party. Subsequently, they send the encrypted mapped schemas to the third party that will run an intersection between the two and then send back the results to the parties. 
 
-This is basic and effective technique, but this implies the schemas to be non-opaque. If that is not the case, the only way to infer the relationships between the columns is to use information theoretic techniques or synopses to estimate the inclusion dependencies between the columns. \cite*{kang_schema_nodate} implement such an algorithm. More precisely, they capture the relationships between the columns of a dataset with a graph containing information theoretic values. In this way they reduce the problem to a graph matching problem. 
+This is a basic and effective technique, but this implies the schemas to be non-opaque. If that is not the case, the only way to infer the relationships between the columns is to use information theoretic techniques or synopses to estimate the inclusion dependencies between the columns. \cite*{kang_schema_nodate} implements such an algorithm. More precisely, they capture the relationships between the columns of a dataset with a graph containing information theoretic values. In this way they reduce the problem to a graph matching problem. 
 
-Another work \cite*{Dasu2002} consist in using synopses about the data mine the structure of a database. In particular, they use MinHashes, q-grams, and linear sketches to estimate joinability, join directions and composite attributes. It does not use any privacy preserving technique, but it is straightforward the chance to use differential privacy algorithms.
+Another work \cite*{Dasu2002} consist in using synopses to mine the structure of a database. In particular, they use MinHashes, q-grams, and linear sketches to estimate joinability, join directions and composite attributes. It does not use any privacy preserving technique, but it is straightforward the chance to use differential privacy algorithms.
 
-Other works \cite*{zhu_lsh_2016} we explored that make the use of Locality Sensitive Hashing (LSH) and MinHashes, called LSH Esemble. MinHash is a technique for quickly estimating how similar two sets are. LSH is dimensionality reduction method, that make use of hash functions that guarantees that the hashed elements maintain a similar distance in the reduced space. Briefly, LSH Esemble split the single MinHash signatures in $b$ bags. Then each bag is hashed with LSH in a bucket. Given a query column, in is first indexed with the algorithm just described, then a hashed column is a candidate where at least one signature maps in the same bucket where the query column is hashed. Here, differential privacy can be applied to guarantee a formal privacy guarantee, as similarly done in \cite*{fernandes_locality_2021}. 
+Other works \cite*{zhu_lsh_2016} we explored that make the use of Locality Sensitive Hashing (LSH) and MinHashes, called LSH Esemble. MinHash is a technique for quickly estimating how similar two sets are. LSH is a dimensionality reduction method, that makes use of hash functions that guarantees that the hashed elements maintain a similar distance in the reduced space. Briefly, LSH Esemble splits the single MinHash signatures in $b$ bags. Then each bag is hashed with LSH in a bucket. Given a query column, it is first indexed with the algorithm just described, then a hashed column is a candidate where at least one signature maps in the same bucket where the query column is hashed. Here, differential privacy can be applied to guarantee a formal privacy guarantee, as similarly done in \cite*{fernandes_locality_2021}. 
 
-A line of work \cite*{santos_sketch-based_2022, santos_correlation_2021} use a sketching technique for reducing a column to a small sample, to then compute the correlation between different columns.
+A line of work \cite*{santos_sketch-based_2022, santos_correlation_2021} uses a sketching technique for reducing a column to a small sample, to then compute the correlation between different columns.
 
-As it is possible to deduce from the above, there is very few work on privacy preserving techniques for schema alignment.
+As it is possible to deduce from the above, there are very few works on privacy preserving techniques for schema alignment.
 
 %namely there is no need to increase computational performance, rather 
 %exploring new techniques for having more precise matchers could be necessary. Nevertheless, the availability of big data, brought recent 
@@ -223,13 +223,13 @@ These protocols are reliable and very effective, with the downside of a very pro
 
 For the knowledge we have so far, we have two works which use SMC and cryptography. \cite*{agrawal_information_nodate} use commutative encryption for matching. No technique for reducing the computational cost (e.g. blocking) is used and they assume that the different tables share a common identifier, which is not true in most DI scenarios. A more recent research article \cite*{khurram_sfour_2020} shows that, by adapting a Private Set Intersection algorithm \cite*{huang2012private}, just by using SMC, they were able to improve the performance of the state of the art algorithm that we will describe below. Practically \cite*{khurram_sfour_2020} use a scoring function to score the records for then sorting them globally and finally run matching algorithm that slides a window across the sorted records and compare only the records inside the window, all done under the guarantees of SMC.
 
-A line of research that aims to improve performance while guaranteeing privacy consist in a series of work that use embedding techniques with or without differential privacy. More in detail, \cite*{scannapieco_privacy_2007} embed the records by using a technique called SparseMap \cite*{sparsemap}, which is a technique for embedding an object to a Euclidean space, by representing it as a vector whose values are the distances between the object and a subset of reference values. The reference set is defined by one of the parties, thus the security is armed in malicious setting. A similar approach is described in \cite*{yakout_efficient_2009} where they embed the records in a complex plane.
+A line of research that aims to improve performance while guaranteeing privacy consist of a series of work that use embedding techniques with or without differential privacy. More in detail, \cite*{scannapieco_privacy_2007} embed the records by using a technique called SparseMap \cite*{sparsemap}, which is a technique for embedding an object to a Euclidean space, by representing it as a vector whose values are the distances between the object and a subset of reference values. The reference set is defined by one of the parties, thus the security is armed in malicious setting. A similar approach is described in \cite*{yakout_efficient_2009} where they embed the records in a complex plane.
 
-To overcome this problem and to have a more formal privacy guarantee, \cite*{bonomi_frequent_2012} uses a different embedding technique based of frequent grams. Briefly, the two parties mine a common base, by using the counts of the top-$k$ frequent grams and then by using the Laplace mechanism \cite*{dwork_algorithmic_2013} to the counts.
+To overcome this problem and to have a more formal privacy guarantee, \cite*{bonomi_frequent_2012} uses a different embedding technique based on frequent grams. Briefly, the two parties mine a common base, by using the counts of the top-$k$ frequent grams and then by using the Laplace mechanism \cite*{dwork_algorithmic_2013} for the counts.
 
 Other works that include masking/embedding techniques make use of Bloom Filters \cite*{schnell2009privacy, durham2013composite}. A Bloom Filter is a probabilistic data strucuture to test whether an element is a member of a set or not. In these works they are used to mask the records, then the matching is done by computing the Dice similarity metric between two BFs. This is not the optimal use of the BFs as their main purpose is to check if an element is not a member of a set, as false negatives are not possibles, while false positives yes. Moreover, BFs does not guarantee any formal privacy guarantee, and these works have been attacked right after their publications \cite*{christen2017efficient, christen2018precise, christen2018pattern, kroll2014automated}. To improve privacy, \cite*{sequence_BF_DP, schnell_randomized_2016} uses Randomized Response mechanism on Bloom Filters to guarantee Differential Privacy. On the other hand, this lead to poor utility/privacy tradeoff, i.e. to obtain a good linkage quality, a very high privacy parameter is required. 
 
-Finally, a line of work focused on the combination of DP and SMC. More in detail, \cite*{Inan2010PrivateRM} run a blocking algorithm, then, for each block, a summary of it is computed (the extent of the block for each attribute and the block size) to then add DP noise to it. After that, a filtering phase is performed, to run a SMC matching algorithm between blocks that overlap (based on the extent). A more recent work apply a analogue technique, but the distribution of noise in the blocks is more advance, by using a private indexing algorithm \cite*{rao_hybrid_2019}, which also satisfies the new definition called Output Constrained DP, see \cite{he_composing_2017}.
+Finally, a line of work focused on the combination of DP and SMC. More in detail, \cite*{Inan2010PrivateRM} run a blocking algorithm, then, for each block, a summary of it is computed (the extent of the block for each attribute and the block size) to then add DP noise to it. After that, a filtering phase is performed, to run a SMC matching algorithm between blocks that overlap (based on the extent). A more recent work apply an analogue technique, but the distribution of noise in the blocks is more advanced, by using a private indexing algorithm \cite*{rao_hybrid_2019}, which also satisfies the new definition called Output Constrained DP, see \cite{he_composing_2017}.
 
 %\paragraph{Data Fusion.} Data fusion resolves conflicts between different data sources, namely, for each entity choose the best record to represent it. 
 %Access to highly accurate data is critical for industry applications, such as knowledge graph search, so data fusion is often 
@@ -243,7 +243,7 @@ Finally, a line of work focused on the combination of DP and SMC. More in detail
 %context of Cyber-Physical Systems.
 
 \subsubsection{Machine Learning and DI}
-Machine Learning and DI have a very close relationship \cite*{dong_data_2018}. For example, it is possible to build a matching function by learning it with labelled examples. The main problem of this approach is that it is needed a huge amount of data to obtain high accuracy/recall results. On the other hand, DI is basically a preprocessing step before feeding the data to a ML model. 
+Machine Learning and DI have a very close relationship \cite*{dong_data_2018}. For example, it is possible to build a matching function by learning it with labelled examples. The main problem of this approach is that it needs a huge amount of data to obtain high accuracy/recall results. On the other hand, DI is basically a preprocessing step before feeding the data to a ML model. 
 
 The main problem of Record Linkage, is the democratization of this process. In particular, with the introduction of distributed representation of words, \cite*{deeper_2018} introduced an approach for tuple embedding. The main advantage wrt the classic embedding approaches is that this is able to capture semantic similarities between words.
 
@@ -254,13 +254,13 @@ An unbalanced and non-IID (identically and independently distributed) data parti
 devices with limited communication bandwidth was introduced as the defining set of challenges \cite*{Kairouz2021}.
 %TODO add references in this paragraph
 Privacy is one of the essential properties of FL. Many techniques exist in literature (e.g. Secure Multiparty Computation, homomorphic encryption), but 
-\textbf{Differential Privacy} represents \textit{de facto} standard for Privacy in many areas (querying, synthetic data generation, etc.) as it guarantees a 
+\textbf{Differential Privacy} represents a \textit{de facto} standard for Privacy in many areas (querying, synthetic data generation, etc.) as it guarantees a 
 better computational performance rather than cryptographic approaches.
 
 FL can be categorized as it follows: 
 \begin{itemize}
    \item \textbf{Horizontal Federated Learning}. Horizontal FL refers when the federated datasets share the same feature space (the column names) but not the sample space (rows). This system
-   assumes that all the participants are honest and security against an honest-but-curious server \cite*{Yang2019}. Usually, the learning steps in this system are: (1) 
+   assumes that all the participants are honest and secured against an honest-but-curious server \cite*{Yang2019}. Usually, the learning steps in this system are: (1) 
    each data owner \textit{trains a local model} then the (2) \textit{gradients are sent} to the central server, which applies a (3) \textit{secure aggregation}. 
    Finally, the (4) \textit{model updates} computed by the central server are sent back to the data owners and their local models get updated.
    \item \textbf{Vertical Federated Learning}. Vertical FL is applicable when the datasets share the sample ID space, but the features are different. In this scenario, data pre-processing is required, in particular 
@@ -277,8 +277,8 @@ FL can be categorized as it follows:
 \subsection{Project Objectives}
 The goal of this PhD can be divided in two main objectives. The first is to develop Privacy Preserving DI algorithms to improve the computational 
 performance with respect to state-of-the-art algorithms.
-The second objective is to experiment those algorithms in the FL process, namely alignment the schemas of the datasets and linking the records. 
-In particular, we plan to experiment how these novel algorithms impact the performance of the FL models, with respect to FL solutions that does not align the data or 
+The second objective is to experiment those algorithms in the FL process, namely aligning the schemas of the datasets and linking the records. 
+In particular, we plan to experiment how these novel algorithms impact the performance of the FL models, with respect to FL solutions that do not align the data or 
 that use other DI algorithms. 
 %bringing it in a more practical scenario, namely, the FL data preparation step. Secondly, after having identified strength and weaknesses of 
 %the actual PPDI techniques, design and develop a framework to integrate with the FL process. %We aim to use techniques like synopses, 
